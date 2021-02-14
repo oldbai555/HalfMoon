@@ -476,3 +476,58 @@
 2021-02-14 15:38:42.537  INFO 5084 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 0_0_0_0_0_0_0_1
 2021-02-14 15:38:42.539  INFO 5084 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 1
 2021-02-14 15:38:42.542  INFO 5084 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : true
+2021-02-14 15:45:18.907  INFO 5084 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-14 15:45:19.033  INFO 5084 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-14 15:45:19.045  INFO 5084 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-14 15:45:25.396  INFO 14284 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 14284 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-02-14 15:45:25.399  INFO 14284 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-02-14 15:45:26.097  INFO 14284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-14 15:45:26.100  INFO 14284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-02-14 15:45:26.128  INFO 14284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2021-02-14 15:45:26.323  INFO 14284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$f5485b39] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-14 15:45:26.564  INFO 14284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-02-14 15:45:26.571  INFO 14284 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-02-14 15:45:26.572  INFO 14284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-14 15:45:26.572  INFO 14284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-02-14 15:45:26.656  INFO 14284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-14 15:45:26.657  INFO 14284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1216 ms
+2021-02-14 15:45:28.071  INFO 14284 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-14 15:45:28.153  INFO 14284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-14 15:45:28.356  INFO 14284 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-02-14 15:45:28.375  INFO 14284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-02-14 15:45:28.376  INFO 14284 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-02-14 15:45:28.390  INFO 14284 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-02-14 15:45:28.416  INFO 14284 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-14 15:45:28.429  INFO 14284 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-14 15:45:28.535  INFO 14284 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-14 15:45:28.543  INFO 14284 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 3.705 seconds (JVM running for 4.653)
+2021-02-14 15:45:40.866  INFO 14284 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-14 15:45:40.867  INFO 14284 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-14 15:45:40.872  INFO 14284 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-02-14 15:45:48.810  INFO 14284 --- [http-nio-8078-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-14 15:45:48.985  INFO 14284 --- [http-nio-8078-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-14 15:46:42.958  INFO 14284 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-14 15:46:42.972  INFO 14284 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-14 15:46:42.978  INFO 14284 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-14 15:46:48.312  INFO 6628 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 6628 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-02-14 15:46:48.316  INFO 6628 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-02-14 15:46:49.057  INFO 6628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-14 15:46:49.058  INFO 6628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-02-14 15:46:49.086  INFO 6628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2021-02-14 15:46:49.280  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$5103770f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-14 15:46:49.513  INFO 6628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-02-14 15:46:49.521  INFO 6628 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-02-14 15:46:49.521  INFO 6628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-14 15:46:49.521  INFO 6628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-02-14 15:46:49.603  INFO 6628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-14 15:46:49.603  INFO 6628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1247 ms
+2021-02-14 15:46:51.011  INFO 6628 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-14 15:46:51.091  INFO 6628 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-14 15:46:51.291  INFO 6628 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-02-14 15:46:51.310  INFO 6628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-02-14 15:46:51.311  INFO 6628 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-02-14 15:46:51.324  INFO 6628 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-02-14 15:46:51.349  INFO 6628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-14 15:46:51.361  INFO 6628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-14 15:46:51.468  INFO 6628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-14 15:46:51.479  INFO 6628 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 3.927 seconds (JVM running for 5.011)

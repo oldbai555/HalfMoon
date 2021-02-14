@@ -24,4 +24,8 @@ public interface UserService extends IService<User> {
     void createCaptcha(String captchaKey) throws IOException, FontFormatException;
 
     ResponseResult sendEmail(String type, String emailAddress);
+
+    ResponseResult checkEmail(String email);
+
+    ResponseResult checkUserName(String userName);
 }

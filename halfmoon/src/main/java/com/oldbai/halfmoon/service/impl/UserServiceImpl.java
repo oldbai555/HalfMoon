@@ -269,18 +269,18 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (StringUtils.isEmpty(emailAddress)) {
             return ResponseResult.FAILED("邮箱地址不可以为空");
         }
-        QueryWrapper<User> wrapper =null;
+        QueryWrapper<User> wrapper = null;
         //根据类型进行查询邮箱是否存在。
         if ("register".equals(type) || "update".equals(type)) {
             wrapper = new QueryWrapper<>();
-            wrapper.eq("email",emailAddress);
+            wrapper.eq("email", emailAddress);
             User oneByEmail = userMapper.selectOne(wrapper);
             if (!StringUtils.isEmpty(oneByEmail)) {
                 return ResponseResult.FAILED("该邮箱已被注册！...");
             }
         } else if ("forget".equals(type)) {
             wrapper = new QueryWrapper<>();
-            wrapper.eq("email",emailAddress);
+            wrapper.eq("email", emailAddress);
             User oneByEmail = userMapper.selectOne(wrapper);
             if (StringUtils.isEmpty(oneByEmail)) {
                 return ResponseResult.FAILED("该邮箱未被注册！...");
@@ -346,5 +346,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //保存code
         redisUtil.set(Constants.User.KEY_EMAIL_CODE_CONTENT + emailAddress, String.valueOf(code), 60 * 5);
         return ResponseResult.SUCCESS("发送成功！");
+    }
+
+    @Override
+    public ResponseResult checkEmail(String email) {
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.eq("email", email);
+        User oneByEmail = userMapper.selectOne(userQueryWrapper);
+        return oneByEmail == null ? ResponseResult.SUCCESS("该邮箱未注册.") : ResponseResult.FAILED("该邮箱已经注册.");
+    }
+
+    @Override
+    public ResponseResult checkUserName(String userName) {
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.eq("user_name", userName);
+        User oneByEmail = userMapper.selectOne(userQueryWrapper);
+        return oneByEmail == null ? ResponseResult.SUCCESS("该用户名未注册.") : ResponseResult.FAILED("该用户名已经注册.");
+
     }
 }

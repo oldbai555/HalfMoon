@@ -7,6 +7,8 @@ import com.oldbai.halfmoon.service.UserService;
 import com.oldbai.halfmoon.service.impl.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -118,5 +120,36 @@ public class UserController {
         return userService.sendEmail(type, emailAddress);
     }
 
+    /**
+     * 检查该Email是否已经注册
+     *
+     * @param email 邮箱地址
+     * @return SUCCESS -- > 已经注册了，FAILED ===> 没有注册
+     */
+    @ApiOperation("检查该Email是否已经注册")
+    @ApiResponses({
+            @ApiResponse(code = 20000, message = "表示当前邮箱已经注册了"),
+            @ApiResponse(code = 40000, message = "表示当前邮箱未注册")
+    })
+    @GetMapping("/email")
+    public ResponseResult checkEmail(@RequestParam("email") String email) {
+        return userService.checkEmail(email);
+    }
+
+    /**
+     * 检查该用户是否已经注册
+     *
+     * @param userName 用户名
+     * @return SUCCESS -- > 已经注册了，FAILED ===> 没有注册
+     */
+    @ApiOperation("检查该用户是否已经注册")
+    @ApiResponses({
+            @ApiResponse(code = 20000, message = "表示用户名已经注册了"),
+            @ApiResponse(code = 40000, message = "表示用户名未注册")
+    })
+    @GetMapping("/check/username")
+    public ResponseResult checkUserName(@RequestParam("userName") String userName) {
+        return userService.checkUserName(userName);
+    }
 }
 
