@@ -1,0 +1,114 @@
+package com.oldbai.halfmoon.util;
+
+/**
+ * 设置默认属性
+ *
+ * @author 老白
+ */
+public interface Constants {
+    /**
+     * 用户的初始化
+     */
+    interface User {
+        //初始化角色
+        String ROLE_ADMIN = "role_admin";
+        String ROLE_NORMAL = "role_normal";
+        //头像
+        String DEFAULT_AVATAR = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202007%2F01%2F20200701063944_5VaBk.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614571386&t=2e68974a8d276943307d75ea32457e3d";
+        //状态
+        String DEFAULT_STATE = "1";
+        //以下是redis的key
+        //验证码的key
+        String KEY_CAPTCHA_CONTENT = "key_captcha_content_";
+        //邮件验证码的key
+        String KEY_EMAIL_CODE_CONTENT = "key_email_code_content_";
+        //email邮件IP地址的key
+        String KEY_EMAIL_SEND_IP = "key_email_send_ip_";
+        //email邮件发送邮箱地址的key
+        String KEY_EMAIL_SEND_ADDRESS = "key_email_send_address_";
+        //md5的token kdy
+        String KEY_TOKEN = "key_token_";
+        //登陆后返回给cookid的token的名字
+        String KEY_TOKEN_NAME = "blog_token";
+        //登陆后返回给cookid的名字
+        String COOKIE_TOKE_KEY = "blog_token";
+        //登陆后返回给cookid的时间
+        int COOKIE_TOKE_AGE = 60 * 60;
+        //TODO redis存活时间 1 天
+        int REDIS_AGE_DAY = 60 * 60;
+    }
+
+    /**
+     * setting的初始化
+     */
+    interface Settings {
+        //初始化管理员账号
+        String HAS_MANAGER_ACCOUNT_INIT_STATE = "has_manager_init_state";
+        //网站标题
+        String WEB_SIZE_TITLE = "web_size_title";
+        //网站描述
+        String WEB_SIZE_DESCRIPTION = "web_size_description";
+        //键，关键字
+        String WEB_SIZE_KEYWORDS = "web_size_keywords";
+        //网站浏览量
+        String WEB_SIZE_VIEW_COUNT = "web_size_view_count";
+    }
+
+    /**
+     * redis 时间类
+     * 单位 毫秒
+     */
+    interface RedisTime {
+        int init = 1000;
+        int MIN = 60 * init;
+        int HOUR = 60 * MIN;
+        int DAY = 24 * HOUR;
+        int WEEK = 7 * DAY;
+        int MONTH = 30 * DAY;
+        int YEAR = 365 * DAY;
+    }
+
+    /**
+     * 统一时间
+     * 单位 秒
+     */
+    interface TimeValue {
+        int MIN = 60;
+        int HOUR = 60 * MIN;
+        int DAY = 24 * HOUR;
+        int WEEK = 7 * DAY;
+        int MONTH = 30 * DAY;
+        int YEAR = 365 * DAY;
+    }
+
+    /**
+     * 分页配制
+     */
+    interface Page {
+        int DEFAULT_PAGE = 1;
+        int MIN_SIZE = 5;
+    }
+
+    /**
+     * 图片格式限制
+     */
+    interface ImageType {
+        String PREFIX = "image/";
+        String TYPE_JGP = "jpg";
+        String TYPE_PNG = "png";
+        String TYPE_GIF = "gif";
+        String TYPE_JGP_WITH_PREFIX = PREFIX + TYPE_JGP;
+        String TYPE_PNG_WITH_PREFIX = PREFIX + TYPE_PNG;
+        String TYPE_GIF_WITH_PREFIX = PREFIX + TYPE_GIF;
+    }
+
+    /**
+     * 文章
+     */
+    interface Article {
+        String STATE_PUBLISH = "";
+        String STATE_DRAFT = "";
+        int TITLE_MAX_LENGTH = 0;
+        int SUMMARY_MAX_LENGTH = 0;
+    }
+}
