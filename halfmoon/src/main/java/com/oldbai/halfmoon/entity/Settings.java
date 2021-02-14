@@ -34,6 +34,7 @@ public class Settings implements Serializable {
     private String id;
 
     @ApiModelProperty(value = "键")
+    @TableField("`key`")
     private String key;
 
     @ApiModelProperty(value = "值")

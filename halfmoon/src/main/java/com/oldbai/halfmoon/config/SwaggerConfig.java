@@ -30,7 +30,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(portalApiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.oldbai.plusblog.controller.portal"))
+                .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.portal"))
                 // 可以根据url路径设置哪些请求加入文档，忽略哪些请求
                 .paths(PathSelectors.any())
                 .build()
@@ -59,7 +59,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(adminApiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.oldbai.plusblog.controller.admin"))
+                .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.admin"))
                 // 可以根据url路径设置哪些请求加入文档，忽略哪些请求
                 .paths(PathSelectors.any())
                 .build()
@@ -84,7 +84,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(userApiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.oldbai.plusblog.controller.user"))
+                .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.user"))
                 // 可以根据url路径设置哪些请求加入文档，忽略哪些请求
                 .paths(PathSelectors.any())
                 .build()
