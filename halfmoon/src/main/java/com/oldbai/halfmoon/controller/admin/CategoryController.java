@@ -1,4 +1,4 @@
-package com.oldbai.halfmoon.controller;
+package com.oldbai.halfmoon.controller.admin;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

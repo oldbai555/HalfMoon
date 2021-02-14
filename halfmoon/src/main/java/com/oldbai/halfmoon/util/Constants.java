@@ -1,4 +1,4 @@
-package com.oldbai.halfmoon.util;
+package com.oldbai.blog.utils;
 
 /**
  * 设置默认属性
@@ -6,11 +6,12 @@ package com.oldbai.halfmoon.util;
  * @author 老白
  */
 public interface Constants {
+
     /**
      * 用户的初始化
      */
     interface User {
-        //初始化角色
+        //初始化管理员角色
         String ROLE_ADMIN = "role_admin";
         String ROLE_NORMAL = "role_normal";
         //头像
@@ -20,7 +21,7 @@ public interface Constants {
         //以下是redis的key
         //验证码的key
         String KEY_CAPTCHA_CONTENT = "key_captcha_content_";
-        //邮件验证码的key
+        //验证码的key
         String KEY_EMAIL_CODE_CONTENT = "key_email_code_content_";
         //email邮件IP地址的key
         String KEY_EMAIL_SEND_IP = "key_email_send_ip_";
@@ -106,9 +107,20 @@ public interface Constants {
      * 文章
      */
     interface Article {
+        // 0表示删除 、1表示发布 、2表示草稿 、3表示置顶
+        String STATE_DELETE = "0";
+        String STATE_PUBLISH = "1";
+        String STATE_DRAFT = "2";
+        String STATE_TOP = "3";
+        int TITLE_MAX_LENGTH = 128;
+        int SUMMARY_MAX_LENGTH = 256;
+    }
+
+    /**
+     * 评论的一个通用处理
+     */
+    interface Comment {
         String STATE_PUBLISH = "";
-        String STATE_DRAFT = "";
-        int TITLE_MAX_LENGTH = 0;
-        int SUMMARY_MAX_LENGTH = 0;
+        String STATE_TOP = "";
     }
 }

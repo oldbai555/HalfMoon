@@ -1,4 +1,4 @@
-package com.oldbai.halfmoon.controller;
+package com.oldbai.halfmoon.controller.portal;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-02-14
  */
 @RestController
-@RequestMapping("/plusblog/article")
-public class ArticleController {
+@RequestMapping("/plusblog/daily-view-count")
+public class DailyViewCountController {
 
 }
 

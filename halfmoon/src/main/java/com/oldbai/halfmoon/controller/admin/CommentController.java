@@ -1,4 +1,4 @@
-package com.oldbai.halfmoon.controller;
+package com.oldbai.halfmoon.controller.admin;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-02-14
  */
 @RestController
-@RequestMapping("/plusblog/labels")
-public class LabelsController {
+@RequestMapping("/plusblog/comment")
+public class CommentController {
 
 }
 
