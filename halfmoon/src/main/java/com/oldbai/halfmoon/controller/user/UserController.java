@@ -124,7 +124,7 @@ public class UserController {
      * 检查该Email是否已经注册
      *
      * @param email 邮箱地址
-     * @return SUCCESS -- > 已经注册了，FAILED ===> 没有注册
+     * @return FAILED -- > 已经注册了，SUCCESS ===> 没有注册
      */
     @ApiOperation("检查该Email是否已经注册")
     @ApiResponses({
@@ -140,7 +140,7 @@ public class UserController {
      * 检查该用户是否已经注册
      *
      * @param userName 用户名
-     * @return SUCCESS -- > 已经注册了，FAILED ===> 没有注册
+     * @return FAILED -- > 已经注册了，SUCCESS ===> 没有注册
      */
     @ApiOperation("检查该用户是否已经注册")
     @ApiResponses({
