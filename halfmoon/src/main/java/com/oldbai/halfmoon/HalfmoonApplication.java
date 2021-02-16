@@ -1,7 +1,9 @@
 package com.oldbai.halfmoon;
 
+import com.oldbai.halfmoon.util.SnowflakeIdWorker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class HalfmoonApplication {
@@ -10,4 +12,11 @@ public class HalfmoonApplication {
         SpringApplication.run(HalfmoonApplication.class, args);
     }
 
+    /**
+     * 雪花算法注入
+     */
+    @Bean
+    public SnowflakeIdWorker createIdWorker() {
+        return new SnowflakeIdWorker(0, 1);
+    }
 }

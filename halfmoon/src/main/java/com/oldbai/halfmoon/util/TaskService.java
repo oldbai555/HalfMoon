@@ -4,7 +4,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
- * 专做异步操作的类
+ * 专做异步操作的服务类
  * @author 老白
  */
 @Service

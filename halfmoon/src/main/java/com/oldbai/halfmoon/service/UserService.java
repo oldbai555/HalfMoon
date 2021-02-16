@@ -28,4 +28,8 @@ public interface UserService extends IService<User> {
     ResponseResult checkEmail(String email);
 
     ResponseResult checkUserName(String userName);
+
+    User checkUser();
+
+    ResponseResult login(String captcha, String captchaKey, User user);
 }

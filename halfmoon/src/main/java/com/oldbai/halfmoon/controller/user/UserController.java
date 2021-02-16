@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -100,6 +101,12 @@ public class UserController {
 
     }
 
+    @PreAuthorize("@permission.adminPermission()")
+    @GetMapping("test")
+    public String test() {
+        return "hellol";
+    }
+
     /**
      * 发送邮件，获取邮箱验证码
      * 通过参数的方式获取。不用result风格
@@ -150,6 +157,35 @@ public class UserController {
     @GetMapping("/check/username")
     public ResponseResult checkUserName(@RequestParam("userName") String userName) {
         return userService.checkUserName(userName);
+    }
+
+    /**
+     * 登陆 sign-up
+     * 1.用户提交数据：用户名(邮箱地址)，密码，图灵验证码,图灵验证码的key
+     * 2.检查验证码是否正确。
+     * 3.通过用户名查找用户，用户是否存在
+     * 4.不存在通过邮箱查找，用户是否存在
+     * 5.存在，则判断密码是否正确
+     * 6.生成token，存入redis,返回登陆结果
+     * <p>
+     * 客户端想要解析
+     * 1.算出token的 md5 值，返回这个 md5 值给客户端，就是 key ,将这个 token 保存到 redis 中。
+     * 2.解析过程，用户访问的时候，携带 md5key ，我们从 redis 中拿到 token ， 解析token 就知道用户是否有效，角色是什么......
+     * 3.设置有效期
+     *
+     * @param user       用户对象
+     * @param captcha    验证码
+     * @param captchaKey 验证码key
+     * @return
+     */
+
+    @ApiOperation("登陆")
+    @PostMapping("/login/{captcha}/{captcha_key}")
+    public ResponseResult login(@RequestBody User user,
+                                @PathVariable("captcha") String captcha,
+                                @PathVariable("captcha_key") String captchaKey) {
+
+        return userService.login(captcha, captchaKey, user);
     }
 }
 
