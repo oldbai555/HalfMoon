@@ -187,5 +187,49 @@ public class UserController {
 
         return userService.login(captcha, captchaKey, user);
     }
+
+    /**
+     * 修改密码password
+     * 普通做法：通过旧密码对比来更新密码
+     * <p>
+     * 找回密码：既可以找回密码又可以修改密码
+     * 发送验证码到邮箱/手机-->判断验证码是否正确来判断
+     * 对应的邮箱/手机号码所注册的账号是否属于你
+     * <p>
+     * 步骤
+     * 1.用户填写邮箱
+     * 2.获取验证码 type = forget
+     * 3.用户填写新的密码
+     * 4.填写验证码
+     * 5.提交数据
+     * <p>
+     * 需要提交的参数
+     * 1.邮箱
+     * 2.新密码
+     * 3.验证码
+     * <p>
+     * 如果验证码正确，所有邮箱注册的账号就是你的，可以修改密码
+     *
+     * @param user
+     * @return
+     */
+    @ApiOperation("修改密码")
+    @PostMapping("/update/password/{verifyCode}")
+    public ResponseResult updatePassword(@PathVariable("verifyCode") String verifyCode,
+                                         @RequestBody User user) {
+        return userService.updateUserPassword(verifyCode, user);
+    }
+
+    /**
+     * 获取用户信息
+     *
+     * @return
+     */
+    @ApiOperation("获取用户信息")
+    @GetMapping("/get/user_info/{userId}")
+    public ResponseResult getUserInfo(@PathVariable("userId") String userId) {
+        //1.用户ID
+        return userService.getUserInfo(userId);
+    }
 }
 

@@ -32,7 +32,7 @@ public class EmailSender {
      * vrrshutytedmbffc
      */
     private EmailSender() {
-        EmailSender.config(EmailSender.SMTP_QQ(false), "1005777562@qq.com", "vrrshutytedmbffc");
+        EmailSender.config(EmailSender.SMTP_QQ(false), "1005777562@qq.com", "lygdtsuonxwqbbaa");
     }
 
     public static Properties defaultConfig(Boolean debug) {

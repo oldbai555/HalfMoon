@@ -16,6 +16,9 @@
     <springProperty scope="context" name="logPath" source="log.path" defaultValue="G:\MyJava\HalfMoon\log"/>
     <!-- 日志级别；默认从配置文件中读取 "logging.level.root" 的配置值，若没有配置，使用默认值 info -->
     <springProperty scope="context" name="logging.level.root" source="logging.level.root" defaultValue="info"/>
+    <!-- 打印sql语句 需要指定dao层包的位置 -->
+    <property name="mapper.package" value="com.oldbai.halfmoon.mapper" />
+
 
     <!--log日志格式-->
     <property name="PATTERN" value="%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>

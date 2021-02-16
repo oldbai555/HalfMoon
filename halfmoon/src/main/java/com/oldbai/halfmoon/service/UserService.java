@@ -32,4 +32,8 @@ public interface UserService extends IService<User> {
     User checkUser();
 
     ResponseResult login(String captcha, String captchaKey, User user);
+
+    ResponseResult updateUserPassword(String verifyCode, User user);
+
+    ResponseResult getUserInfo(String userId);
 }

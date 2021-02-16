@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.service.impl;
 
 import cn.hutool.crypto.digest.BCrypt;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.google.gson.Gson;
 import com.oldbai.blog.utils.Constants;
 import com.oldbai.halfmoon.entity.RefreshToken;
 import com.oldbai.halfmoon.entity.Settings;
@@ -60,6 +61,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private RefreshTokenMapper refreshTokenMapper;
     @Autowired
     private SnowflakeIdWorker idWorker;
+
+    private Gson gson = new Gson();
 
     HttpServletRequest request = null;
     HttpServletResponse response = null;
@@ -497,6 +500,66 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         createToken(oneByUsername);
 
         return ResponseResult.SUCCESS("登陆成功");
+    }
+
+    /**
+     * 更新密码
+     *
+     * @param verifyCode
+     * @param user
+     * @return
+     */
+    @Override
+    public ResponseResult updateUserPassword(String verifyCode, User user) {
+        getRequestAndResponse();
+        //检查邮箱是否有填写
+        if (StringUtils.isEmpty(user.getEmail())) {
+            return ResponseResult.FAILED("邮箱不可以为空");
+        }
+        //根据邮箱去 rdis 拿验证码
+        String code = (String) redisUtil.get(Constants.User.KEY_EMAIL_CODE_CONTENT + user.getEmail());
+        //进行比对
+        if (StringUtils.isEmpty(verifyCode) || !verifyCode.equals(code)) {
+            return ResponseResult.FAILED("验证码错误......");
+        }
+        //干掉资源,删除redis里的验证码
+        redisUtil.del(Constants.User.KEY_EMAIL_CODE_CONTENT + user.getEmail());
+        //修改密码
+        QueryWrapper<User> wrapper = new QueryWrapper<User>();
+        wrapper.eq("id", user.getId()).eq("email", user.getEmail());
+        user.setPassword(BCrypt.hashpw(user.getPassword()));
+        int i = userMapper.update(user, wrapper);
+        return i > 0 ? ResponseResult.SUCCESS("密码修改成功") : ResponseResult.FAILED("密码修改失败");
+    }
+
+    /**
+     * 获取用户信息
+     *
+     * @param userId
+     * @return
+     */
+    @Override
+    public ResponseResult getUserInfo(String userId) {
+        getRequestAndResponse();
+        //1.从数据库获取
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.eq("id", userId);
+
+        User one = userMapper.selectOne(userQueryWrapper);
+        //判断结果
+        if (StringUtils.isEmpty(one)) {
+            //如果不存在
+            return ResponseResult.FAILED("用户不存在......");
+        }
+        //如果存在，就复制对象清空密码、email、登陆IP 注册IP
+        String userJson = gson.toJson(one);
+        User newUser = gson.fromJson(userJson, User.class);
+        newUser.setPassword("");
+        newUser.setAvatar("");
+        newUser.setRegIp("");
+        newUser.setLoginIp("");
+        //返回结果
+        return ResponseResult.SUCCESS("获取成功", newUser);
     }
 
     /**
