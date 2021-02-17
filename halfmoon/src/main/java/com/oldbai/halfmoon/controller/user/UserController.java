@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.controller.user;
 
 
 import com.oldbai.halfmoon.entity.User;
+import com.oldbai.halfmoon.exception.NotLoginException;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.UserService;
 import com.oldbai.halfmoon.service.impl.UserServiceImpl;
@@ -101,11 +102,6 @@ public class UserController {
 
     }
 
-    @PreAuthorize("@permission.adminPermission()")
-    @GetMapping("test")
-    public String test() {
-        return "hellol";
-    }
 
     /**
      * 发送邮件，获取邮箱验证码
@@ -287,6 +283,47 @@ public class UserController {
         //TODO :通过注解的方式来控制权限
 
         return userService.deleteUserById(userId);
+    }
+
+    /**
+     * 1、必须已经登录了
+     * 2、新的邮箱没有注册过
+     * <p>
+     * 用户的步骤：
+     * 1、已经登录
+     * 2、输入新的邮箱地址
+     * 3、获取验证码 type=update
+     * 4、输入验证码
+     * 5、提交数据
+     * <p>
+     * 需要提交的数据
+     * 1、新的邮箱地址
+     * 2、验证码
+     * 3、其他信息我们可以token里获取
+     *
+     * @return
+     */
+    @ApiOperation("更新邮箱")
+    @PostMapping("/update/email")
+    public ResponseResult updateEmail(@RequestParam("email") String email,
+                                      @RequestParam("verify_code") String verifyCode) {
+        return userService.updateEmail(email, verifyCode);
+    }
+
+    /**
+     * 退出登录
+     * <p>
+     * 拿到token_key
+     * -> 删除redis里对应的token
+     * -> 删除mysql里对应的refreshToken
+     * -> 删除cookie里的token_key
+     *
+     * @return
+     */
+    @ApiOperation("退出登录")
+    @GetMapping("/logout")
+    public ResponseResult logout() throws NotLoginException {
+        return userService.doLogout();
     }
 }
 

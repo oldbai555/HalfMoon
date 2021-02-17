@@ -2,6 +2,8 @@ package com.oldbai.halfmoon.exception;
 
 
 import com.oldbai.halfmoon.response.ResponseResult;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,19 +13,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author 老白
  */
 @ControllerAdvice
+@Slf4j
 public class ExceptionController {
 
-    @ExceptionHandler(NotLoginException.class)
+    @ExceptionHandler(AccessDeniedException.class)
     @ResponseBody
-    public ResponseResult handlerNotLoginException(NotLoginException e) {
+    public ResponseResult handlerNotLoginException(AccessDeniedException e) {
+        log.info(e.getMessage());
         e.printStackTrace();
-        return ResponseResult.FAILED("账号未登录");
+        return ResponseResult.NO_PERMISSION("账号未登录或权限不足");
     }
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseResult handlerException(Exception e) {
         e.printStackTrace();
+        log.info(e.getMessage());
         return ResponseResult.FAILED("服务器繁忙");
     }
 

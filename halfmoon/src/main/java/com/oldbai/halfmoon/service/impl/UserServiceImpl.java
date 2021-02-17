@@ -658,6 +658,55 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
     }
 
+    @Override
+    public ResponseResult updateEmail(String email, String verifyCode) {
+        getRequestAndResponse();
+        //1、确保用户已经登录了
+        User sobUser = checkUser();
+        //没有登录
+        if (sobUser == null) {
+            return ResponseResult.NO_LOGIN("没有登录");
+        }
+        //2、对比验证码，确保新的邮箱地址是属于当前用户的
+        String redisVerifyCode = (String) redisUtil.get(Constants.User.KEY_EMAIL_CODE_CONTENT + email);
+        if (StringUtils.isEmpty(redisVerifyCode) || !redisVerifyCode.equals(verifyCode)) {
+            return ResponseResult.FAILED("验证码错误");
+        }
+        //验证完成,删除验证码
+        redisUtil.del(Constants.User.KEY_EMAIL_CODE_CONTENT + email);
+        //2768011423
+        //可以修改邮箱
+        User user = new User();
+        user.setId(sobUser.getId());
+        user.setEmail(email);
+        int result = userMapper.updateById(user);
+        return result > 0 ? ResponseResult.SUCCESS("邮箱修改成功") : ResponseResult.FAILED("邮箱修改失败");
+    }
+
+    /**
+     * 退出登录
+     *
+     * @return
+     */
+    @Override
+    public ResponseResult doLogout() {
+        getRequestAndResponse();
+        //拿到token_key
+        String tokenKey = CookieUtils.getCookie(request, Constants.User.COOKIE_TOKE_KEY);
+        if (StringUtils.isEmpty(tokenKey)) {
+            return ResponseResult.NO_LOGIN();
+        }
+        //刪除redis里的token
+        redisUtil.del(Constants.User.KEY_TOKEN + tokenKey);
+        //删除mysql里的refreshToken
+        QueryWrapper<RefreshToken> wrapper = new QueryWrapper<>();
+        wrapper.eq("token_key", tokenKey);
+        refreshTokenMapper.delete(wrapper);
+        //删除cookie里的token_key
+        CookieUtils.deleteCookie(response, Constants.User.COOKIE_TOKE_KEY);
+        return ResponseResult.SUCCESS("退出登录成功.");
+    }
+
     /**
      * 生成token,抽取出来的方法
      *

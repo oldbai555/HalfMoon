@@ -42,4 +42,8 @@ public interface UserService extends IService<User> {
     ResponseResult listUsers(int page, int size);
 
     ResponseResult deleteUserById(String userId);
+
+    ResponseResult updateEmail(String email, String verifyCode);
+
+    ResponseResult doLogout();
 }
