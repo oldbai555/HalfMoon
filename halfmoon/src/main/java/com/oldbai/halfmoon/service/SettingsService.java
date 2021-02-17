@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.service;
 
 import com.oldbai.halfmoon.entity.Settings;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.oldbai.halfmoon.response.ResponseResult;
 
 /**
  * <p>
@@ -13,4 +14,13 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface SettingsService extends IService<Settings> {
 
+    ResponseResult getWebSizeTitle();
+
+    ResponseResult putWebSizeTitle(String title);
+
+    ResponseResult getSeoInfo();
+
+    ResponseResult putSeoInfo(String keywords, String description);
+
+    ResponseResult getSizeViewCount();
 }

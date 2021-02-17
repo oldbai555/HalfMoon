@@ -10,6 +10,7 @@ import com.oldbai.halfmoon.service.CategoryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import com.oldbai.halfmoon.service.UserService;
+import com.oldbai.halfmoon.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
@@ -115,7 +116,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
         User checkUser = userService.checkUser();
         List<Category> all = null;
         QueryWrapper<Category> queryWrapper = null;
-        if (StringUtils.isEmpty(checkUser) || !com.oldbai.blog.utils.Constants.User.ROLE_ADMIN.equals(checkUser.getRoles())) {
+        if (StringUtils.isEmpty(checkUser) || !Constants.User.ROLE_ADMIN.equals(checkUser.getRoles())) {
             //只能获取到正常的category
             queryWrapper = new QueryWrapper<>();
             queryWrapper.eq("status", 1).orderByDesc("update_time");

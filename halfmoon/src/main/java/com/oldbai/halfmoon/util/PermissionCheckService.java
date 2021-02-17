@@ -1,6 +1,5 @@
 package com.oldbai.halfmoon.util;
 
-import com.oldbai.blog.utils.Constants;
 import com.oldbai.halfmoon.entity.User;
 import com.oldbai.halfmoon.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

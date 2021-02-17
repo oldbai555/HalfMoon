@@ -13,7 +13,7 @@ public class CookieUtils {
     /**
      * 存活时间
      */
-    public static final int default_age = com.oldbai.blog.utils.Constants.User.COOKIE_TOKE_AGE;
+    public static final int default_age = Constants.User.COOKIE_TOKE_AGE;
 
     public static final String domain = "localhost";
 

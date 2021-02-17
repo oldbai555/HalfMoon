@@ -1,4 +1,4 @@
-package com.oldbai.blog.utils;
+package com.oldbai.halfmoon.util;
 
 /**
  * 设置默认属性

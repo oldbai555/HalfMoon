@@ -8,6 +8,7 @@ import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.FriendLinkService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.oldbai.halfmoon.service.UserService;
+import com.oldbai.halfmoon.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -124,7 +125,7 @@ public class FriendLinkServiceImpl extends ServiceImpl<FriendLinkMapper, FriendL
         List<FriendLink> all;
         User sobUser = userService.checkUser();
         QueryWrapper<FriendLink> friendLinkQueryWrapper = null;
-        if (sobUser == null || !com.oldbai.blog.utils.Constants.User.ROLE_ADMIN.equals(sobUser.getRoles())) {
+        if (sobUser == null || !Constants.User.ROLE_ADMIN.equals(sobUser.getRoles())) {
             //只能获取到正常的category
             friendLinkQueryWrapper = new QueryWrapper<>();
             friendLinkQueryWrapper.eq("state","1").orderByDesc("update_time");

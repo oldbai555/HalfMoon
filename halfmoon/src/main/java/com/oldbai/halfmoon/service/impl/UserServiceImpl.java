@@ -4,7 +4,6 @@ import cn.hutool.crypto.digest.BCrypt;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
-import com.oldbai.blog.utils.Constants;
 import com.oldbai.halfmoon.entity.RefreshToken;
 import com.oldbai.halfmoon.entity.Settings;
 import com.oldbai.halfmoon.entity.User;
