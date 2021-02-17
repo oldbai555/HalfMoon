@@ -43,6 +43,7 @@ public class Category implements Serializable {
     private String description;
 
     @ApiModelProperty(value = "顺序")
+    @TableField("`order`")
     private Integer order;
 
     @ApiModelProperty(value = "状态：0表示不使用，1表示正常")
@@ -50,6 +51,7 @@ public class Category implements Serializable {
 
     @ApiModelProperty(value = "发布时间")
     @TableField(fill = FieldFill.INSERT)
+//    @JSONField(format="yyyy-MM-dd")
     private Date createTime;
 
     @ApiModelProperty(value = "更新时间")

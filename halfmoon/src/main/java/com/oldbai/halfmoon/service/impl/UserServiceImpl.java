@@ -729,7 +729,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         cliams.put("avatar", oneByUsername.getAvatar());
         cliams.put("email", oneByUsername.getEmail());
         cliams.put("sign", oneByUsername.getSign());
-        String token = JwtUtil.createToken(cliams);
+        String token = JwtUtil.createToken(cliams,Constants.RedisTime.DAY);
         // 返回一个token 的 md5 值 key ，保存在redis中。
         String tokenKey = DigestUtils.md5DigestAsHex(token.getBytes());
         //保存在redis 中 , 1个小时有效期 , key 是 tokenKey

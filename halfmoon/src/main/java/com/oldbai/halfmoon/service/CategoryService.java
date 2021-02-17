@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.service;
 
 import com.oldbai.halfmoon.entity.Category;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.oldbai.halfmoon.response.ResponseResult;
 
 /**
  * <p>
@@ -13,4 +14,13 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface CategoryService extends IService<Category> {
 
+    ResponseResult addCategory(Category category);
+
+    ResponseResult deleteCategory(String categoryId);
+
+    ResponseResult updateCategory(String categoryId, Category category);
+
+    ResponseResult getCategory(String categoryId);
+
+    ResponseResult listCategories();
 }
