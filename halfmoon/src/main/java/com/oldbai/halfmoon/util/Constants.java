@@ -98,9 +98,11 @@ public interface Constants {
         String TYPE_JGP = "jpg";
         String TYPE_PNG = "png";
         String TYPE_GIF = "gif";
+        String TYPE_JPEG = "jpeg";
         String TYPE_JGP_WITH_PREFIX = PREFIX + TYPE_JGP;
         String TYPE_PNG_WITH_PREFIX = PREFIX + TYPE_PNG;
         String TYPE_GIF_WITH_PREFIX = PREFIX + TYPE_GIF;
+        String TYPE_JPEG_WITH_PREFIX = PREFIX + TYPE_JPEG;
     }
 
     /**
