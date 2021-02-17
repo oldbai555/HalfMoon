@@ -43,6 +43,7 @@ public class FriendLink implements Serializable {
     private String url;
 
     @ApiModelProperty(value = "顺序")
+    @TableField("`order`")
     private Integer order;
 
     @ApiModelProperty(value = "友情链接状态:0表示不可用，1表示正常")

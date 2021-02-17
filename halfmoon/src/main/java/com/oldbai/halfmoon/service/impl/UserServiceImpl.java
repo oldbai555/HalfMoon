@@ -733,14 +733,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         // 返回一个token 的 md5 值 key ，保存在redis中。
         String tokenKey = DigestUtils.md5DigestAsHex(token.getBytes());
         //保存在redis 中 , 1个小时有效期 , key 是 tokenKey
-        redisUtil.set(Constants.User.KEY_TOKEN + tokenKey, token, Constants.TimeValue.HOUR);
+        redisUtil.set(Constants.User.KEY_TOKEN + tokenKey, token, Constants.TimeValue.DAY);
         //把token 写入 cookies 里
         Cookie cookie = new Cookie(Constants.User.COOKIE_TOKE_KEY, tokenKey);
         //TODO 动态获取域名，可以从request里获取
         cookie.setDomain("localhost");
         //设置存活时间
         cookie.setPath("/");
-        cookie.setMaxAge(Constants.User.COOKIE_TOKE_AGE);
+        cookie.setMaxAge(Constants.User.COOKIE_TOKE_AGE * 24);
         response.addCookie(cookie);
         // 前端访问时，携带 md5 key ，后端从 redis中取出 token
 

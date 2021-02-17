@@ -114,14 +114,17 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
         //管理员账号 可以拿到所有的分类
         User checkUser = userService.checkUser();
         List<Category> all = null;
+        QueryWrapper<Category> queryWrapper = null;
         if (StringUtils.isEmpty(checkUser) || !com.oldbai.blog.utils.Constants.User.ROLE_ADMIN.equals(checkUser.getRoles())) {
             //只能获取到正常的category
-            QueryWrapper<Category> queryWrapper = new QueryWrapper<>();
+            queryWrapper = new QueryWrapper<>();
             queryWrapper.eq("status", 1).orderByDesc("update_time");
             all = categoryMapper.selectList(queryWrapper);
         } else {
             //查询
-            all = categoryMapper.selectList(null);
+            queryWrapper = new QueryWrapper<>();
+            queryWrapper.orderByDesc("update_time");
+            all = categoryMapper.selectList(queryWrapper);
         }
         //返回结果
         return ResponseResult.SUCCESS("获取分类列表成功.", all);
