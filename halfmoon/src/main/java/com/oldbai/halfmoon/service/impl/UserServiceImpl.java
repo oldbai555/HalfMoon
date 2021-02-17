@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.service.impl;
 
 import cn.hutool.crypto.digest.BCrypt;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
 import com.oldbai.blog.utils.Constants;
 import com.oldbai.halfmoon.entity.RefreshToken;
@@ -10,11 +11,13 @@ import com.oldbai.halfmoon.entity.User;
 import com.oldbai.halfmoon.mapper.RefreshTokenMapper;
 import com.oldbai.halfmoon.mapper.SettingsMapper;
 import com.oldbai.halfmoon.mapper.UserMapper;
+import com.oldbai.halfmoon.mapper.UserViewMapper;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.response.ResponseState;
 import com.oldbai.halfmoon.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.oldbai.halfmoon.util.*;
+import com.oldbai.halfmoon.vo.UserView;
 import com.wf.captcha.SpecCaptcha;
 import com.wf.captcha.base.Captcha;
 import io.jsonwebtoken.Claims;
@@ -61,6 +64,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private RefreshTokenMapper refreshTokenMapper;
     @Autowired
     private SnowflakeIdWorker idWorker;
+    @Autowired
+    private UserViewMapper userViewMapper;
 
     private Gson gson = new Gson();
 
@@ -560,6 +565,97 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         newUser.setLoginIp("");
         //返回结果
         return ResponseResult.SUCCESS("获取成功", newUser);
+    }
+
+    /**
+     * 修改用户信息
+     * TODO 还需要改进。比如说，只修改某个属性
+     *
+     * @param userId
+     * @param user
+     * @return
+     */
+    @Transactional
+    @Override
+    public ResponseResult updateUserInfo(String userId, User user) {
+        getRequestAndResponse();
+        //1.检查用户是否登录
+        User checkUserKey = checkUser();
+        if (StringUtils.isEmpty(checkUserKey)) {
+            return ResponseResult.NO_LOGIN("用户未登录......");
+        }
+        //从数据库中获取
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.eq("id", checkUserKey.getId());
+        User checkUser = userMapper.selectOne(wrapper);
+        //2.判断用户的Id是否一致，如果一致才可以修改
+        if (checkUser.equals(userId)) {
+            return ResponseResult.NO_PERMISSION("无权修改......");
+        }
+        //3.可以修改
+        //可以修改的位置
+        //用户名 , 用户名不为空且数据库无改用户名注册过
+        wrapper = new QueryWrapper<>();
+        wrapper.eq("user_name", user.getUserName());
+        if (!StringUtils.isEmpty(user.getUserName()) && StringUtils.isEmpty(userMapper.selectOne(wrapper))) {
+            checkUser.setUserName(user.getUserName());
+        } else {
+            return ResponseResult.FAILED("该用户名已被注册无法修改......");
+        }
+        //头像
+        if (!StringUtils.isEmpty(user.getAvatar())) {
+            checkUser.setAvatar(user.getAvatar());
+        }
+        //签名，可以为空
+        checkUser.setSign(user.getSign());
+        wrapper = new QueryWrapper<>();
+        wrapper.eq("id", checkUser.getId());
+        userMapper.update(checkUser, wrapper);
+        //TODO 干掉redis里的token ,下一次请求，跟用户有关的需要解析token，就会根据refreshToken创建一个
+        //拿到key
+        String tokenKey = CookieUtils.getCookie(request, Constants.User.COOKIE_TOKE_KEY);
+        redisUtil.del(Constants.User.KEY_TOKEN + tokenKey);
+        return ResponseResult.SUCCESS("修改成功......");
+    }
+
+    /**
+     * 获取用户列表，需要管理员权限
+     *
+     * @param page
+     * @param size
+     * @return
+     */
+    @Transactional
+    @Override
+    public ResponseResult listUsers(int page, int size) {
+        getRequestAndResponse();
+        //可以获取用户列表
+        //分页查询
+        //判断page
+        page = Utils.getPage(page);
+        //size也限制一下,每一页不小于5个
+        size = Utils.getSize(size);
+        //分页开始
+        //根据注册日期排序
+        Page<UserView> pageObj = new Page<>(page, size);
+        QueryWrapper<UserView> viewQueryWrapper = new QueryWrapper<>();
+        viewQueryWrapper.orderByDesc("create_time");
+        Page<UserView> all = userViewMapper.selectPage(pageObj, viewQueryWrapper);
+        //TODO 处理密码问题，在这使用了视图
+        return ResponseResult.SUCCESS("获取用户列表成功", all);
+    }
+
+    @Override
+    public ResponseResult deleteUserById(String userId) {
+        getRequestAndResponse();
+        //可以删除用户了......
+        int result = userMapper.deleteById(userId);
+        if (result > 0) {
+            return ResponseResult.SUCCESS("删除成功");
+        } else {
+
+            return ResponseResult.FAILED("用户不存在......");
+        }
     }
 
     /**

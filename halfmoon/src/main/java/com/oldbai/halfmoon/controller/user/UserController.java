@@ -231,5 +231,62 @@ public class UserController {
         //1.用户ID
         return userService.getUserInfo(userId);
     }
+
+    /**
+     * 修改用户信息
+     * <p>
+     * 允许用户修改的内容：
+     * 1.头像 ()
+     * 2.用户名 (唯一的)
+     * 3.密码 (单独更新)
+     * 4.签名 ()
+     * 5.用户邮箱 (单独修改，唯一的)
+     *
+     * @param user
+     * @return
+     */
+    @ApiOperation("修改用户信息")
+    @PostMapping("/update/user_info/{userId}")
+    public ResponseResult updateUserInfo(@RequestBody User user,
+                                         @PathVariable("userId") String userId) {
+        return userService.updateUserInfo(userId, user);
+    }
+
+    /**
+     * 获取用户集合
+     * 分页查询
+     * 需要管理员权限
+     *
+     * @param page
+     * @param size
+     * @return ------
+     * 权限注解 @PreAuthorize("@permission.adminPermission()")
+     */
+    @PreAuthorize("@permission.adminPermission()")
+    @ApiOperation("获取用户集合")
+    @GetMapping("/user/list")
+    public ResponseResult listUser(@RequestParam("page") int page,
+                                   @RequestParam("size") int size
+    ) {
+        return userService.listUsers(page, size);
+    }
+
+    /**
+     * 删除用户
+     * 需要管理员权限
+     *
+     * @param userId
+     * @return
+     */
+    @PreAuthorize("@permission.adminPermission()")
+    @ApiOperation("删除用户")
+    @GetMapping("/delete/user/{userId}")
+    public ResponseResult deleteUser(@PathVariable("userId") String userId) {
+        //判断当前操作的用户是谁
+        //根据用户角色判断是否可以删除
+        //TODO :通过注解的方式来控制权限
+
+        return userService.deleteUserById(userId);
+    }
 }
 

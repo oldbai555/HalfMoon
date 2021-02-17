@@ -36,4 +36,10 @@ public interface UserService extends IService<User> {
     ResponseResult updateUserPassword(String verifyCode, User user);
 
     ResponseResult getUserInfo(String userId);
+
+    ResponseResult updateUserInfo(String userId, User user);
+
+    ResponseResult listUsers(int page, int size);
+
+    ResponseResult deleteUserById(String userId);
 }
