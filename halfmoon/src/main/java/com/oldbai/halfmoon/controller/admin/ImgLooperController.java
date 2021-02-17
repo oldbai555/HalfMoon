@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-02-14
  */
 @RestController
-@RequestMapping("/plusblog/img-looper")
+@RequestMapping("/halfmoon/img-looper")
 public class ImgLooperController {
 
 }

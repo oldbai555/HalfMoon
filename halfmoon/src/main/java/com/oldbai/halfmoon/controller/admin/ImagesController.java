@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-02-14
  */
 @RestController
-@RequestMapping("/plusblog/images")
+@RequestMapping("/halfmoon/images")
 public class ImagesController {
 
 }

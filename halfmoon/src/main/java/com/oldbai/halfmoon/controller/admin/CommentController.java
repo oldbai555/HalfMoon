@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-02-14
  */
 @RestController
-@RequestMapping("/plusblog/comment")
+@RequestMapping("/halfmoon/comment")
 public class CommentController {
 
 }
