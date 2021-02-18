@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.service;
 
 import com.oldbai.halfmoon.entity.ImgLooper;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.oldbai.halfmoon.response.ResponseResult;
 
 /**
  * <p>
@@ -13,4 +14,13 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ImgLooperService extends IService<ImgLooper> {
 
+    ResponseResult addLoop(ImgLooper looper);
+
+    ResponseResult deleteLoop(String loopId);
+
+    ResponseResult updateLoop(String loopId, ImgLooper looper);
+
+    ResponseResult getLoop(String loopId);
+
+    ResponseResult listLoops();
 }

@@ -55,9 +55,13 @@ public class SettingsServiceImpl extends ServiceImpl<SettingsMapper, Settings> i
         if (titleFromDb == null) {
             titleFromDb = new Settings();
             titleFromDb.setKey(Constants.Settings.WEB_SIZE_TITLE);
+            titleFromDb.setValue(title);
+            settingsMapper.insert(titleFromDb);
+        } else {
+            titleFromDb.setValue(title);
+            settingsMapper.updateById(titleFromDb);
         }
-        titleFromDb.setValue(title);
-        settingsMapper.insert(titleFromDb);
+
         return ResponseResult.SUCCESS("网站Title更新成功.");
     }
 
@@ -94,18 +98,26 @@ public class SettingsServiceImpl extends ServiceImpl<SettingsMapper, Settings> i
         if (descriptionFromDb == null) {
             descriptionFromDb = new Settings();
             descriptionFromDb.setKey(Constants.Settings.WEB_SIZE_DESCRIPTION);
+            descriptionFromDb.setValue(description);
+            settingsMapper.insert(descriptionFromDb);
+        } else {
+            descriptionFromDb.setValue(description);
+            settingsMapper.updateById(descriptionFromDb);
         }
-        descriptionFromDb.setValue(description);
-        settingsMapper.insert(descriptionFromDb);
+
         queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("`key`", Constants.Settings.WEB_SIZE_KEYWORDS);
         Settings keyWordsFromDb = settingsMapper.selectOne(queryWrapper);
         if (keyWordsFromDb == null) {
             keyWordsFromDb = new Settings();
             keyWordsFromDb.setKey(Constants.Settings.WEB_SIZE_KEYWORDS);
+            keyWordsFromDb.setValue(keywords);
+            settingsMapper.insert(keyWordsFromDb);
+        } else {
+            keyWordsFromDb.setValue(keywords);
+            settingsMapper.updateById(keyWordsFromDb);
         }
-        keyWordsFromDb.setValue(keywords);
-        settingsMapper.insert(keyWordsFromDb);
+
         return ResponseResult.SUCCESS("更新SEO信息成功.");
     }
 
