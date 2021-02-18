@@ -122,7 +122,7 @@ public interface Constants {
      * 评论的一个通用处理
      */
     interface Comment {
-        String STATE_PUBLISH = "";
-        String STATE_TOP = "";
+        String STATE_PUBLISH = "1";
+        String STATE_TOP = "3";
     }
 }

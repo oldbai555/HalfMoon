@@ -5,7 +5,7 @@ package com.oldbai.halfmoon.util;
  */
 public class Utils {
     public static int getPage(int page) {
-        return page < Constants.Page.DEFAULT_PAGE ? page : Constants.Page.DEFAULT_PAGE;
+        return page < Constants.Page.DEFAULT_PAGE ? Constants.Page.DEFAULT_PAGE : page;
     }
 
     public static int getSize(int size) {

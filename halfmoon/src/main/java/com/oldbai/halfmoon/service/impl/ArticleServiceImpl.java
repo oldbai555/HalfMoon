@@ -16,15 +16,15 @@ import com.oldbai.halfmoon.service.UserService;
 import com.oldbai.halfmoon.util.Constants;
 import com.oldbai.halfmoon.util.Utils;
 import com.oldbai.halfmoon.vo.ArticleView;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import javax.rmi.CORBA.Util;
+import java.lang.reflect.Type;
+import java.util.*;
 
 /**
  * <p>
@@ -34,6 +34,7 @@ import java.util.List;
  * @author oldbai
  * @since 2021-02-14
  */
+@Slf4j
 @Service
 public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements ArticleService {
 
@@ -351,5 +352,94 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
             return ResponseResult.SUCCESS("已取消置顶.");
         }
         return ResponseResult.FAILED("不支持该操作.");
+    }
+
+    @Transactional
+    @Override
+    public ResponseResult listTopArticles() {
+        QueryWrapper<ArticleView> articleViewQueryWrapper = new QueryWrapper<>();
+        articleViewQueryWrapper.eq("state", Constants.Article.STATE_TOP);
+        List<ArticleView> result = articleViewMapper.selectList(articleViewQueryWrapper);
+        return ResponseResult.SUCCESS("获取置顶文章列表成功.", result);
+    }
+
+    @Transactional
+    @Override
+    public ResponseResult listLabels(int size) {
+        size = Utils.getSize(size);
+        QueryWrapper<Labels> wrapper = new QueryWrapper<>();
+        wrapper.orderByDesc("count");
+        Page<Labels> labelsPage = new Page<>(1, size);
+        Page<Labels> all = labelsMapper.selectPage(labelsPage, wrapper);
+        return ResponseResult.SUCCESS("获取标签列表成功.", all);
+    }
+
+    /**
+     * 获取推荐文章，通过标签来计算
+     *
+     * @param articleId
+     * @param size
+     * @return
+     */
+
+    @Transactional
+    @Override
+    public ResponseResult listRecommendArticle(String articleId, int size) {
+        Random random = new Random();
+
+        //查询文章，不需要文章，只需要标签
+        QueryWrapper<ArticleView> articleViewQueryWrapper = new QueryWrapper<>();
+        articleViewQueryWrapper.select("labels").eq("id", articleId);
+        String labels = articleViewMapper.selectOne(articleViewQueryWrapper).getLabels();
+        //打散标签
+        List<String> labelList = new ArrayList<>();
+        if (!labels.contains("-")) {
+            labelList.add(labels);
+        } else {
+            labelList.addAll(Arrays.asList(labels.split("-")));
+        }
+        //从列表中随即获取一标签，查询与此标签相似的文章
+        String targetLabel = labelList.get(random.nextInt(labelList.size()));
+        log.info("targetLabel == > " + targetLabel);
+        articleViewQueryWrapper = new QueryWrapper<>();
+        articleViewQueryWrapper
+                .like("labels", targetLabel)
+                .ne("id", articleId)
+                .and(i -> i.eq("state", "1").or().eq("state", "3"))
+                .orderByDesc("create_time");
+        Page<ArticleView> viewPage = new Page<>(1, size);
+        Page<ArticleView> likeResultList = articleViewMapper.selectPage(viewPage, articleViewQueryWrapper);
+        //判断它的长度
+        if (likeResultList.getTotal() < size) {
+            //说明不够数量，获取最新的文章作为补充
+            int dxSize = (int) (size - likeResultList.getTotal());
+            articleViewQueryWrapper = new QueryWrapper<>();
+            articleViewQueryWrapper
+                    .ne("id", articleId)
+                    .and(i -> i.eq("state", "1").or().eq("state", "3"))
+                    .orderByDesc("create_time");
+            Page<ArticleView> viewPage1 = new Page<>(1, dxSize);
+            Page<ArticleView> dxList = articleViewMapper.selectPage(viewPage1, articleViewQueryWrapper);
+            //这个写法有一定的弊端，会把可能前面找到的也加进来，概率比较小，如果文章比较多
+            List<ArticleView> resultList = new ArrayList<>(likeResultList.getRecords());
+            resultList.addAll(new ArrayList<>(dxList.getRecords()));
+            likeResultList.setRecords(resultList);
+        }
+        return ResponseResult.SUCCESS("获取推荐文章成功.", likeResultList);
+    }
+
+
+    @Transactional
+    @Override
+    public ResponseResult listArticlesByLabel(int page, int size, String label) {
+        page = Utils.getPage(page);
+        size = Utils.getSize(size);
+        Page<ArticleView> articleViewPage = new Page<>(page, size);
+        QueryWrapper<ArticleView> wrapper = new QueryWrapper<>();
+        wrapper.like("labels", label)
+                .and(i -> i.eq("state", "1").or().eq("state", "3"))
+                .orderByDesc("create_time");
+        Page<ArticleView> all = articleViewMapper.selectPage(articleViewPage, wrapper);
+        return ResponseResult.SUCCESS("获取文章列表成功.", all);
     }
 }

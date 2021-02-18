@@ -19,4 +19,8 @@ public interface CommentService extends IService<Comment> {
     ResponseResult listComments(int page, int size);
 
     ResponseResult topComment(String commentId);
+
+    ResponseResult postComment(Comment comment);
+
+    ResponseResult listCommentByArticleId(String articleId, int page, int size);
 }

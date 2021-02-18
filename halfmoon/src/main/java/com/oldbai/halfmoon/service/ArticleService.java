@@ -27,4 +27,12 @@ public interface ArticleService extends IService<Article> {
     ResponseResult deleteArticleByState(String articleId);
 
     ResponseResult topArticle(String articleId);
+
+    ResponseResult listTopArticles();
+
+    ResponseResult listLabels(int size);
+
+    ResponseResult listRecommendArticle(String articleId, int size);
+
+    ResponseResult listArticlesByLabel(int page, int size, String label);
 }

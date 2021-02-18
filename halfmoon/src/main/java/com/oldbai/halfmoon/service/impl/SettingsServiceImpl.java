@@ -152,6 +152,32 @@ public class SettingsServiceImpl extends ServiceImpl<SettingsMapper, Settings> i
         return ResponseResult.SUCCESS("获取网站浏览量成功.", result);
     }
 
+    /**
+     * 1、并发量
+     * 2、过滤相通的IP/ID
+     * 3、防止攻击，比如太频繁的访问，就提示请稍后重试.
+     */
+    @Override
+    public void updateViewCount() {
+        //redis的更新时机：
+        String viewCount = (String) redisUtil.get(Constants.Settings.WEB_SIZE_VIEW_COUNT);
+        if (StringUtils.isEmpty(viewCount)) {
+            QueryWrapper<Settings> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("`key`", Constants.Settings.WEB_SIZE_VIEW_COUNT);
+            Settings setting = settingsMapper.selectOne(queryWrapper);
+            if (setting == null) {
+                setting = this.initViewItem();
+                settingsMapper.insert(setting);
+            }
+            redisUtil.set(Constants.Settings.WEB_SIZE_VIEW_COUNT, setting.getValue());
+        } else {
+            //自增
+            Integer integer = Integer.valueOf(viewCount);
+            integer = integer + 1;
+            redisUtil.set(Constants.Settings.WEB_SIZE_VIEW_COUNT, String.valueOf(integer));
+        }
+    }
+
     private Settings initViewItem() {
         Settings settings = new Settings();
         settings.setKey(Constants.Settings.WEB_SIZE_VIEW_COUNT);

@@ -13,8 +13,11 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.oldbai.halfmoon.service.UserService;
 import com.oldbai.halfmoon.util.Constants;
 import com.oldbai.halfmoon.util.Utils;
+import com.oldbai.halfmoon.vo.ArticleView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
 
 /**
  * <p>
@@ -78,12 +81,79 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         String state = comment.getState();
         if (Constants.Comment.STATE_PUBLISH.equals(state)) {
             comment.setState(Constants.Comment.STATE_TOP);
+            commentMapper.updateById(comment);
             return ResponseResult.SUCCESS("置顶成功.");
         } else if (Constants.Comment.STATE_TOP.equals(state)) {
             comment.setState(Constants.Comment.STATE_PUBLISH);
+            commentMapper.updateById(comment);
             return ResponseResult.SUCCESS("取消置顶.");
         } else {
             return ResponseResult.FAILED("评论状态非法.");
         }
+    }
+
+    /**
+     * 发表评论
+     *
+     * @param comment 评论
+     * @return
+     */
+    @Override
+    public ResponseResult postComment(Comment comment) {
+        //检查用户是否有登录
+        User sobUser = userService.checkUser();
+        if (sobUser == null) {
+            return ResponseResult.NO_LOGIN();
+        }
+        //检查内容
+        String articleId = comment.getArticleId();
+        if (StringUtils.isEmpty(articleId)) {
+            return ResponseResult.FAILED("文章ID不可以为空.");
+        }
+        ArticleView article = articleViewMapper.selectById(articleId);
+        if (article == null) {
+            return ResponseResult.FAILED("文章不存在.");
+        }
+        String content = comment.getContent();
+        if (StringUtils.isEmpty(content)) {
+            return ResponseResult.FAILED("评论内容不可以为空.");
+        }
+        if (StringUtils.isEmpty(comment.getState())){
+            comment.setState("1");
+        }
+        //补全内容
+        comment.setUserAvatar(sobUser.getAvatar());
+        comment.setUserName(sobUser.getUserName());
+        comment.setUserId(sobUser.getId());
+        //保存入库
+        commentMapper.insert(comment);
+        //返回结果
+        return ResponseResult.SUCCESS("评论成功");
+    }
+
+    /**
+     * 获取文章的评论
+     * 评论的排序策略：
+     * 最基本的就按时间排序-->升序和降序-->先发表的在前面或者后发表的在前面
+     * <p>
+     * 置顶的：一定在前最前面
+     * <p>
+     * 后发表的：前单位时间内会排在前面，过了此单位时间，会按点赞量和发表时间进行排序
+     *
+     * @param articleId
+     * @param page
+     * @param size
+     * @return
+     */
+    @Override
+    public ResponseResult listCommentByArticleId(String articleId, int page, int size) {
+        page = Utils.getPage(page);
+        size = Utils.getSize(size);
+        Page<Comment> commentPage = new Page<>(page, size);
+        QueryWrapper<Comment> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("state", "create_time");
+        Page<Comment> all = commentMapper.selectPage(commentPage, queryWrapper);
+
+        return ResponseResult.SUCCESS("评论列表获取成功.", all);
     }
 }

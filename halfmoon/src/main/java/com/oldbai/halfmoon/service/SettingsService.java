@@ -23,4 +23,6 @@ public interface SettingsService extends IService<Settings> {
     ResponseResult putSeoInfo(String keywords, String description);
 
     ResponseResult getSizeViewCount();
+
+    void updateViewCount();
 }
