@@ -6,6 +6,9 @@ spring:
     password: root
     url: jdbc:mysql://192.168.30.133:3306/halfmoon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    solr:
+      host: http://47.106.234.164:8983/solr/Ik_core
 server:
   port: 8078
 

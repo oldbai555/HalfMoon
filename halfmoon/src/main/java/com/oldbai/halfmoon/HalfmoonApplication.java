@@ -1,6 +1,7 @@
 package com.oldbai.halfmoon;
 
 import com.oldbai.halfmoon.util.SnowflakeIdWorker;
+import org.apache.solr.client.solrj.SolrClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -19,4 +20,6 @@ public class HalfmoonApplication {
     public SnowflakeIdWorker createIdWorker() {
         return new SnowflakeIdWorker(0, 1);
     }
+
+
 }
