@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  solr:
+    build: ikanalyzer-solr5
+    restart: always
+    container_name: sob_blog_solr
+    ports:
+      - 8983:8983
