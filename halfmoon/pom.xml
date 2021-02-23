@@ -17,6 +17,17 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <!--markdown to html-->
+        <dependency>
+            <groupId>com.vladsch.flexmark</groupId>
+            <artifactId>flexmark-all</artifactId>
+            <version>0.50.44</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.12.1</version>
+        </dependency>
         <!--        solr-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

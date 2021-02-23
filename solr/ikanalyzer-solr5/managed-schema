@@ -1171,8 +1171,8 @@
 	
 	<!--自定义字段-->
 	<field name="blog_view_count" type="int" indexed="true" stored="true" required="true" multiValued="false" />
-	<field name="blog_title" type="string" indexed="true" stored="true" required="true" multiValued="false" />
-	<field name="blog_content" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+	<field name="blog_title" type="text_cn" indexed="true" stored="true" required="true" multiValued="false" />
+	<field name="blog_content" type="text_cn" indexed="true" stored="true" required="true" multiValued="false" />
 	<field name="blog_create_timme" type="date" indexed="true" stored="true" required="true" multiValued="false" />
 	<field name="blog_labels" type="string" indexed="true" stored="true" required="true" multiValued="false" />
 	<field name="blog_url" type="string" indexed="true" stored="true" required="true" multiValued="false" />

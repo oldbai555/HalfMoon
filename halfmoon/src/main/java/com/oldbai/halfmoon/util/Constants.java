@@ -116,6 +116,8 @@ public interface Constants {
         String STATE_TOP = "3";
         int TITLE_MAX_LENGTH = 128;
         int SUMMARY_MAX_LENGTH = 256;
+        String TYPE_MARKDOWN = "1";
+        String TYPE_RICH_TEXT = "0";
     }
 
     /**
