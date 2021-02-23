@@ -2,7 +2,11 @@ package com.oldbai.halfmoon.solr;
 
 import com.oldbai.halfmoon.entity.Article;
 import com.oldbai.halfmoon.mapper.ArticleMapper;
+import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.util.Constants;
+import com.oldbai.halfmoon.util.Utils;
+import com.oldbai.halfmoon.vo.PageList;
+import com.oldbai.halfmoon.vo.SearchResult;
 import com.vladsch.flexmark.ext.jekyll.tag.JekyllTagExtension;
 import com.vladsch.flexmark.ext.tables.TablesExtension;
 import com.vladsch.flexmark.ext.toc.SimTocExtension;
@@ -13,16 +17,20 @@ import com.vladsch.flexmark.util.ast.Node;
 import com.vladsch.flexmark.util.data.MutableDataSet;
 import io.swagger.annotations.Api;
 import org.apache.solr.client.solrj.SolrClient;
+import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrInputDocument;
 import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class SolrTestService {
@@ -150,5 +158,4 @@ public class SolrTestService {
             }
         }
     }
-
 }

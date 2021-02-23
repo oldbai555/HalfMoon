@@ -35,6 +35,4 @@ public interface ArticleService extends IService<Article> {
     ResponseResult listRecommendArticle(String articleId, int size);
 
     ResponseResult listArticlesByLabel(int page, int size, String label);
-
-    ResponseResult doSearch(String keyword, int page, int size, String categoryId, Integer sort);
 }

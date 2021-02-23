@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.controller.portal;
 
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.ArticleService;
+import com.oldbai.halfmoon.solr.SolrService;
 import com.oldbai.halfmoon.solr.SolrTestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Api(description = "门户-搜索")
 public class SearchPortalController {
+
+    @Autowired
+    private SolrService solrService;
 
     @Autowired
     private SolrTestService solrTestService;
@@ -58,6 +62,6 @@ public class SearchPortalController {
                                             @RequestParam(value = "categoryId", required = false) String categoryId,
                                             @RequestParam(value = "sort", required = false) Integer sort) {
 
-        return articleService.doSearch(keyword, page, size, categoryId, sort);
+        return solrService.doSearch(keyword, page, size, categoryId, sort);
     }
 }
