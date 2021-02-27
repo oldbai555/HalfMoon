@@ -56,7 +56,7 @@ public interface Constants {
     }
 
     /**
-     * redis 时间类
+     * JWT 时间类
      * 单位 毫秒
      */
     interface RedisTime {
@@ -118,6 +118,8 @@ public interface Constants {
         int SUMMARY_MAX_LENGTH = 256;
         String TYPE_MARKDOWN = "1";
         String TYPE_RICH_TEXT = "0";
+        String KEY_ARTICLE_CACHE = "key_article_cache_";
+        String KEY_ARTICLE_VIEW_COUNT = "key_article_view_count_";
     }
 
     /**

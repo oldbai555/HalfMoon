@@ -1,19 +1,49 @@
 package com.oldbai.halfmoon.solr;
 
+import com.oldbai.halfmoon.entity.Article;
 import com.oldbai.halfmoon.response.ResponseResult;
+import com.oldbai.halfmoon.util.Constants;
 import com.oldbai.halfmoon.util.Utils;
 import com.oldbai.halfmoon.vo.PageList;
 import com.oldbai.halfmoon.vo.SearchResult;
+import com.vladsch.flexmark.ext.jekyll.tag.JekyllTagExtension;
+import com.vladsch.flexmark.ext.tables.TablesExtension;
+import com.vladsch.flexmark.ext.toc.SimTocExtension;
+import com.vladsch.flexmark.ext.toc.TocExtension;
+import com.vladsch.flexmark.html.HtmlRenderer;
+import com.vladsch.flexmark.parser.Parser;
+import com.vladsch.flexmark.util.ast.Node;
+import com.vladsch.flexmark.util.data.MutableDataSet;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.response.QueryResponse;
+import org.apache.solr.common.SolrInputDocument;
+import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * solr服务类
+ * 时机
+ * <p>
+ * 搜索内容添加：
+ * 文章发表的时候，也就是状态为 1
+ * <p>
+ * 搜索内容删除：
+ * 文章删除，包括物理删除和逻辑删除
+ * <p>
+ * 搜索内容更新：
+ * TODO
+ * 阅读量更新
+ */
 @Service
 public class SolrServiceImpl implements SolrService {
 
@@ -109,4 +139,77 @@ public class SolrServiceImpl implements SolrService {
         }
         return ResponseResult.FAILED("搜索失败，请稍后重试.");
     }
+
+    @Override
+    public void addArticle(Article article) {
+        SolrInputDocument doc = new SolrInputDocument();
+        doc.addField("id", article.getId());
+        if (StringUtils.isEmpty(article.getViewCount())) {
+            article.setViewCount(0);
+        }
+        doc.addField("blog_view_count", article.getViewCount());
+        doc.addField("blog_title", article.getTitle());
+        //对内容进行处理，去掉标签，提取纯文本内容
+        //第一种是由markdown写的内容 ==> type = 1
+        //第二种是有富文本内容 ==> type = 0
+        //如果type等于 1 ，需要转换成 html
+        //再由 html 转换成 纯文本
+        //如果type等于 0 ，提取出纯文本
+        String type = article.getType();
+        String html = null;
+        if (Constants.Article.TYPE_MARKDOWN.equals(type)) {
+            //转成HTML
+            // markdown to html
+            MutableDataSet options = new MutableDataSet().set(Parser.EXTENSIONS, Arrays.asList(
+                    TablesExtension.create(),
+                    JekyllTagExtension.create(),
+                    TocExtension.create(),
+                    SimTocExtension.create()
+            ));
+            Parser parser = Parser.builder(options).build();
+            HtmlRenderer renderer = HtmlRenderer.builder(options).build();
+            Node document = parser.parse(article.getContent());
+            html = renderer.render(document);
+        } else if (Constants.Article.TYPE_RICH_TEXT.equals(type)) {
+            //富文本
+            html = article.getContent();
+        }
+        //到了这里不管是什么都变成了 html
+        //HTML转Text
+        String content = Jsoup.parse(html).text();
+        doc.addField("blog_content", content);
+        if (StringUtils.isEmpty(article.getCreateTime())) {
+            article.setCreateTime(new Date());
+        }
+        doc.addField("blog_create_timme", article.getCreateTime());
+        doc.addField("blog_labels", article.getLabels());
+        doc.addField("blog_url", "null");
+        doc.addField("blog_category_id", article.getCategoryId());
+        try {
+            solrClient.add(doc);
+            solrClient.commit();
+        } catch (SolrServerException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void deleteArticle(String id) {
+        //单独删除一条
+        try {
+            solrClient.deleteById(id);
+            solrClient.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void updateArticle(Article article) {
+        this.addArticle(article);
+    }
+
+
 }

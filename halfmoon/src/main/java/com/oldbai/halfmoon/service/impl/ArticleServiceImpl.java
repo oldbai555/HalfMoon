@@ -4,6 +4,7 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.crypto.BCUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.google.gson.Gson;
 import com.oldbai.halfmoon.entity.Article;
 import com.oldbai.halfmoon.entity.Comment;
 import com.oldbai.halfmoon.entity.Labels;
@@ -13,7 +14,9 @@ import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.ArticleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.oldbai.halfmoon.service.UserService;
+import com.oldbai.halfmoon.solr.SolrService;
 import com.oldbai.halfmoon.util.Constants;
+import com.oldbai.halfmoon.util.RedisUtil;
 import com.oldbai.halfmoon.util.Utils;
 import com.oldbai.halfmoon.vo.ArticleView;
 import com.oldbai.halfmoon.vo.PageList;
@@ -44,17 +47,21 @@ import java.util.*;
 public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements ArticleService {
 
     @Autowired
-    ArticleMapper articleMapper;
+    private RedisUtil redisUtil;
     @Autowired
-    ArticleViewMapper articleViewMapper;
+    private ArticleMapper articleMapper;
     @Autowired
-    CommentMapper commentMapper;
+    private ArticleViewMapper articleViewMapper;
     @Autowired
-    LabelsMapper labelsMapper;
+    private CommentMapper commentMapper;
     @Autowired
-    UserService userService;
+    private LabelsMapper labelsMapper;
     @Autowired
-    private SolrClient solrClient;
+    private UserService userService;
+    @Autowired
+    private SolrService solrService;
+    @Autowired
+    private Gson gson;
 
     /**
      * {
@@ -150,6 +157,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         //保存到数据库里
         articleMapper.updateById(article);
         //TODO:保存到搜索的数据库里
+        solrService.addArticle(article);
         //打散标签，入库，统计
         this.setupLabels(article.getLabels());
         //返回结果,只有一种case使用到这个ID
@@ -188,6 +196,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         commentMapper.delete(queryWrapper);
         int result = articleMapper.deleteById(articleId);
         if (result > 0) {
+            solrService.deleteArticle(articleId);
             return ResponseResult.SUCCESS("文章删除成功.");
         }
         return ResponseResult.FAILED("文章不存在.");
@@ -261,6 +270,15 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
      * 如果有审核机制：审核中的文章-->只有管理员和作者自己可以获取
      * 有草稿、删除、置顶的、已经发布的
      * 删除的不能获取、其他都可以获取
+     * <p>
+     * 统计文章的阅读量：
+     * 精确点，对ip 进行处理
+     * 对同一个 ip 那就不保存
+     * <p>
+     * 先把阅读量保存到 redis 中，文章也会在 redis中缓存一份。
+     * 比如说：
+     * 十分钟，当文章没的时候，从 mysql 中取，同时更新阅读量
+     * 十分钟后，在下一次访问的时候更新一次。
      *
      * @param articleId
      * @return
@@ -268,8 +286,27 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     @Transactional
     @Override
     public ResponseResult getArticleById(String articleId) {
-        //查询出文章
-        Article article = articleMapper.selectById(articleId);
+        //先从redis里获取文章
+        //如果没有再从mysql中取文章
+        Article article = (Article) redisUtil.get(Constants.Article.KEY_ARTICLE_CACHE + articleId);
+        if (!StringUtils.isEmpty(article)) {
+            //阅读量 + 1
+            Integer count = (Integer) redisUtil.get(Constants.Article.KEY_ARTICLE_VIEW_COUNT + articleId);
+            if (StringUtils.isEmpty(count)) {
+                count = 1;
+            } else {
+                count = count + 1;
+            }
+            redisUtil.set(Constants.Article.KEY_ARTICLE_VIEW_COUNT + articleId, count);
+            article.setViewCount(count);
+            articleMapper.updateById(article);
+            //可以返回
+            return ResponseResult.SUCCESS("获取文章成功.", article);
+        } else {
+            //查询出文章
+            article = articleMapper.selectById(articleId);
+        }
+
         if (article == null) {
             return ResponseResult.FAILED("文章不存在.");
         }
@@ -277,6 +314,20 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         String state = article.getState();
         if (Constants.Article.STATE_PUBLISH.equals(state) ||
                 Constants.Article.STATE_TOP.equals(state)) {
+            //正常发布的状态才能增加阅读量
+            redisUtil.set(Constants.Article.KEY_ARTICLE_CACHE + articleId, article, Constants.TimeValue.MIN * 5);
+            //设置阅读量的Key ，先从redis里面拿，如果redis里面没有，就从 article 中获取，并且添加到redis中
+            Integer viewCount = (Integer) redisUtil.get(Constants.Article.KEY_ARTICLE_VIEW_COUNT + articleId);
+            if (StringUtils.isEmpty(viewCount)) {
+                int newCount = article.getViewCount() + 1;
+                redisUtil.set(Constants.Article.KEY_ARTICLE_VIEW_COUNT + article.getId(), newCount);
+            } else {
+                //有的话更新到数据库中
+                int newCount = viewCount;
+                article.setViewCount(newCount);
+            }
+            articleMapper.updateById(article);
+            solrService.updateArticle(article);
             //可以返回
             return ResponseResult.SUCCESS("获取文章成功.", article);
         }

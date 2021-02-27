@@ -23,37 +23,7 @@ public class SearchPortalController {
 
     @Autowired
     private ArticleService articleService;
-
-    @GetMapping("/test/solr/add")
-    public ResponseResult solrAddTest() {
-        solrTestService.solrAdd();
-        return ResponseResult.SUCCESS("添加成功");
-    }
-
-    @GetMapping("/test/solr/addAll")
-    public ResponseResult solrAddAllTest() {
-        solrTestService.importAll();
-        return ResponseResult.SUCCESS("添加所有成功");
-    }
-
-    @GetMapping("/test/solr/update")
-    public ResponseResult solrUpdateTest() {
-        solrTestService.solrUpdate();
-        return ResponseResult.SUCCESS("更新成功");
-    }
-
-    @GetMapping("/test/solr/delete")
-    public ResponseResult solrDeleteTest() {
-        solrTestService.solrDelete();
-        return ResponseResult.SUCCESS("删除成功");
-    }
-
-    @GetMapping("/test/solr/deleteAll")
-    public ResponseResult solrDeleteAllTest() {
-        solrTestService.solrDeleteAll();
-        return ResponseResult.SUCCESS("删除所有成功");
-    }
-
+    
     @ApiOperation("搜索功能")
     @GetMapping("/solr/select")
     public ResponseResult solrSelectAllTest(@RequestParam("keyword") String keyword,
