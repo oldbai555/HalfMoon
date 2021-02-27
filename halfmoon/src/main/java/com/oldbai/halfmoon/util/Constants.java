@@ -126,7 +126,9 @@ public interface Constants {
      * 评论的一个通用处理
      */
     interface Comment {
+
         String STATE_PUBLISH = "1";
         String STATE_TOP = "3";
+        String KEY_COMMENT_FIRST_PAGE = "key_comment_first_page_";
     }
 }

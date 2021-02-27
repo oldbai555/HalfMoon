@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author oldbai
@@ -29,9 +29,9 @@ import java.util.List;
 public class FriendLinkServiceImpl extends ServiceImpl<FriendLinkMapper, FriendLink> implements FriendLinkService {
 
     @Autowired
-    FriendLinkMapper friendLinkMapper;
+    private FriendLinkMapper friendLinkMapper;
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     /**
      * 添加友情连接
@@ -128,7 +128,7 @@ public class FriendLinkServiceImpl extends ServiceImpl<FriendLinkMapper, FriendL
         if (sobUser == null || !Constants.User.ROLE_ADMIN.equals(sobUser.getRoles())) {
             //只能获取到正常的category
             friendLinkQueryWrapper = new QueryWrapper<>();
-            friendLinkQueryWrapper.eq("state","1").orderByDesc("update_time");
+            friendLinkQueryWrapper.eq("state", "1").orderByDesc("update_time");
             all = friendLinkMapper.selectList(friendLinkQueryWrapper);
         } else {
             //查询

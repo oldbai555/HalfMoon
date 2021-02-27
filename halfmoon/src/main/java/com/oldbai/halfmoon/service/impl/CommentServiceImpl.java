@@ -12,6 +12,8 @@ import com.oldbai.halfmoon.service.CommentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.oldbai.halfmoon.service.UserService;
 import com.oldbai.halfmoon.util.Constants;
+import com.oldbai.halfmoon.util.RedisUtil;
+import com.oldbai.halfmoon.util.TaskService;
 import com.oldbai.halfmoon.util.Utils;
 import com.oldbai.halfmoon.vo.ArticleView;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +39,10 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     private ImagesMapper imagesMapper;
     @Autowired
     private ArticleViewMapper articleViewMapper;
+    @Autowired
+    private RedisUtil redisUtil;
+    @Autowired
+    TaskService taskService;
 
     @Override
     public ResponseResult deleteCommentById(String commentId) {
@@ -118,7 +124,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         if (StringUtils.isEmpty(content)) {
             return ResponseResult.FAILED("评论内容不可以为空.");
         }
-        if (StringUtils.isEmpty(comment.getState())){
+        if (StringUtils.isEmpty(comment.getState())) {
             comment.setState("1");
         }
         //补全内容
@@ -127,6 +133,8 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         comment.setUserId(sobUser.getId());
         //保存入库
         commentMapper.insert(comment);
+        //清除对应文章的评论
+        redisUtil.del(Constants.Comment.KEY_COMMENT_FIRST_PAGE + articleId);
         //返回结果
         return ResponseResult.SUCCESS("评论成功");
     }
@@ -149,11 +157,24 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     public ResponseResult listCommentByArticleId(String articleId, int page, int size) {
         page = Utils.getPage(page);
         size = Utils.getSize(size);
-        Page<Comment> commentPage = new Page<>(page, size);
+        //如果是第一页评论，先从缓存中拿
+        Page<Comment> commentPage = null;
+        if (page == 1) {
+            //如果有
+            commentPage = (Page<Comment>) redisUtil.get(Constants.Comment.KEY_COMMENT_FIRST_PAGE + articleId);
+            if (!StringUtils.isEmpty(commentPage)) {
+                return ResponseResult.SUCCESS("评论列表获取成功.", commentPage);
+            }
+        }
+        //如果没有
+        commentPage = new Page<>(page, size);
         QueryWrapper<Comment> queryWrapper = new QueryWrapper<>();
-        queryWrapper.orderByDesc("state", "create_time");
+        queryWrapper.orderByDesc("state", "create_time").eq("article_id", articleId);
         Page<Comment> all = commentMapper.selectPage(commentPage, queryWrapper);
-
+        //保存一份到缓存中
+        if (page == 1) {
+            redisUtil.set(Constants.Comment.KEY_COMMENT_FIRST_PAGE + articleId, all, Constants.TimeValue.DAY);
+        }
         return ResponseResult.SUCCESS("评论列表获取成功.", all);
     }
 }

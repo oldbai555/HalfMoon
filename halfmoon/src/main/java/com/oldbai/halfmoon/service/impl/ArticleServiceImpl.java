@@ -196,6 +196,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         commentMapper.delete(queryWrapper);
         int result = articleMapper.deleteById(articleId);
         if (result > 0) {
+            redisUtil.del(Constants.Article.KEY_ARTICLE_CACHE + articleId);
+            redisUtil.del(Constants.Article.KEY_ARTICLE_VIEW_COUNT + articleId);
             solrService.deleteArticle(articleId);
             return ResponseResult.SUCCESS("文章删除成功.");
         }
