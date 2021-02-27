@@ -59,6 +59,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         if (sobUser.getId().equals(comment.getUserId()) ||
                 //登录要判断角色
                 Constants.User.ROLE_ADMIN.equals(sobUser.getRoles())) {
+            redisUtil.del(Constants.Comment.KEY_COMMENT_FIRST_PAGE + comment.getArticleId());
             commentMapper.deleteById(commentId);
             return ResponseResult.SUCCESS("评论删除成功.");
         } else {
@@ -173,7 +174,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         Page<Comment> all = commentMapper.selectPage(commentPage, queryWrapper);
         //保存一份到缓存中
         if (page == 1) {
-            redisUtil.set(Constants.Comment.KEY_COMMENT_FIRST_PAGE + articleId, all, Constants.TimeValue.DAY);
+            redisUtil.set(Constants.Comment.KEY_COMMENT_FIRST_PAGE + articleId, all, Constants.TimeValue.HOUR);
         }
         return ResponseResult.SUCCESS("评论列表获取成功.", all);
     }
