@@ -1,5 +1,6 @@
 package com.oldbai.halfmoon.controller.portal;
 
+import com.oldbai.halfmoon.interceptor.CheckTooFrequentCommit;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.ArticleService;
 import com.oldbai.halfmoon.service.CategoryService;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @Api(description = "门户-文章")
 @RestController
 @CrossOrigin
-@RequestMapping("/portal/article")
+@RequestMapping("/halfmoon/portal/article")
 public class ArticlePortalController {
     @Autowired
     ArticleService articleService;
@@ -35,6 +36,7 @@ public class ArticlePortalController {
      * @param articleId
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("获取文章详情")
     @GetMapping("/get_article/{articleId}")
     public ResponseResult getArticle(@PathVariable("articleId") String articleId) {

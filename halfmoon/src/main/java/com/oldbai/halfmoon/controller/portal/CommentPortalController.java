@@ -1,6 +1,7 @@
 package com.oldbai.halfmoon.controller.portal;
 
 import com.oldbai.halfmoon.entity.Comment;
+import com.oldbai.halfmoon.interceptor.CheckTooFrequentCommit;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.CommentService;
 import io.swagger.annotations.Api;
@@ -8,9 +9,12 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author 老白
+ */
 @Api(description = "门户-评论")
 @RestController
-@RequestMapping("/portal/comment")
+@RequestMapping("/halfmoon/portal/comment")
 @CrossOrigin
 public class CommentPortalController {
     @Autowired
@@ -21,6 +25,7 @@ public class CommentPortalController {
      *
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("添加评论")
     @PostMapping("/add_comment")
     public ResponseResult addComment(@RequestBody Comment comment) {

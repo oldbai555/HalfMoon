@@ -3,6 +3,7 @@ package com.oldbai.halfmoon.controller.admin;
 
 import com.oldbai.halfmoon.entity.FriendLink;
 import com.oldbai.halfmoon.entity.Images;
+import com.oldbai.halfmoon.interceptor.CheckTooFrequentCommit;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.FriendLinkService;
 import com.oldbai.halfmoon.service.ImagesService;

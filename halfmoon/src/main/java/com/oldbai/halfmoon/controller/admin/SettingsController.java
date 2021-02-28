@@ -1,6 +1,7 @@
 package com.oldbai.halfmoon.controller.admin;
 
 
+import com.oldbai.halfmoon.interceptor.CheckTooFrequentCommit;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.SettingsService;
 import io.swagger.annotations.Api;
@@ -47,6 +48,7 @@ public class SettingsController {
      *
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("更新网站标题")
     @PreAuthorize("@permission.adminPermission()")
     @GetMapping("/updateTitle/{title}")
@@ -80,6 +82,7 @@ public class SettingsController {
      *
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("修改网站信息")
     @PreAuthorize("@permission.adminPermission()")
     @PostMapping("/update/seo")

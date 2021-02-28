@@ -42,6 +42,7 @@ public class ImgLooperController {
      *
      * @return
      */
+
     @ApiOperation("添加轮播图")
     @PreAuthorize("@permission.adminPermission()")
     @PostMapping("/add_loop")

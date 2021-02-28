@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.controller.admin;
 
 
 import com.oldbai.halfmoon.entity.Article;
+import com.oldbai.halfmoon.interceptor.CheckTooFrequentCommit;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.ArticleService;
 import io.swagger.annotations.Api;
@@ -61,6 +62,7 @@ public class ArticleController {
      * @param article
      * @return
      */
+    @CheckTooFrequentCommit
     @PreAuthorize("@permission.adminPermission()")
     @ApiOperation("发表文章")
     @PostMapping("/add_article")
@@ -93,6 +95,7 @@ public class ArticleController {
      * @param article   文章
      * @return
      */
+    @CheckTooFrequentCommit
     @PreAuthorize("@permission.adminPermission()")
     @ApiOperation("更新文章")
     @PostMapping("/update/{articleId}")

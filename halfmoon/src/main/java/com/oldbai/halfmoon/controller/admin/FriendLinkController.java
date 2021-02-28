@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.controller.admin;
 
 
 import com.oldbai.halfmoon.entity.FriendLink;
+import com.oldbai.halfmoon.interceptor.CheckTooFrequentCommit;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.FriendLinkService;
 import io.swagger.annotations.Api;
@@ -32,6 +33,7 @@ public class FriendLinkController {
      *
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("添加友情链接")
     @PreAuthorize("@permission.adminPermission()")
     @PostMapping("/upload")
@@ -58,6 +60,7 @@ public class FriendLinkController {
      * @param friendLinkId
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("更新友情链接")
     @PreAuthorize("@permission.adminPermission()")
     @PostMapping("/update/{friendLinkId}")

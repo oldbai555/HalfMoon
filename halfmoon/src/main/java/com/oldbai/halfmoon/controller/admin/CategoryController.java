@@ -2,6 +2,7 @@ package com.oldbai.halfmoon.controller.admin;
 
 
 import com.oldbai.halfmoon.entity.Category;
+import com.oldbai.halfmoon.interceptor.CheckTooFrequentCommit;
 import com.oldbai.halfmoon.mapper.CategoryMapper;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.CategoryService;
@@ -33,6 +34,7 @@ public class CategoryController {
      *
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("添加分类")
     @PreAuthorize("@permission.adminPermission()")
     @PostMapping("/add_categories")
@@ -60,6 +62,7 @@ public class CategoryController {
      * @param categoryId
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("更新分类")
     @PreAuthorize("@permission.adminPermission()")
     @PostMapping("/update_categories/{categoryId}")

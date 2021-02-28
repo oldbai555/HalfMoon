@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(description = "门户-网站")
 @RestController
 @CrossOrigin
-@RequestMapping("/portal/web_size_info")
+@RequestMapping("/halfmoon/portal/web_size_info")
 public class WebSettingController {
 
     @Autowired

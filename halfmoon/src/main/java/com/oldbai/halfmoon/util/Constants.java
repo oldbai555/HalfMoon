@@ -37,6 +37,8 @@ public interface Constants {
         int COOKIE_TOKE_AGE = 60 * 60;
         //TODO redis存活时间 1 天
         int REDIS_AGE_DAY = 60 * 60;
+        //判断是否重复提交
+        String KEY_COMMIT_TOKEN_RECORD = "key_commit_token_record_";
     }
 
     /**
@@ -75,6 +77,7 @@ public interface Constants {
      */
     interface TimeValue {
         int MIN = 60;
+        int HALFT_MIN = 15;
         int HOUR = 60 * MIN;
         int DAY = 24 * HOUR;
         int WEEK = 7 * DAY;
@@ -118,8 +121,11 @@ public interface Constants {
         int SUMMARY_MAX_LENGTH = 256;
         String TYPE_MARKDOWN = "1";
         String TYPE_RICH_TEXT = "0";
+        //文章缓存的key
         String KEY_ARTICLE_CACHE = "key_article_cache_";
+        //文章浏览次数缓存的key
         String KEY_ARTICLE_VIEW_COUNT = "key_article_view_count_";
+        //第一页缓存的key
         String KEY_ARTICLE_FIRST_PAGE = "key_article_first_page_";
     }
 
@@ -130,6 +136,7 @@ public interface Constants {
 
         String STATE_PUBLISH = "1";
         String STATE_TOP = "3";
+        //第一页缓存的key
         String KEY_COMMENT_FIRST_PAGE = "key_comment_first_page_";
     }
 }
