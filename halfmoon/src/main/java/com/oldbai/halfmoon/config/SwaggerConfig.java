@@ -28,6 +28,7 @@ public class SwaggerConfig {
     @Bean
     public Docket portalApi() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .enable(false)
                 .apiInfo(portalApiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.portal"))
@@ -57,6 +58,7 @@ public class SwaggerConfig {
     @Bean
     public Docket adminApi() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .enable(false)
                 .apiInfo(adminApiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.admin"))
@@ -82,6 +84,7 @@ public class SwaggerConfig {
     @Bean
     public Docket UserApi() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .enable(false)
                 .apiInfo(userApiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.user"))

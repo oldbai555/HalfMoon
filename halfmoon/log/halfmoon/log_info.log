@@ -1,0 +1,58 @@
+2021-02-28 16:57:08.444  INFO 3380 --- [main] c.o.halfmoon.HalfmoonApplicationTests    : Starting HalfmoonApplicationTests on 老白的炸鸡堡垒 with PID 3380 (started by 老白 in G:\MyJava\HalfMoon\halfmoon)
+2021-02-28 16:57:08.446  INFO 3380 --- [main] c.o.halfmoon.HalfmoonApplicationTests    : No active profile set, falling back to default profiles: default
+2021-02-28 16:57:09.431  INFO 3380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-28 16:57:09.433  INFO 3380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-02-28 16:57:09.471  INFO 3380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2021-02-28 16:57:09.479  INFO 3380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-28 16:57:09.480  INFO 3380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-02-28 16:57:09.497  INFO 3380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Solr repository interfaces.
+2021-02-28 16:57:09.947  INFO 3380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$4c718a15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-28 16:57:09.971  INFO 3380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@61d60e38' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-28 16:57:09.982  INFO 3380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-28 16:57:13.716  INFO 3380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-02-28 16:57:13.728  INFO 3380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-02-28 16:57:13.811  INFO 3380 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7ee0973c-f3a1-429d-a7ef-a179a7e80c7d
+
+2021-02-28 16:57:13.998  INFO 3380 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c2be147, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b5623b4, org.springframework.security.web.header.HeaderWriterFilter@19d13d04, org.springframework.security.web.authentication.logout.LogoutFilter@43094e0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33239d72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2dcbf825, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dddcd91, org.springframework.security.web.session.SessionManagementFilter@61d61b0e, org.springframework.security.web.access.ExceptionTranslationFilter@147ad4bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@603faaad]
+2021-02-28 16:57:14.061  INFO 3380 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-28 16:57:15.062  INFO 3380 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-02-28 16:57:15.082  INFO 3380 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-02-28 16:57:15.117  INFO 3380 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-28 16:57:15.293  INFO 3380 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-02-28 16:57:15.322  INFO 3380 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-28 16:57:15.365  INFO 3380 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-28 16:57:15.379  INFO 3380 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-02-28 16:57:15.382  INFO 3380 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-02-28 16:57:15.399  INFO 3380 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-02-28 16:57:15.403  INFO 3380 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-02-28 16:57:15.420  INFO 3380 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-02-28 16:57:15.450  INFO 3380 --- [main] c.o.halfmoon.HalfmoonApplicationTests    : Started HalfmoonApplicationTests in 7.739 seconds (JVM running for 8.899)
+2021-02-28 16:57:16.033  INFO 3380 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-02-28 17:27:31.376  INFO 13684 --- [main] c.o.halfmoon.HalfmoonApplicationTests    : Starting HalfmoonApplicationTests on 老白的炸鸡堡垒 with PID 13684 (started by 老白 in G:\MyJava\HalfMoon\halfmoon)
+2021-02-28 17:27:31.379  INFO 13684 --- [main] c.o.halfmoon.HalfmoonApplicationTests    : No active profile set, falling back to default profiles: default
+2021-02-28 17:27:32.328  INFO 13684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-28 17:27:32.330  INFO 13684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-02-28 17:27:32.369  INFO 13684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2021-02-28 17:27:32.380  INFO 13684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-28 17:27:32.381  INFO 13684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-02-28 17:27:32.399  INFO 13684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Solr repository interfaces.
+2021-02-28 17:27:32.865  INFO 13684 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$4c718a15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-28 17:27:32.892  INFO 13684 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@61d60e38' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-28 17:27:32.905  INFO 13684 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-28 17:27:36.546  INFO 13684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-02-28 17:27:36.554  INFO 13684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-02-28 17:27:36.634  INFO 13684 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2e00207e-6836-49a4-93d9-dae62d0400ee
+
+2021-02-28 17:27:36.798  INFO 13684 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e344f14, org.springframework.security.web.context.SecurityContextPersistenceFilter@646bf8a6, org.springframework.security.web.header.HeaderWriterFilter@6655f3cd, org.springframework.security.web.authentication.logout.LogoutFilter@2d5d001f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8c34631, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@97cb8dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d117280, org.springframework.security.web.session.SessionManagementFilter@2979c6ef, org.springframework.security.web.access.ExceptionTranslationFilter@3dc39412, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f9236d8]
+2021-02-28 17:27:36.854  INFO 13684 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-28 17:27:37.735  INFO 13684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-02-28 17:27:37.753  INFO 13684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-02-28 17:27:37.753  INFO 13684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
+2021-02-28 17:27:37.754  INFO 13684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
+2021-02-28 17:27:37.754  INFO 13684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
+2021-02-28 17:27:37.764  INFO 13684 --- [main] c.o.halfmoon.HalfmoonApplicationTests    : Started HalfmoonApplicationTests in 6.741 seconds (JVM running for 7.632)
+2021-02-28 17:27:38.167  INFO 13684 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
