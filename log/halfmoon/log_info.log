@@ -603,3 +603,6 @@ Using generated security password: 002f0359-326f-4b79-9d5d-c6ff7e010d08
 2021-02-28 16:13:50.726  INFO 4256 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
 2021-02-28 16:13:50.869  INFO 4256 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : createNew+1
 2021-02-28 16:13:50.938  INFO 4256 --- [http-nio-8078-exec-2] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-02-28 16:28:44.735  INFO 4256 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-02-28 16:28:44.737  INFO 4256 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-28 16:28:44.745  INFO 4256 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
