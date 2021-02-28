@@ -13,7 +13,6 @@ public class HalfmoonApplication {
         SpringApplication.run(HalfmoonApplication.class, args);
     }
 
-
     /**
      * 雪花算法注入
      */
