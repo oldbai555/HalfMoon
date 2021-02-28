@@ -12,7 +12,6 @@ spring:
 server:
   port: 8078
 
-
 mybatis-plus:
   global-config:
     db-config:
