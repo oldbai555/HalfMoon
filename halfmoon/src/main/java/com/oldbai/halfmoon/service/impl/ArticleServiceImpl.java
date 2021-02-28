@@ -162,6 +162,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         this.setupLabels(article.getLabels());
         //返回结果,只有一种case使用到这个ID
         //如果要做程序自动保存成草稿（比如说每30秒保存一次，就需要加上这个ID了，否则会创建多个Item）
+        redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "null");
+        redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + article.getCategoryId());
         return ResponseResult.SUCCESS(Constants.Article.STATE_DRAFT.equals(state) ? "草稿保存成功" :
                 "文章发表成功.", article.getId());
     }
@@ -176,6 +178,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         }
         //入库 并统计
         for (String label : labelList) {
+            redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + label);
             int result = labelsMapper.updateCountByName(label);
             if (result == 0) {
                 Labels targetLabel = new Labels();
@@ -198,6 +201,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         if (result > 0) {
             redisUtil.del(Constants.Article.KEY_ARTICLE_CACHE + articleId);
             redisUtil.del(Constants.Article.KEY_ARTICLE_VIEW_COUNT + articleId);
+            redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "null");
+            redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + article.getCategoryId());
             solrService.deleteArticle(articleId);
             return ResponseResult.SUCCESS("文章删除成功.");
         }
@@ -214,6 +219,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         }
         //入库 并统计
         for (String label : labelList) {
+            redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + label);
             int result = labelsMapper.deleteCountByName(label);
         }
     }
@@ -359,6 +365,12 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         //处理一下size 和page
         page = Utils.getPage(page);
         size = Utils.getSize(size);
+        if (page == 1) {
+            Page<ArticleView> all = (Page<ArticleView>) redisUtil.get(Constants.Article.KEY_ARTICLE_FIRST_PAGE + categoryId);
+            if (!StringUtils.isEmpty(all)) {
+                return ResponseResult.SUCCESS("获取文章列表成功.", all);
+            }
+        }
         //创建分页和排序条件
         QueryWrapper<ArticleView> queryWrapper = new QueryWrapper<>();
         if (!StringUtils.isEmpty(state)) {
@@ -376,6 +388,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         Page<ArticleView> all = articleViewMapper.selectPage(viewPage, queryWrapper);
         //处理查询条件
         //返回结果
+        if (page == 1) {
+            redisUtil.set(Constants.Article.KEY_ARTICLE_FIRST_PAGE + categoryId, all, Constants.TimeValue.DAY);
+        }
         return ResponseResult.SUCCESS("获取文章列表成功.", all);
     }
 
@@ -494,12 +509,22 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     public ResponseResult listArticlesByLabel(int page, int size, String label) {
         page = Utils.getPage(page);
         size = Utils.getSize(size);
+        if (page == 1) {
+            Page<ArticleView> all = (Page<ArticleView>) redisUtil.get(Constants.Article.KEY_ARTICLE_FIRST_PAGE + label);
+            if (!StringUtils.isEmpty(all)) {
+                return ResponseResult.SUCCESS("获取文章列表成功.", all);
+            }
+        }
         Page<ArticleView> articleViewPage = new Page<>(page, size);
         QueryWrapper<ArticleView> wrapper = new QueryWrapper<>();
         wrapper.like("labels", label)
                 .and(i -> i.eq("state", "1").or().eq("state", "3"))
                 .orderByDesc("create_time");
         Page<ArticleView> all = articleViewMapper.selectPage(articleViewPage, wrapper);
+        //返回结果
+        if (page == 1) {
+            redisUtil.set(Constants.Article.KEY_ARTICLE_FIRST_PAGE + label, all, Constants.TimeValue.DAY);
+        }
         return ResponseResult.SUCCESS("获取文章列表成功.", all);
     }
 

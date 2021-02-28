@@ -120,6 +120,7 @@ public interface Constants {
         String TYPE_RICH_TEXT = "0";
         String KEY_ARTICLE_CACHE = "key_article_cache_";
         String KEY_ARTICLE_VIEW_COUNT = "key_article_view_count_";
+        String KEY_ARTICLE_FIRST_PAGE = "key_article_first_page_";
     }
 
     /**
