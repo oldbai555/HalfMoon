@@ -17,6 +17,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
+    boolean isEnable = true;
+
     //版本
     public static final String VERSION = "1.0.0";
 
@@ -28,7 +30,7 @@ public class SwaggerConfig {
     @Bean
     public Docket portalApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .enable(false)
+                .enable(isEnable)
                 .apiInfo(portalApiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.portal"))
@@ -58,7 +60,7 @@ public class SwaggerConfig {
     @Bean
     public Docket adminApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .enable(false)
+                .enable(isEnable)
                 .apiInfo(adminApiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.admin"))
@@ -84,7 +86,7 @@ public class SwaggerConfig {
     @Bean
     public Docket UserApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .enable(false)
+                .enable(isEnable)
                 .apiInfo(userApiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.oldbai.halfmoon.controller.user"))

@@ -235,7 +235,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public void createCaptcha(String captchaKey) throws IOException, FontFormatException {
         getRequestAndResponse();
         //进行判断是否传入key
-        if (StringUtils.isEmpty(captchaKey) || !(captchaKey.length() < 13)) {
+        if (StringUtils.isEmpty(captchaKey) || !(captchaKey.length() < 20)) {
             return;
         }
         long key = 01;
