@@ -39,11 +39,13 @@ public interface UserService extends IService<User> {
 
     ResponseResult updateUserInfo(String userId, User user);
 
-    ResponseResult listUsers(int page, int size);
+    ResponseResult listUsers(int page, int size, String userName, String email);
 
     ResponseResult deleteUserById(String userId);
 
     ResponseResult updateEmail(String email, String verifyCode);
 
     ResponseResult doLogout();
+
+    ResponseResult parseTOken();
 }

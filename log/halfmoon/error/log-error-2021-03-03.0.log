@@ -1,0 +1,5 @@
+2021-03-03 20:43:24.301 ERROR 5872 --- [http-nio-8078-exec-5] c.o.h.controller.user.UserController     : java.lang.NullPointerException
+2021-03-03 20:53:50.574 ERROR 5872 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : java.lang.NullPointerException
+2021-03-03 21:09:11.530 ERROR 5872 --- [http-nio-8078-exec-8] c.o.h.controller.user.UserController     : java.lang.NullPointerException
+2021-03-03 21:17:38.337 ERROR 5872 --- [http-nio-8078-exec-10] c.o.h.controller.user.UserController     : java.lang.NullPointerException
+2021-03-03 21:29:02.275 ERROR 5872 --- [http-nio-8078-exec-1] c.o.h.controller.user.UserController     : java.lang.NullPointerException

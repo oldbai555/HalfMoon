@@ -44,6 +44,7 @@ public class ImagesController {
      */
     @ApiOperation("上传图片")
     @PostMapping("/upload")
+    @CheckTooFrequentCommit
     public ResponseResult uploadImage(@RequestParam("file") MultipartFile file) {
 
         return imageService.uploadImage(file);

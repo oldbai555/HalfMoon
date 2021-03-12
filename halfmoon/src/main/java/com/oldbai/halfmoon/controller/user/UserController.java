@@ -263,9 +263,11 @@ public class UserController {
     @ApiOperation("获取用户集合")
     @GetMapping("/user/list")
     public ResponseResult listUser(@RequestParam("page") int page,
-                                   @RequestParam("size") int size
+                                   @RequestParam("size") int size,
+                                   @RequestParam(value = "userName",required = false) String userName,
+                                   @RequestParam(value = "email",required = false)String email
     ) {
-        return userService.listUsers(page, size);
+        return userService.listUsers(page, size,userName,email);
     }
 
     /**
@@ -325,6 +327,12 @@ public class UserController {
     @GetMapping("/logout")
     public ResponseResult logout() throws NotLoginException {
         return userService.doLogout();
+    }
+
+    @ApiOperation("检查token")
+    @GetMapping("/checkToken")
+    public ResponseResult parseTOken() {
+        return userService.parseTOken();
     }
 }
 

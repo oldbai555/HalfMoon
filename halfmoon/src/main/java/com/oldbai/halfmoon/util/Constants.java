@@ -15,7 +15,7 @@ public interface Constants {
         String ROLE_ADMIN = "role_admin";
         String ROLE_NORMAL = "role_normal";
         //头像
-        String DEFAULT_AVATAR = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202007%2F01%2F20200701063944_5VaBk.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614571386&t=2e68974a8d276943307d75ea32457e3d";
+        String DEFAULT_AVATAR = "https://oldbai-flie.oss-cn-shenzhen.aliyuncs.com/2021/03/07/466e33e357c546dcadc9fd938e6f468d%E5%A4%B4%E5%83%8F.gif";
         //状态
         String DEFAULT_STATE = "1";
         //以下是redis的key

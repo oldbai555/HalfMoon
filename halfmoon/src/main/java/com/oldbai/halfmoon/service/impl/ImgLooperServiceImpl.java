@@ -64,8 +64,13 @@ public class ImgLooperServiceImpl extends ServiceImpl<ImgLooperMapper, ImgLooper
 
     @Override
     public ResponseResult deleteLoop(String loopId) {
-        looperMapper.deleteById(loopId);
-        return ResponseResult.SUCCESS("删除成功.");
+        int result = looperMapper.deleteById(loopId);
+        if (result>0){
+
+            return ResponseResult.SUCCESS("删除成功.");
+        }else {
+            return ResponseResult.FAILED("删除失败，请检查是否有该轮播图.");
+        }
     }
 
     @Override

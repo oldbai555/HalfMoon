@@ -1,0 +1,210 @@
+2021-03-06 11:39:24.201  INFO 15992 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 15992 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-06 11:39:24.232  INFO 15992 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-06 11:39:33.813  INFO 15992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-06 11:39:33.813  INFO 15992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-06 11:39:33.908  INFO 15992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
+2021-03-06 11:39:33.927  INFO 15992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-06 11:39:33.927  INFO 15992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-06 11:39:33.943  INFO 15992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-06 11:39:34.989  INFO 15992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$f899cfca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 11:39:35.043  INFO 15992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@45e6d1e0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 11:39:35.048  INFO 15992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 11:39:35.772  INFO 15992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-06 11:39:35.804  INFO 15992 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-06 11:39:35.805  INFO 15992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-06 11:39:35.805  INFO 15992 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-06 11:39:36.094  INFO 15992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-06 11:39:36.096  INFO 15992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11647 ms
+2021-03-06 11:39:42.429  INFO 15992 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-06 11:39:42.430  INFO 15992 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-06 11:39:42.703  INFO 15992 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: caf65336-4dab-4953-b5e2-a95a842cfa2b
+
+2021-03-06 11:39:42.948  INFO 15992 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56d5460f, org.springframework.security.web.context.SecurityContextPersistenceFilter@656c5818, org.springframework.security.web.header.HeaderWriterFilter@5f5923ef, org.springframework.security.web.authentication.logout.LogoutFilter@111cbcda, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29592929, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@774304ca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57f725b8, org.springframework.security.web.session.SessionManagementFilter@2006fdaa, org.springframework.security.web.access.ExceptionTranslationFilter@7c840fe3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59b853aa]
+2021-03-06 11:39:43.005  INFO 15992 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-06 11:39:44.111  INFO 15992 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-06 11:39:44.184  INFO 15992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-06 11:39:44.187  INFO 15992 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-06 11:39:44.234  INFO 15992 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-06 11:39:44.342  INFO 15992 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 11:39:44.420  INFO 15992 --- [http-nio-8078-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-06 11:39:44.421  INFO 15992 --- [http-nio-8078-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-06 11:39:44.450  INFO 15992 --- [http-nio-8078-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2021-03-06 11:39:44.650  INFO 15992 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-06 11:39:44.684  INFO 15992 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 11:39:44.690  INFO 15992 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : captcha content == > 5ccgp
+2021-03-06 11:39:44.722  INFO 15992 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 11:39:44.744  INFO 15992 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-06 11:39:44.746  INFO 15992 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-06 11:39:44.757  INFO 15992 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-06 11:39:44.759  INFO 15992 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-06 11:39:44.769  INFO 15992 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-06 11:39:44.809  INFO 15992 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 23.489 seconds (JVM running for 38.676)
+2021-03-06 11:39:50.982  INFO 15992 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-06 11:39:51.218  INFO 15992 --- [http-nio-8078-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-06 11:39:51.747  INFO 15992 --- [http-nio-8078-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-06 11:39:52.079  INFO 15992 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : createNew+1
+2021-03-06 11:39:52.195  INFO 15992 --- [http-nio-8078-exec-1] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-03-06 11:39:52.252  INFO 15992 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : captcha content == > vzehq
+2021-03-06 11:50:16.070  INFO 15992 --- [http-nio-8078-exec-1] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-06 11:50:19.720  INFO 15992 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-06 11:50:19.814  INFO 15992 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-06 11:56:59.857  INFO 15992 --- [http-nio-8078-exec-4] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-06 11:57:01.018  INFO 15992 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-06 11:57:01.048  INFO 15992 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-06 12:22:30.418  INFO 15992 --- [http-nio-8078-exec-7] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-06 12:22:31.619  INFO 15992 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-06 12:22:31.651  INFO 15992 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-06 12:28:04.313  INFO 15992 --- [http-nio-8078-exec-8] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-06 12:28:05.516  INFO 15992 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-06 12:28:05.563  INFO 15992 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-06 12:50:16.515  INFO 15992 --- [http-nio-8078-exec-3] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-06 12:50:17.715  INFO 15992 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-06 12:50:17.742  INFO 15992 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-06 12:51:39.609  INFO 15992 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-06 12:51:39.611  INFO 15992 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-06 12:51:39.615  INFO 15992 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-06 12:51:45.848  INFO 6684 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 6684 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-06 12:51:45.852  INFO 6684 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-06 12:51:46.721  INFO 6684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-06 12:51:46.723  INFO 6684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-06 12:51:46.757  INFO 6684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2021-03-06 12:51:46.762  INFO 6684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-06 12:51:46.762  INFO 6684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-06 12:51:46.774  INFO 6684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-06 12:51:47.068  INFO 6684 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$254cdb11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 12:51:47.086  INFO 6684 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@51fc862e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 12:51:47.090  INFO 6684 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 12:51:47.395  INFO 6684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-06 12:51:47.404  INFO 6684 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-06 12:51:47.405  INFO 6684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-06 12:51:47.406  INFO 6684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-06 12:51:47.499  INFO 6684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-06 12:51:47.499  INFO 6684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1607 ms
+2021-03-06 12:51:49.900  INFO 6684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-06 12:51:49.901  INFO 6684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-06 12:51:49.966  INFO 6684 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ed1bdfd5-1bd0-4628-9310-0153b03b7045
+
+2021-03-06 12:51:50.048  INFO 6684 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@515940af, org.springframework.security.web.context.SecurityContextPersistenceFilter@390a07a0, org.springframework.security.web.header.HeaderWriterFilter@70ed902a, org.springframework.security.web.authentication.logout.LogoutFilter@4ba1c1a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@572b4072, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a29fe2e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f8df69, org.springframework.security.web.session.SessionManagementFilter@6d7bb5cc, org.springframework.security.web.access.ExceptionTranslationFilter@4b5aa48b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@642c5bb3]
+2021-03-06 12:51:50.070  INFO 6684 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-06 12:51:50.511  INFO 6684 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-06 12:51:50.533  INFO 6684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-06 12:51:50.533  INFO 6684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-06 12:51:50.548  INFO 6684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-06 12:51:50.581  INFO 6684 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 12:51:50.713  INFO 6684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-06 12:51:50.733  INFO 6684 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 12:51:50.758  INFO 6684 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 12:51:50.766  INFO 6684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-06 12:51:50.767  INFO 6684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-06 12:51:50.777  INFO 6684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-06 12:51:50.778  INFO 6684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-06 12:51:50.788  INFO 6684 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-06 12:51:50.807  INFO 6684 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 5.581 seconds (JVM running for 6.715)
+2021-03-06 12:52:21.571  INFO 6684 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-06 12:52:21.571  INFO 6684 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-06 12:52:21.582  INFO 6684 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-03-06 12:52:21.681  INFO 6684 --- [http-nio-8078-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-06 12:52:21.810  INFO 6684 --- [http-nio-8078-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-06 12:57:33.884  INFO 6684 --- [http-nio-8078-exec-5] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 12:57:34.477  INFO 6684 --- [http-nio-8078-exec-5] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-03-06 13:03:33.541  INFO 6684 --- [http-nio-8078-exec-7] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 13:03:33.758  INFO 6684 --- [http-nio-8078-exec-7] c.o.h.exception.ExceptionController      : null
+2021-03-06 13:04:25.196  INFO 6684 --- [http-nio-8078-exec-8] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 13:04:25.450  INFO 6684 --- [http-nio-8078-exec-8] c.o.h.exception.ExceptionController      : null
+2021-03-06 13:05:25.437  INFO 6684 --- [http-nio-8078-exec-9] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 13:05:25.722  INFO 6684 --- [http-nio-8078-exec-9] c.o.h.exception.ExceptionController      : null
+2021-03-06 13:07:10.793  INFO 6684 --- [http-nio-8078-exec-1] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 13:07:32.098  INFO 6684 --- [http-nio-8078-exec-1] c.o.h.exception.ExceptionController      : null
+2021-03-06 13:08:30.576  INFO 6684 --- [http-nio-8078-exec-2] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-06 13:08:44.375  INFO 6684 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-06 13:08:44.409  INFO 6684 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-06 13:09:17.752  INFO 6684 --- [http-nio-8078-exec-10] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 13:09:35.838  INFO 6684 --- [http-nio-8078-exec-10] c.o.h.exception.ExceptionController      : null
+2021-03-06 13:25:23.046  INFO 6684 --- [http-nio-8078-exec-6] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-06 13:25:24.275  INFO 6684 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-06 13:25:24.302  INFO 6684 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-06 13:41:59.869  INFO 6684 --- [http-nio-8078-exec-3] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 13:42:00.083  INFO 6684 --- [http-nio-8078-exec-3] c.o.h.exception.ExceptionController      : null
+2021-03-06 13:44:38.816  INFO 6684 --- [http-nio-8078-exec-8] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 13:44:39.014  INFO 6684 --- [http-nio-8078-exec-8] c.o.h.exception.ExceptionController      : null
+2021-03-06 13:46:47.520  INFO 6684 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-06 13:46:47.523  INFO 6684 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-06 13:46:47.534  INFO 6684 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-06 15:21:51.726  INFO 16236 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 16236 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-06 15:21:51.732  INFO 16236 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-06 15:21:53.398  INFO 16236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-06 15:21:53.402  INFO 16236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-06 15:21:53.463  INFO 16236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 Redis repository interfaces.
+2021-03-06 15:21:53.476  INFO 16236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-06 15:21:53.477  INFO 16236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-06 15:21:53.500  INFO 16236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Solr repository interfaces.
+2021-03-06 15:21:54.093  INFO 16236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$3d10a6de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 15:21:54.125  INFO 16236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@34d713a2' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 15:21:54.131  INFO 16236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 15:21:54.881  INFO 16236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-06 15:21:54.895  INFO 16236 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-06 15:21:54.897  INFO 16236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-06 15:21:54.897  INFO 16236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-06 15:21:55.040  INFO 16236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-06 15:21:55.041  INFO 16236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3238 ms
+2021-03-06 15:21:58.256  INFO 16236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-06 15:21:58.258  INFO 16236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-06 15:21:58.332  INFO 16236 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a7b828a8-43fa-466c-87b0-b47dfe05ac9e
+
+2021-03-06 15:21:58.439  INFO 16236 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6585df70, org.springframework.security.web.context.SecurityContextPersistenceFilter@45d38165, org.springframework.security.web.header.HeaderWriterFilter@af3295f, org.springframework.security.web.authentication.logout.LogoutFilter@146833a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26612078, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77e730bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d93ff21, org.springframework.security.web.session.SessionManagementFilter@6879e983, org.springframework.security.web.access.ExceptionTranslationFilter@72ec16f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66abb2fa]
+2021-03-06 15:21:58.470  INFO 16236 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-06 15:21:59.176  INFO 16236 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-06 15:21:59.202  INFO 16236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-06 15:21:59.203  INFO 16236 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-06 15:21:59.227  INFO 16236 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-06 15:21:59.269  INFO 16236 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 15:21:59.470  INFO 16236 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-06 15:21:59.498  INFO 16236 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 15:21:59.535  INFO 16236 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-06 15:21:59.547  INFO 16236 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-06 15:21:59.550  INFO 16236 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-06 15:21:59.567  INFO 16236 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-06 15:21:59.569  INFO 16236 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-06 15:21:59.578  INFO 16236 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-06 15:21:59.600  INFO 16236 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 8.734 seconds (JVM running for 11.553)
+2021-03-06 16:05:49.422  INFO 16236 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-06 16:05:49.422  INFO 16236 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-06 16:05:49.429  INFO 16236 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-03-06 16:05:53.672  INFO 16236 --- [http-nio-8078-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-06 16:06:15.782  INFO 16236 --- [http-nio-8078-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-06 16:06:15.790  INFO 16236 --- [http-nio-8078-exec-3] c.o.h.exception.ExceptionController      : Could not open JDBC Connection for transaction; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021-03-06 16:06:15.942  INFO 16236 --- [http-nio-8078-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-06 16:06:25.479  INFO 16236 --- [http-nio-8078-exec-9] c.o.h.service.impl.ImagesServiceImpl     : contentType == > image/png
+2021-03-06 16:06:25.865  INFO 16236 --- [http-nio-8078-exec-9] c.o.h.exception.ExceptionController      : null
+2021-03-06 20:43:04.562  INFO 16236 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-06 20:43:04.949  INFO 16236 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-06 20:43:10.239  INFO 16236 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.106.234.164:6379
+2021-03-06 20:43:10.335  INFO 16236 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379

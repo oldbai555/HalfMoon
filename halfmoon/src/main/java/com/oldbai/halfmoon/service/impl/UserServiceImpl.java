@@ -150,7 +150,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //角色
         user.setRoles(Constants.User.ROLE_NORMAL);
         //头像
-        user.setAvatar(Constants.User.DEFAULT_AVATAR);
+        if (StringUtils.isEmpty(user.getAvatar())){
+            user.setAvatar(Constants.User.DEFAULT_AVATAR);
+        }
         //默认状态
         user.setState(Constants.User.DEFAULT_STATE);
         //注册IP
@@ -622,11 +624,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      *
      * @param page
      * @param size
+     * @param userName
+     * @param email
      * @return
      */
     @Transactional
     @Override
-    public ResponseResult listUsers(int page, int size) {
+    public ResponseResult listUsers(int page, int size, String userName, String email) {
         getRequestAndResponse();
         //可以获取用户列表
         //分页查询
@@ -638,6 +642,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //根据注册日期排序
         Page<UserView> pageObj = new Page<>(page, size);
         QueryWrapper<UserView> viewQueryWrapper = new QueryWrapper<>();
+        if (!StringUtils.isEmpty(userName)){
+            viewQueryWrapper.like("user_name",userName);
+        }
+        if (!StringUtils.isEmpty(email)){
+            viewQueryWrapper.eq("email",email);
+        }
         viewQueryWrapper.orderByDesc("create_time");
         Page<UserView> all = userViewMapper.selectPage(pageObj, viewQueryWrapper);
         //TODO 处理密码问题，在这使用了视图
@@ -652,7 +662,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (result > 0) {
             return ResponseResult.SUCCESS("删除成功");
         } else {
-
             return ResponseResult.FAILED("用户不存在......");
         }
     }
@@ -704,6 +713,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //删除cookie里的token_key
         CookieUtils.deleteCookie(response, Constants.User.COOKIE_TOKE_KEY);
         return ResponseResult.SUCCESS("退出登录成功.");
+    }
+
+    @Override
+    public ResponseResult parseTOken() {
+        User user = checkUser();
+        if (StringUtils.isEmpty(user)) {
+            return ResponseResult.FAILED("用户未登录");
+        }else {
+            return ResponseResult.SUCCESS("获取成功",user);
+        }
+
     }
 
     /**
