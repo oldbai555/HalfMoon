@@ -1275,3 +1275,290 @@ Using generated security password: 623db9da-e041-4de3-993b-75c4aa9678ef
 2021-03-19 20:03:30.386  INFO 11512 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : null
 2021-03-19 20:03:32.931  INFO 11512 --- [http-nio-8078-exec-3] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
 2021-03-19 20:03:36.545  INFO 11512 --- [http-nio-8078-exec-5] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:09:23.697  INFO 11512 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:09:23.813  INFO 11512 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:09:23.849  INFO 11512 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:12:58.978  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:12:59.038  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:12:59.038  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:12:59.046  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:12:59.100  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 20:12:59.156  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:13:29.863  INFO 11512 --- [http-nio-8078-exec-4] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:13:29.918  INFO 11512 --- [http-nio-8078-exec-4] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:13:29.919  INFO 11512 --- [http-nio-8078-exec-4] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:13:29.922  INFO 11512 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:13:29.981  INFO 11512 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 0
+2021-03-19 20:13:30.037  INFO 11512 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:14:02.633  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:14:02.693  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:14:02.694  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:14:02.703  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:14:02.758  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 1
+2021-03-19 20:14:02.813  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:16:27.682  INFO 11512 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:16:27.738  INFO 11512 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:16:27.739  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:16:27.743  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:16:27.802  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 2
+2021-03-19 20:16:27.859  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:17:38.415  INFO 11512 --- [http-nio-8078-exec-8] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:17:38.478  INFO 11512 --- [http-nio-8078-exec-8] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:17:38.479  INFO 11512 --- [http-nio-8078-exec-8] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:17:38.483  INFO 11512 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:17:38.538  INFO 11512 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 3
+2021-03-19 20:17:38.593  INFO 11512 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:19:11.874  INFO 11512 --- [http-nio-8078-exec-10] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:19:11.930  INFO 11512 --- [http-nio-8078-exec-10] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:19:11.930  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:19:11.935  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:19:11.993  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 4
+2021-03-19 20:19:12.048  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:20:39.517  INFO 11512 --- [http-nio-8078-exec-9] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:20:39.572  INFO 11512 --- [http-nio-8078-exec-9] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:20:39.573  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:20:39.578  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:20:39.634  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 5
+2021-03-19 20:20:39.690  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:21:48.315  INFO 11512 --- [http-nio-8078-exec-3] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:21:48.370  INFO 11512 --- [http-nio-8078-exec-3] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:21:48.370  INFO 11512 --- [http-nio-8078-exec-3] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:21:48.374  INFO 11512 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:21:48.428  INFO 11512 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 6
+2021-03-19 20:21:48.483  INFO 11512 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:21:54.026  INFO 11512 --- [lettuce-nioEventLoop-4-2] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:21:54.117  INFO 11512 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:21:54.154  INFO 11512 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:22:33.225  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:22:33.284  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:22:33.284  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:22:33.289  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:22:33.347  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 7
+2021-03-19 20:22:33.406  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:22:44.487  INFO 11512 --- [http-nio-8078-exec-4] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:23:29.808  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:23:29.866  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:23:29.866  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:23:29.870  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:23:29.928  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 8
+2021-03-19 20:23:29.985  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:24:05.223  INFO 11512 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:24:05.281  INFO 11512 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:24:05.282  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:24:05.286  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:24:05.344  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 9
+2021-03-19 20:24:05.402  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:24:31.776  INFO 11512 --- [lettuce-nioEventLoop-4-3] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:821)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:24:31.816  INFO 11512 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:24:31.869  INFO 11512 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:25:04.085  INFO 11512 --- [lettuce-nioEventLoop-4-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:25:04.113  INFO 11512 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:25:04.146  INFO 11512 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:26:05.197  INFO 11512 --- [lettuce-nioEventLoop-4-5] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:26:05.214  INFO 11512 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:26:05.255  INFO 11512 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:26:37.390  INFO 11512 --- [lettuce-nioEventLoop-4-6] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:26:37.413  INFO 11512 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:26:37.461  INFO 11512 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:26:56.204  INFO 11512 --- [http-nio-8078-exec-10] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:26:56.260  INFO 11512 --- [http-nio-8078-exec-10] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:26:56.260  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:26:56.265  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:26:56.319  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 10
+2021-03-19 20:26:56.373  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:27:32.744  INFO 11512 --- [http-nio-8078-exec-9] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:27:32.798  INFO 11512 --- [http-nio-8078-exec-9] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:27:32.799  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:27:32.802  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:27:32.856  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 11
+2021-03-19 20:27:37.034  INFO 11512 --- [http-nio-8078-exec-1] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:27:41.346  INFO 11512 --- [http-nio-8078-exec-3] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:28:21.489  INFO 11512 --- [http-nio-8078-exec-5] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:28:21.542  INFO 11512 --- [http-nio-8078-exec-5] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:28:21.543  INFO 11512 --- [http-nio-8078-exec-5] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:28:21.546  INFO 11512 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:28:21.600  INFO 11512 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 20:28:21.655  INFO 11512 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:29:12.279  INFO 11512 --- [lettuce-nioEventLoop-4-7] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:29:12.314  INFO 11512 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:29:12.384  INFO 11512 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:29:14.784  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:29:14.863  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:29:14.863  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:29:19.667  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:29:19.726  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 0
+2021-03-19 20:29:19.781  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:29:20.182  INFO 11512 --- [http-nio-8078-exec-4] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:29:44.567  INFO 11512 --- [lettuce-nioEventLoop-4-8] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:29:44.619  INFO 11512 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:29:44.646  INFO 11512 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:29:53.079  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:29:53.130  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:29:53.131  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:29:53.136  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:29:53.186  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 1
+2021-03-19 20:29:53.236  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:31:09.805  INFO 11512 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 20:31:09.808  INFO 11512 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-19 20:31:09.819  INFO 11512 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
