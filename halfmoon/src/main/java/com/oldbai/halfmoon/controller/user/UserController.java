@@ -308,9 +308,10 @@ public class UserController {
      */
     @ApiOperation("更新邮箱")
     @PostMapping("/update/email")
-    public ResponseResult updateEmail(@RequestParam("email") String email,
+    public ResponseResult updateEmail(@RequestParam("oldEmail") String oldEmail,
+                                      @RequestParam("newEmail") String newEmail,
                                       @RequestParam("verify_code") String verifyCode) {
-        return userService.updateEmail(email, verifyCode);
+        return userService.updateEmail(oldEmail, newEmail, verifyCode);
     }
 
     /**
@@ -339,8 +340,8 @@ public class UserController {
     @PreAuthorize("@permission.adminPermission()")
     @PostMapping("/resetPassword/{userId}")
     public ResponseResult resetPassword(@PathVariable("userId") String userId,
-                                        @RequestParam("password")String password) {
-        return userService.resetPassword(userId,password);
+                                        @RequestParam("password") String password) {
+        return userService.resetPassword(userId, password);
     }
 }
 

@@ -1,8 +1,6 @@
 package com.oldbai.halfmoon.service.impl;
 
-import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.digest.BCrypt;
-import cn.hutool.crypto.digest.MD5;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
@@ -24,7 +22,6 @@ import com.wf.captcha.base.Captcha;
 import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
@@ -670,7 +667,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    public ResponseResult updateEmail(String email, String verifyCode) {
+    public ResponseResult updateEmail(String oldEmail, String email, String verifyCode) {
         getRequestAndResponse();
         //1、确保用户已经登录了
         User sobUser = checkUser();
@@ -679,12 +676,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return ResponseResult.NO_LOGIN("没有登录");
         }
         //2、对比验证码，确保新的邮箱地址是属于当前用户的
-        String redisVerifyCode = (String) redisUtil.get(Constants.User.KEY_EMAIL_CODE_CONTENT + email);
+        String redisVerifyCode = (String) redisUtil.get(Constants.User.KEY_EMAIL_CODE_CONTENT + oldEmail);
         if (StringUtils.isEmpty(redisVerifyCode) || !redisVerifyCode.equals(verifyCode)) {
             return ResponseResult.FAILED("验证码错误");
         }
         //验证完成,删除验证码
-        redisUtil.del(Constants.User.KEY_EMAIL_CODE_CONTENT + email);
+        redisUtil.del(Constants.User.KEY_EMAIL_CODE_CONTENT + oldEmail);
         //2768011423
         //可以修改邮箱
         User user = new User();

@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author oldbai
@@ -43,7 +43,7 @@ public interface UserService extends IService<User> {
 
     ResponseResult deleteUserById(String userId);
 
-    ResponseResult updateEmail(String email, String verifyCode);
+    ResponseResult updateEmail(String oldEmail, String email, String verifyCode);
 
     ResponseResult doLogout();
 
