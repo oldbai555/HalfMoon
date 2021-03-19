@@ -48,4 +48,7 @@ public interface UserService extends IService<User> {
     ResponseResult doLogout();
 
     ResponseResult parseTOken();
+
+
+    ResponseResult resetPassword(String userId, String password);
 }

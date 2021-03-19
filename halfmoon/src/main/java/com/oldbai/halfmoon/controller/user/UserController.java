@@ -264,10 +264,10 @@ public class UserController {
     @GetMapping("/user/list")
     public ResponseResult listUser(@RequestParam("page") int page,
                                    @RequestParam("size") int size,
-                                   @RequestParam(value = "userName",required = false) String userName,
-                                   @RequestParam(value = "email",required = false)String email
+                                   @RequestParam(value = "userName", required = false) String userName,
+                                   @RequestParam(value = "email", required = false) String email
     ) {
-        return userService.listUsers(page, size,userName,email);
+        return userService.listUsers(page, size, userName, email);
     }
 
     /**
@@ -333,6 +333,14 @@ public class UserController {
     @GetMapping("/checkToken")
     public ResponseResult parseTOken() {
         return userService.parseTOken();
+    }
+
+    @ApiOperation("重置密码")
+    @PreAuthorize("@permission.adminPermission()")
+    @PostMapping("/resetPassword/{userId}")
+    public ResponseResult resetPassword(@PathVariable("userId") String userId,
+                                        @RequestParam("password")String password) {
+        return userService.resetPassword(userId,password);
     }
 }
 

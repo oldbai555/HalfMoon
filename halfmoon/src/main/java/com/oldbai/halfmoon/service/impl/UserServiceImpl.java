@@ -1,6 +1,8 @@
 package com.oldbai.halfmoon.service.impl;
 
+import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.digest.BCrypt;
+import cn.hutool.crypto.digest.MD5;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
@@ -22,6 +24,7 @@ import com.wf.captcha.base.Captcha;
 import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
@@ -150,7 +153,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //角色
         user.setRoles(Constants.User.ROLE_NORMAL);
         //头像
-        if (StringUtils.isEmpty(user.getAvatar())){
+        if (StringUtils.isEmpty(user.getAvatar())) {
             user.setAvatar(Constants.User.DEFAULT_AVATAR);
         }
         //默认状态
@@ -642,11 +645,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //根据注册日期排序
         Page<UserView> pageObj = new Page<>(page, size);
         QueryWrapper<UserView> viewQueryWrapper = new QueryWrapper<>();
-        if (!StringUtils.isEmpty(userName)){
-            viewQueryWrapper.like("user_name",userName);
+        if (!StringUtils.isEmpty(userName)) {
+            viewQueryWrapper.like("user_name", userName);
         }
-        if (!StringUtils.isEmpty(email)){
-            viewQueryWrapper.eq("email",email);
+        if (!StringUtils.isEmpty(email)) {
+            viewQueryWrapper.eq("email", email);
         }
         viewQueryWrapper.orderByDesc("create_time");
         Page<UserView> all = userViewMapper.selectPage(pageObj, viewQueryWrapper);
@@ -720,10 +723,25 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         User user = checkUser();
         if (StringUtils.isEmpty(user)) {
             return ResponseResult.FAILED("用户未登录");
-        }else {
-            return ResponseResult.SUCCESS("获取成功",user);
+        } else {
+            return ResponseResult.SUCCESS("获取成功", user);
         }
 
+    }
+
+    @Override
+    public ResponseResult resetPassword(String userId, String password) {
+        //查询用户，判断是否存在
+        User user = userMapper.selectById(userId);
+        if (StringUtils.isEmpty(user)) {
+            return ResponseResult.FAILED("用户不存在");
+        }
+        //密码进行加密
+        String newPassword = BCrypt.hashpw(password);
+        user.setPassword(newPassword);
+        int result = userMapper.updateById(user);
+        //处理结果
+        return result == 0 ? ResponseResult.FAILED("修改失败......") : ResponseResult.SUCCESS("修改成功");
     }
 
     /**
@@ -748,7 +766,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         cliams.put("avatar", oneByUsername.getAvatar());
         cliams.put("email", oneByUsername.getEmail());
         cliams.put("sign", oneByUsername.getSign());
-        String token = JwtUtil.createToken(cliams,Constants.RedisTime.DAY);
+        String token = JwtUtil.createToken(cliams, Constants.RedisTime.DAY);
         // 返回一个token 的 md5 值 key ，保存在redis中。
         String tokenKey = DigestUtils.md5DigestAsHex(token.getBytes());
         //保存在redis 中 , 1个小时有效期 , key 是 tokenKey

@@ -1,49 +1,79 @@
-2021-03-12 18:49:07.913  INFO 6192 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 6192 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
-2021-03-12 18:49:07.952  INFO 6192 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
-2021-03-12 18:49:13.611  INFO 6192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-03-12 18:49:13.618  INFO 6192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-03-12 18:49:13.761  INFO 6192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
-2021-03-12 18:49:14.197  INFO 6192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-03-12 18:49:14.197  INFO 6192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
-2021-03-12 18:49:14.289  INFO 6192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
-2021-03-12 18:49:20.739  INFO 6192 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$7cc6a6d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-12 18:49:21.428  INFO 6192 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@31f295b6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-12 18:49:21.433  INFO 6192 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-12 18:49:27.317  INFO 6192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
-2021-03-12 18:49:27.342  INFO 6192 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
-2021-03-12 18:49:27.343  INFO 6192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-03-12 18:49:27.344  INFO 6192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2021-03-12 18:49:27.841  INFO 6192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-03-12 18:49:27.841  INFO 6192 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 19564 ms
-2021-03-12 18:49:36.978  INFO 6192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2021-03-12 18:49:36.980  INFO 6192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
-2021-03-12 18:49:37.145  INFO 6192 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+2021-03-19 16:49:37.571  INFO 2060 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 2060 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 16:49:37.591  INFO 2060 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 16:49:56.299  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:49:56.321  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:49:56.756  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 0 Redis repository interfaces.
+2021-03-19 16:49:56.805  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:49:56.806  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 16:49:56.908  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Solr repository interfaces.
+2021-03-19 16:49:59.324  INFO 2060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$e746c4a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:49:59.376  INFO 2060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@214beff9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:49:59.383  INFO 2060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:02.855  INFO 2060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 16:50:02.881  INFO 2060 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 16:50:02.882  INFO 2060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 16:50:02.882  INFO 2060 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 16:50:03.496  INFO 2060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 16:50:03.496  INFO 2060 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 25737 ms
+2021-03-19 16:50:12.796  INFO 2060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 16:50:12.799  INFO 2060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 16:50:13.238  INFO 2060 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: acf2e4bc-79f2-469f-836d-b03c35bf08f2
+Using generated security password: 2b2ac881-23aa-4ff2-88c5-783cba025254
 
-2021-03-12 18:49:37.360  INFO 6192 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d5508a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@614cbec4, org.springframework.security.web.header.HeaderWriterFilter@103478b8, org.springframework.security.web.authentication.logout.LogoutFilter@36a1fd20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2759749, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3856d0cb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@103bcc9f, org.springframework.security.web.session.SessionManagementFilter@df6f19b, org.springframework.security.web.access.ExceptionTranslationFilter@215a0264, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6badb08c]
-2021-03-12 18:49:37.396  INFO 6192 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-12 18:49:38.113  INFO 6192 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
-2021-03-12 18:49:38.164  INFO 6192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
-2021-03-12 18:49:38.166  INFO 6192 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-12 18:49:38.217  INFO 6192 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
-2021-03-12 18:49:38.295  INFO 6192 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-12 18:49:38.523  INFO 6192 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
-2021-03-12 18:49:38.548  INFO 6192 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-12 18:49:38.585  INFO 6192 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-12 18:49:38.595  INFO 6192 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
-2021-03-12 18:49:38.597  INFO 6192 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
-2021-03-12 18:49:38.612  INFO 6192 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
-2021-03-12 18:49:38.614  INFO 6192 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
-2021-03-12 18:49:38.628  INFO 6192 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
-2021-03-12 18:49:38.657  INFO 6192 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 33.486 seconds (JVM running for 42.189)
-2021-03-12 18:50:04.183  INFO 6192 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-03-12 18:50:04.183  INFO 6192 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-03-12 18:50:04.202  INFO 6192 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2021-03-12 18:51:24.627  INFO 6192 --- [http-nio-8078-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-12 18:51:25.036  INFO 6192 --- [http-nio-8078-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-12 18:51:25.316  INFO 6192 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : captcha content == > mkqzh
-2021-03-12 18:51:30.315  INFO 6192 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
-2021-03-12 18:51:30.902  INFO 6192 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : createNew+1
-2021-03-12 18:51:31.009  INFO 6192 --- [http-nio-8078-exec-10] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
-2021-03-12 18:51:31.092  INFO 6192 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : captcha content == > vkxbb
+2021-03-19 16:50:13.670  INFO 2060 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4af84a76, org.springframework.security.web.context.SecurityContextPersistenceFilter@73958426, org.springframework.security.web.header.HeaderWriterFilter@37142579, org.springframework.security.web.authentication.logout.LogoutFilter@493968a9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d0b7fd5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c787389, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b5ff70b, org.springframework.security.web.session.SessionManagementFilter@31dbf5bb, org.springframework.security.web.access.ExceptionTranslationFilter@6159fb3c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c98981e]
+2021-03-19 16:50:13.721  INFO 2060 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:50:15.051  INFO 2060 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 16:50:15.121  INFO 2060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 16:50:15.126  INFO 2060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 16:50:15.190  INFO 2060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 16:50:15.277  INFO 2060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 16:50:15.766  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 16:50:15.813  INFO 2060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 16:50:15.880  INFO 2060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 16:50:15.899  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 16:50:15.902  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 16:50:15.921  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 16:50:15.925  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 16:50:15.940  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 16:50:15.997  INFO 2060 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 44.506 seconds (JVM running for 61.857)
+2021-03-19 17:03:17.133  INFO 2060 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 17:03:26.508  INFO 15848 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 15848 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 17:03:26.512  INFO 15848 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 17:03:27.880  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 17:03:27.883  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 17:03:27.925  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2021-03-19 17:03:27.931  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 17:03:27.931  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 17:03:27.946  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-19 17:03:28.321  INFO 15848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$d8a938a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:03:28.346  INFO 15848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f438904' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:03:28.351  INFO 15848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:03:28.807  INFO 15848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 17:03:28.820  INFO 15848 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 17:03:28.822  INFO 15848 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 17:03:28.822  INFO 15848 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 17:03:28.993  INFO 15848 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 17:03:28.994  INFO 15848 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2431 ms
+2021-03-19 17:03:33.324  INFO 15848 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 17:03:33.326  INFO 15848 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 17:03:33.390  INFO 15848 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7f857e17-9cbc-4dd2-a43a-1e70d83554c0
+
+2021-03-19 17:03:33.490  INFO 15848 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3856d0cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b895e76, org.springframework.security.web.header.HeaderWriterFilter@61bd0845, org.springframework.security.web.authentication.logout.LogoutFilter@66dd04e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a6facb0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c8758d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2125535d, org.springframework.security.web.session.SessionManagementFilter@24435620, org.springframework.security.web.access.ExceptionTranslationFilter@2c02a007, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2759749]
+2021-03-19 17:03:33.515  INFO 15848 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 17:03:34.070  INFO 15848 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 17:03:34.097  INFO 15848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 17:03:34.099  INFO 15848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 17:03:34.118  INFO 15848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 17:03:34.158  INFO 15848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:03:34.314  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 17:03:34.333  INFO 15848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:03:34.363  INFO 15848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:03:34.372  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 17:03:34.373  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 17:03:34.385  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 17:03:34.386  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 17:03:34.395  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 17:03:34.419  INFO 15848 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 8.886 seconds (JVM running for 10.985)
