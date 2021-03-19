@@ -3,6 +3,7 @@ package com.oldbai.halfmoon.controller.user;
 
 import com.oldbai.halfmoon.entity.User;
 import com.oldbai.halfmoon.exception.NotLoginException;
+import com.oldbai.halfmoon.interceptor.CheckTooFrequentCommit;
 import com.oldbai.halfmoon.response.ResponseResult;
 import com.oldbai.halfmoon.service.UserService;
 import com.oldbai.halfmoon.service.impl.UserServiceImpl;
@@ -116,6 +117,7 @@ public class UserController {
      * @param emailAddress 防止同一IP轰炸
      * @return
      */
+    @CheckTooFrequentCommit
     @ApiOperation("发送邮件，获取邮箱验证码")
     @GetMapping("/send/verify_code")
     public ResponseResult sendVerifyCode(@RequestParam("email") String emailAddress,
