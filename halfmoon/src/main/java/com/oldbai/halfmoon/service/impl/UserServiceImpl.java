@@ -548,24 +548,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public ResponseResult getUserInfo(String userId) {
         getRequestAndResponse();
         //1.从数据库获取
-        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+        QueryWrapper<UserView> userQueryWrapper = new QueryWrapper<>();
         userQueryWrapper.eq("id", userId);
 
-        User one = userMapper.selectOne(userQueryWrapper);
+        UserView one = userViewMapper.selectOne(userQueryWrapper);
         //判断结果
         if (StringUtils.isEmpty(one)) {
             //如果不存在
             return ResponseResult.FAILED("用户不存在......");
         }
         //如果存在，就复制对象清空密码、email、登陆IP 注册IP
-        String userJson = gson.toJson(one);
-        User newUser = gson.fromJson(userJson, User.class);
-        newUser.setPassword("");
-        newUser.setAvatar("");
-        newUser.setRegIp("");
-        newUser.setLoginIp("");
+
         //返回结果
-        return ResponseResult.SUCCESS("获取成功", newUser);
+        return ResponseResult.SUCCESS("获取成功", one);
     }
 
     /**
@@ -600,9 +595,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         wrapper.eq("user_name", user.getUserName());
         if (!StringUtils.isEmpty(user.getUserName()) && StringUtils.isEmpty(userMapper.selectOne(wrapper))) {
             checkUser.setUserName(user.getUserName());
-        } else {
-            return ResponseResult.FAILED("该用户名已被注册无法修改......");
         }
+
+//        else {
+//            return ResponseResult.FAILED("该用户名已被注册无法修改......");
+//        }
+
         //头像
         if (!StringUtils.isEmpty(user.getAvatar())) {
             checkUser.setAvatar(user.getAvatar());

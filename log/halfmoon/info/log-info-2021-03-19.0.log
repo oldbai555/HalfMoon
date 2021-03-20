@@ -1,0 +1,1564 @@
+2021-03-19 16:49:37.571  INFO 2060 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 2060 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 16:49:37.591  INFO 2060 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 16:49:56.299  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:49:56.321  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:49:56.756  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 0 Redis repository interfaces.
+2021-03-19 16:49:56.805  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:49:56.806  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 16:49:56.908  INFO 2060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Solr repository interfaces.
+2021-03-19 16:49:59.324  INFO 2060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$e746c4a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:49:59.376  INFO 2060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@214beff9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:49:59.383  INFO 2060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:02.855  INFO 2060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 16:50:02.881  INFO 2060 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 16:50:02.882  INFO 2060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 16:50:02.882  INFO 2060 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 16:50:03.496  INFO 2060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 16:50:03.496  INFO 2060 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 25737 ms
+2021-03-19 16:50:12.796  INFO 2060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 16:50:12.799  INFO 2060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 16:50:13.238  INFO 2060 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2b2ac881-23aa-4ff2-88c5-783cba025254
+
+2021-03-19 16:50:13.670  INFO 2060 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4af84a76, org.springframework.security.web.context.SecurityContextPersistenceFilter@73958426, org.springframework.security.web.header.HeaderWriterFilter@37142579, org.springframework.security.web.authentication.logout.LogoutFilter@493968a9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d0b7fd5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c787389, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b5ff70b, org.springframework.security.web.session.SessionManagementFilter@31dbf5bb, org.springframework.security.web.access.ExceptionTranslationFilter@6159fb3c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c98981e]
+2021-03-19 16:50:13.721  INFO 2060 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:50:15.051  INFO 2060 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 16:50:15.121  INFO 2060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 16:50:15.126  INFO 2060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 16:50:15.190  INFO 2060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 16:50:15.277  INFO 2060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 16:50:15.766  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 16:50:15.813  INFO 2060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 16:50:15.880  INFO 2060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 16:50:15.899  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 16:50:15.902  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 16:50:15.921  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 16:50:15.925  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 16:50:15.940  INFO 2060 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 16:50:15.997  INFO 2060 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 44.506 seconds (JVM running for 61.857)
+2021-03-19 17:03:17.133  INFO 2060 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 17:03:26.508  INFO 15848 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 15848 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 17:03:26.512  INFO 15848 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 17:03:27.880  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 17:03:27.883  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 17:03:27.925  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2021-03-19 17:03:27.931  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 17:03:27.931  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 17:03:27.946  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-19 17:03:28.321  INFO 15848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$d8a938a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:03:28.346  INFO 15848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f438904' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:03:28.351  INFO 15848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:03:28.807  INFO 15848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 17:03:28.820  INFO 15848 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 17:03:28.822  INFO 15848 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 17:03:28.822  INFO 15848 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 17:03:28.993  INFO 15848 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 17:03:28.994  INFO 15848 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2431 ms
+2021-03-19 17:03:33.324  INFO 15848 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 17:03:33.326  INFO 15848 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 17:03:33.390  INFO 15848 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7f857e17-9cbc-4dd2-a43a-1e70d83554c0
+
+2021-03-19 17:03:33.490  INFO 15848 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3856d0cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b895e76, org.springframework.security.web.header.HeaderWriterFilter@61bd0845, org.springframework.security.web.authentication.logout.LogoutFilter@66dd04e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a6facb0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c8758d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2125535d, org.springframework.security.web.session.SessionManagementFilter@24435620, org.springframework.security.web.access.ExceptionTranslationFilter@2c02a007, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2759749]
+2021-03-19 17:03:33.515  INFO 15848 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 17:03:34.070  INFO 15848 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 17:03:34.097  INFO 15848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 17:03:34.099  INFO 15848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 17:03:34.118  INFO 15848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 17:03:34.158  INFO 15848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:03:34.314  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 17:03:34.333  INFO 15848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:03:34.363  INFO 15848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:03:34.372  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 17:03:34.373  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 17:03:34.385  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 17:03:34.386  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 17:03:34.395  INFO 15848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 17:03:34.419  INFO 15848 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 8.886 seconds (JVM running for 10.985)
+2021-03-19 17:05:16.255  INFO 15848 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 17:05:22.644  INFO 16608 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 16608 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 17:05:22.648  INFO 16608 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 17:05:24.561  INFO 16608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 17:05:24.564  INFO 16608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 17:05:24.661  INFO 16608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70ms. Found 0 Redis repository interfaces.
+2021-03-19 17:05:24.686  INFO 16608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 17:05:24.688  INFO 16608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 17:05:24.734  INFO 16608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 Solr repository interfaces.
+2021-03-19 17:05:25.387  INFO 16608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$5aafb4a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:05:25.413  INFO 16608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e95595b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:05:25.419  INFO 16608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:05:25.894  INFO 16608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 17:05:25.906  INFO 16608 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 17:05:25.906  INFO 16608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 17:05:25.907  INFO 16608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 17:05:26.052  INFO 16608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 17:05:26.052  INFO 16608 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3338 ms
+2021-03-19 17:05:30.263  INFO 16608 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 17:05:30.265  INFO 16608 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 17:05:30.328  INFO 16608 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7b50d5ee-56b6-4655-b034-f88c347acb4a
+
+2021-03-19 17:05:30.415  INFO 16608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@279e1422, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d156f8f, org.springframework.security.web.header.HeaderWriterFilter@2a259f6f, org.springframework.security.web.authentication.logout.LogoutFilter@4ab86b2a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3749c2b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6150afc6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@af3295f, org.springframework.security.web.session.SessionManagementFilter@54f25b42, org.springframework.security.web.access.ExceptionTranslationFilter@1eabfad5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2cff03cf]
+2021-03-19 17:05:30.440  INFO 16608 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 17:05:31.089  INFO 16608 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 17:05:31.124  INFO 16608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 17:05:31.126  INFO 16608 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 17:05:31.149  INFO 16608 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 17:05:31.192  INFO 16608 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:05:31.436  INFO 16608 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 17:05:31.436  INFO 16608 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 17:05:31.443  INFO 16608 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 17:05:31.452  INFO 16608 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2021-03-19 17:05:31.471  INFO 16608 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:05:31.515  INFO 16608 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:05:31.524  INFO 16608 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 17:05:31.526  INFO 16608 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 17:05:31.540  INFO 16608 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 17:05:31.541  INFO 16608 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 17:05:31.553  INFO 16608 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 17:05:31.576  INFO 16608 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 10.238 seconds (JVM running for 12.729)
+2021-03-19 17:05:31.629  INFO 16608 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : captcha content == > pew46
+2021-03-19 17:05:48.456  INFO 16608 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:05:48.607  INFO 16608 --- [http-nio-8078-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 17:05:48.977  INFO 16608 --- [http-nio-8078-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 17:05:49.284  INFO 16608 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : createNew+1
+2021-03-19 17:05:49.370  INFO 16608 --- [http-nio-8078-exec-6] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-03-19 17:05:49.393  INFO 16608 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : captcha content == > bjpkv
+2021-03-19 17:06:21.321  INFO 16608 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : captcha content == > 9wbsw
+2021-03-19 17:06:27.735  INFO 16608 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:06:27.771  INFO 16608 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : captcha content == > jkafz
+2021-03-19 17:06:32.164  INFO 16608 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:06:32.308  INFO 16608 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : createNew+1
+2021-03-19 17:06:32.335  INFO 16608 --- [http-nio-8078-exec-6] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-03-19 17:06:32.358  INFO 16608 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : captcha content == > yzhk3
+2021-03-19 17:06:56.377  INFO 16608 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : captcha content == > 9cjwx
+2021-03-19 17:07:00.702  INFO 16608 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:07:00.772  INFO 16608 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : captcha content == > e6ayt
+2021-03-19 17:07:05.544  INFO 16608 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:07:05.677  INFO 16608 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : createNew+1
+2021-03-19 17:07:05.703  INFO 16608 --- [http-nio-8078-exec-6] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-03-19 17:07:05.717  INFO 16608 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : captcha content == > gn5nr
+2021-03-19 17:07:22.173  INFO 16608 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : captcha content == > ap77g
+2021-03-19 17:07:30.958  INFO 16608 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:07:31.089  INFO 16608 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : createNew+1
+2021-03-19 17:07:31.116  INFO 16608 --- [http-nio-8078-exec-10] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-03-19 17:07:31.142  INFO 16608 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : captcha content == > ybunh
+2021-03-19 17:07:52.297  INFO 16608 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:07:52.403  INFO 16608 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:07:52.463  INFO 16608 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:08:50.710  INFO 16608 --- [lettuce-nioEventLoop-4-2] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:08:50.803  INFO 16608 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:08:50.828  INFO 16608 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:11:46.814  INFO 16608 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:11:46.859  INFO 16608 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:11:53.146  INFO 16608 --- [http-nio-8078-exec-10] c.o.h.exception.ExceptionController      : Redis exception; nested exception is io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2021-03-19 17:12:19.054  INFO 16608 --- [lettuce-nioEventLoop-4-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:12:19.104  INFO 16608 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:12:19.134  INFO 16608 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:18:34.911  INFO 16608 --- [lettuce-nioEventLoop-4-5] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:18:35.003  INFO 16608 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:18:35.030  INFO 16608 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:19:07.363  INFO 16608 --- [lettuce-nioEventLoop-4-6] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:19:07.404  INFO 16608 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:19:07.433  INFO 16608 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:27:13.870  INFO 16608 --- [http-nio-8078-exec-4] o.a.catalina.connector.CoyoteAdapter     : Encountered a non-recycled response and recycled it forcedly.
+
+org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException: null
+	at org.apache.catalina.connector.CoyoteAdapter.checkRecycled(CoyoteAdapter.java:525)
+	at org.apache.coyote.http11.Http11Processor.recycle(Http11Processor.java:1352)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.release(AbstractProtocol.java:1072)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:993)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:27:23.716  INFO 16608 --- [http-nio-8078-exec-3] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-19 17:27:27.303  INFO 16608 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:27:27.333  INFO 16608 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:28:09.959  INFO 16608 --- [http-nio-8078-exec-2] c.o.h.exception.ExceptionController      : Required String parameter 'password' is not present
+2021-03-19 17:28:25.829  INFO 16608 --- [lettuce-nioEventLoop-4-8] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:28:25.906  INFO 16608 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:28:25.937  INFO 16608 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:28:58.364  INFO 16608 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:28:58.404  INFO 16608 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:28:58.454  INFO 16608 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:33:09.667  INFO 16608 --- [http-nio-8078-exec-10] c.o.h.exception.ExceptionController      : Required String parameter 'password' is not present
+2021-03-19 17:33:46.716  INFO 16608 --- [http-nio-8078-exec-6] c.o.h.exception.ExceptionController      : Required String parameter 'password' is not present
+2021-03-19 17:35:47.145  INFO 16608 --- [http-nio-8078-exec-9] c.o.h.exception.ExceptionController      : Required String parameter 'password' is not present
+2021-03-19 17:35:58.527  INFO 16608 --- [http-nio-8078-exec-7] c.o.h.exception.ExceptionController      : Required String parameter 'password' is not present
+2021-03-19 17:36:32.379  INFO 16608 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 17:36:32.381  INFO 16608 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-19 17:36:32.392  INFO 16608 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-19 17:36:37.890  INFO 6680 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 6680 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 17:36:37.892  INFO 6680 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 17:36:39.205  INFO 6680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 17:36:39.207  INFO 6680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 17:36:39.250  INFO 6680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
+2021-03-19 17:36:39.256  INFO 6680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 17:36:39.256  INFO 6680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 17:36:39.272  INFO 6680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-19 17:36:39.653  INFO 6680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$17172b0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:36:39.672  INFO 6680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@69909c14' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:36:39.680  INFO 6680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 17:36:40.031  INFO 6680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 17:36:40.040  INFO 6680 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 17:36:40.040  INFO 6680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 17:36:40.040  INFO 6680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 17:36:40.173  INFO 6680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 17:36:40.173  INFO 6680 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2232 ms
+2021-03-19 17:36:43.997  INFO 6680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 17:36:43.998  INFO 6680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 17:36:44.055  INFO 6680 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ab9ecef8-b5ba-4378-b03e-26e02e4ef1a1
+
+2021-03-19 17:36:44.149  INFO 6680 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46fa2a7e, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d5cd210, org.springframework.security.web.header.HeaderWriterFilter@2c0a3826, org.springframework.security.web.authentication.logout.LogoutFilter@6ab1f85b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6edb1e9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7438c3d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d02ff64, org.springframework.security.web.session.SessionManagementFilter@6dd2e453, org.springframework.security.web.access.ExceptionTranslationFilter@18887028, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6fc28e5b]
+2021-03-19 17:36:44.175  INFO 6680 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 17:36:44.657  INFO 6680 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 17:36:44.679  INFO 6680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 17:36:44.680  INFO 6680 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 17:36:44.697  INFO 6680 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 17:36:44.734  INFO 6680 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:36:44.885  INFO 6680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 17:36:44.910  INFO 6680 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:36:44.942  INFO 6680 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 17:36:44.951  INFO 6680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 17:36:44.952  INFO 6680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 17:36:44.967  INFO 6680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 17:36:44.968  INFO 6680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 17:36:44.980  INFO 6680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 17:36:45.003  INFO 6680 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 8.15 seconds (JVM running for 10.244)
+2021-03-19 17:37:04.166  INFO 6680 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 17:37:04.166  INFO 6680 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 17:37:04.184  INFO 6680 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2021-03-19 17:37:06.576  INFO 6680 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 17:37:06.755  INFO 6680 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 17:45:27.866  INFO 6680 --- [http-nio-8078-exec-7] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-19 17:47:58.563  INFO 6680 --- [http-nio-8078-exec-1] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-19 17:48:33.849  INFO 6680 --- [http-nio-8078-exec-3] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-19 17:48:48.634  INFO 6680 --- [http-nio-8078-exec-5] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-19 17:49:08.396  INFO 6680 --- [http-nio-8078-exec-7] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-19 17:49:30.268  INFO 6680 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : captcha content == > 7vefx
+2021-03-19 17:49:40.010  INFO 6680 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:49:40.149  INFO 6680 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : createNew+0
+2021-03-19 17:49:40.189  INFO 6680 --- [http-nio-8078-exec-1] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-03-19 17:49:40.215  INFO 6680 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : captcha content == > sa7w6
+2021-03-19 17:50:11.532  INFO 6680 --- [http-nio-8078-exec-6] c.o.h.exception.ExceptionController      : 不允许访问
+2021-03-19 17:50:25.527  INFO 6680 --- [http-nio-8078-exec-9] c.o.h.exception.ExceptionController      : 不允许访问
+2021-03-19 17:52:22.199  INFO 6680 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 17:52:22.341  INFO 6680 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 17:52:22.388  INFO 6680 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 17:54:57.518  INFO 6680 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : captcha content == > deb9g
+2021-03-19 17:55:02.889  INFO 6680 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:55:03.484  INFO 6680 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : captcha content == > xfmv4
+2021-03-19 17:55:03.815  INFO 6680 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:55:08.634  INFO 6680 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : key_captcha_content_
+2021-03-19 17:55:08.780  INFO 6680 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : createNew+1
+2021-03-19 17:55:08.829  INFO 6680 --- [http-nio-8078-exec-10] c.o.halfmoon.config.MyMetaObjectHandler  : start insert fill ....
+2021-03-19 17:55:08.852  INFO 6680 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : captcha content == > exuge
+2021-03-19 17:55:08.854  INFO 6680 --- [http-nio-8078-exec-3] o.a.catalina.connector.CoyoteAdapter     : Encountered a non-recycled response and recycled it forcedly.
+
+org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException: null
+	at org.apache.catalina.connector.CoyoteAdapter.checkRecycled(CoyoteAdapter.java:525)
+	at org.apache.coyote.http11.Http11Processor.recycle(Http11Processor.java:1352)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.release(AbstractProtocol.java:1072)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:993)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:02:49.824  INFO 6680 --- [lettuce-nioEventLoop-4-2] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:02:49.843  INFO 6680 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:02:49.875  INFO 6680 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:03:39.614  INFO 6680 --- [lettuce-nioEventLoop-4-3] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:03:39.638  INFO 6680 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:03:39.676  INFO 6680 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:04:11.910  INFO 6680 --- [lettuce-nioEventLoop-4-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:04:11.961  INFO 6680 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:04:12.007  INFO 6680 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:05:19.385  INFO 6680 --- [lettuce-nioEventLoop-4-5] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:05:19.441  INFO 6680 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:05:19.474  INFO 6680 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:05:51.834  INFO 6680 --- [lettuce-nioEventLoop-4-6] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:05:51.843  INFO 6680 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:05:51.880  INFO 6680 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:14:10.018  INFO 6680 --- [http-nio-8078-exec-2] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-19 18:14:11.239  INFO 6680 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:14:11.269  INFO 6680 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:25:02.835  INFO 6680 --- [http-nio-8078-exec-10] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-19 18:25:04.039  INFO 6680 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:25:04.065  INFO 6680 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:30:53.928  INFO 6680 --- [http-nio-8078-exec-2] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-19 18:30:55.138  INFO 6680 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:30:55.336  INFO 6680 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:32:36.747  INFO 6680 --- [lettuce-nioEventLoop-4-2] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:32:36.839  INFO 6680 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:32:36.869  INFO 6680 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:33:09.226  INFO 6680 --- [lettuce-nioEventLoop-4-3] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:33:09.243  INFO 6680 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:33:09.275  INFO 6680 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:40:01.738  INFO 6680 --- [lettuce-nioEventLoop-4-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:40:01.838  INFO 6680 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:40:01.882  INFO 6680 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:40:34.185  INFO 6680 --- [lettuce-nioEventLoop-4-5] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:40:34.241  INFO 6680 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:40:34.267  INFO 6680 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:43:51.204  INFO 6680 --- [lettuce-nioEventLoop-4-6] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:43:51.245  INFO 6680 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:43:51.273  INFO 6680 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:45:23.663  INFO 6680 --- [lettuce-nioEventLoop-4-7] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:45:23.741  INFO 6680 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:45:23.774  INFO 6680 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:52:04.749  INFO 6680 --- [lettuce-nioEventLoop-4-8] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:52:04.839  INFO 6680 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:52:04.867  INFO 6680 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:53:07.389  INFO 6680 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:53:07.438  INFO 6680 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:53:07.465  INFO 6680 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:54:15.723  INFO 6680 --- [lettuce-nioEventLoop-4-2] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:54:15.742  INFO 6680 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:54:15.781  INFO 6680 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:54:47.889  INFO 6680 --- [lettuce-nioEventLoop-4-3] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:54:47.938  INFO 6680 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:54:47.963  INFO 6680 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:55:45.756  INFO 6680 --- [lettuce-nioEventLoop-4-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:55:45.841  INFO 6680 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:55:45.876  INFO 6680 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:55:53.156  INFO 6680 --- [http-nio-8078-exec-5] c.o.h.exception.ExceptionController      : Required String parameter 'type' is not present
+2021-03-19 18:55:58.600  INFO 6680 --- [http-nio-8078-exec-6] c.o.h.exception.ExceptionController      : Required String parameter 'type' is not present
+2021-03-19 18:56:16.258  INFO 6680 --- [http-nio-8078-exec-7] c.o.h.exception.ExceptionController      : Required String parameter 'type' is not present
+2021-03-19 18:56:18.102  INFO 6680 --- [lettuce-nioEventLoop-4-5] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 18:56:18.154  INFO 6680 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 18:56:18.187  INFO 6680 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 18:56:21.410  INFO 6680 --- [http-nio-8078-exec-8] c.o.h.exception.ExceptionController      : Required String parameter 'type' is not present
+2021-03-19 18:56:45.816  INFO 6680 --- [http-nio-8078-exec-9] c.o.h.exception.ExceptionController      : Required String parameter 'type' is not present
+2021-03-19 18:56:53.937  INFO 6680 --- [http-nio-8078-exec-3] c.o.h.controller.user.UserController     : undefined
+2021-03-19 18:56:53.959  INFO 6680 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 18:56:54.010  INFO 6680 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 18:56:54.062  INFO 6680 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 18:57:04.400  INFO 6680 --- [http-nio-8078-exec-1] c.o.h.controller.user.UserController     : undefined
+2021-03-19 18:57:04.406  INFO 6680 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 18:57:04.458  INFO 6680 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 18:57:04.515  INFO 6680 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 18:57:56.842  INFO 6680 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 18:58:22.361  INFO 6680 --- [http-nio-8078-exec-5] c.o.h.controller.user.UserController     : undefined
+2021-03-19 19:03:51.210  INFO 6680 --- [lettuce-nioEventLoop-4-6] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 19:03:51.215  INFO 6680 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : undefined
+2021-03-19 19:03:51.219  INFO 6680 --- [http-nio-8078-exec-4] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1609656808] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-03-19 19:03:51.221  INFO 6680 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 19:03:51.223  INFO 6680 --- [http-nio-8078-exec-6] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:03:51.225  INFO 6680 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 19:03:51.232  INFO 6680 --- [http-nio-8078-exec-6] c.o.h.exception.ExceptionController      : java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+2021-03-19 19:03:51.238  INFO 6680 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 19:03:51.266  INFO 6680 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 19:03:51.331  INFO 6680 --- [http-nio-8078-exec-8] c.o.h.exception.ExceptionController      : java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+2021-03-19 19:03:51.346  INFO 6680 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 19:03:51.374  INFO 6680 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 19:03:51.450  INFO 6680 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 19:03:51.455  INFO 6680 --- [http-nio-8078-exec-5] c.o.h.exception.ExceptionController      : java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+2021-03-19 19:03:51.475  INFO 6680 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 19:03:51.481  INFO 6680 --- [http-nio-8078-exec-7] c.o.h.exception.ExceptionController      : java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+2021-03-19 19:03:52.331  INFO 6680 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 19:03:52.334  INFO 6680 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-19 19:03:52.337  INFO 6680 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-19 19:03:58.467  INFO 17688 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 17688 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 19:03:58.471  INFO 17688 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 19:03:59.614  INFO 17688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:03:59.616  INFO 17688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 19:03:59.654  INFO 17688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2021-03-19 19:03:59.666  INFO 17688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:03:59.666  INFO 17688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 19:03:59.679  INFO 17688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-19 19:04:00.008  INFO 17688 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$57b62e0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:04:00.026  INFO 17688 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@ebda593' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:04:00.031  INFO 17688 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:04:00.331  INFO 17688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 19:04:00.342  INFO 17688 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:04:00.342  INFO 17688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 19:04:00.343  INFO 17688 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 19:04:00.462  INFO 17688 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 19:04:00.463  INFO 17688 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1950 ms
+2021-03-19 19:04:03.786  INFO 17688 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 19:04:03.788  INFO 17688 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 19:04:03.845  INFO 17688 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7bbb1417-1123-4824-a1c6-dd4156750dd3
+
+2021-03-19 19:04:03.929  INFO 17688 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c9ef37b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b64bf61, org.springframework.security.web.header.HeaderWriterFilter@44106e25, org.springframework.security.web.authentication.logout.LogoutFilter@5018b56b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7846913f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b7e4d14, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4888425d, org.springframework.security.web.session.SessionManagementFilter@2d2a8819, org.springframework.security.web.access.ExceptionTranslationFilter@5a8b42a3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b895e76]
+2021-03-19 19:04:03.950  INFO 17688 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 19:04:04.401  INFO 17688 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:04:04.422  INFO 17688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 19:04:04.424  INFO 17688 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 19:04:04.440  INFO 17688 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 19:04:04.471  INFO 17688 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:04:04.602  INFO 17688 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 19:04:04.619  INFO 17688 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:04:04.646  INFO 17688 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:04:04.655  INFO 17688 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 19:04:04.656  INFO 17688 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 19:04:04.666  INFO 17688 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 19:04:04.667  INFO 17688 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 19:04:04.675  INFO 17688 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 19:04:04.694  INFO 17688 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 6.998 seconds (JVM running for 9.733)
+2021-03-19 19:04:09.212  INFO 17688 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 19:04:09.212  INFO 17688 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 19:04:09.222  INFO 17688 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2021-03-19 19:04:20.008  INFO 17688 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:04:20.074  INFO 17688 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 19:04:20.202  INFO 17688 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 19:04:25.806  INFO 17688 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 19:04:25.983  INFO 17688 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 19:04:26.027  INFO 17688 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 19:05:17.919  INFO 17688 --- [http-nio-8078-exec-3] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:05:28.138  INFO 17688 --- [http-nio-8078-exec-5] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:05:28.143  INFO 17688 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 19:05:29.766  INFO 17688 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 19:05:29.817  INFO 17688 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 19:09:51.748  INFO 17688 --- [http-nio-8078-exec-6] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-19 19:09:52.967  INFO 17688 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 19:09:52.993  INFO 17688 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 19:09:53.118  INFO 17688 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 19:09:53.121  INFO 17688 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-19 19:09:53.132  INFO 17688 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-19 19:09:58.713  INFO 18256 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 18256 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 19:09:58.722  INFO 18256 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 19:09:59.890  INFO 18256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:09:59.893  INFO 18256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 19:09:59.928  INFO 18256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2021-03-19 19:09:59.934  INFO 18256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:09:59.934  INFO 18256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 19:09:59.946  INFO 18256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 Solr repository interfaces.
+2021-03-19 19:10:00.257  INFO 18256 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$dd6b2d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:10:00.275  INFO 18256 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@46e190ed' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:10:00.279  INFO 18256 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:10:00.606  INFO 18256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 19:10:00.615  INFO 18256 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:10:00.615  INFO 18256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 19:10:00.616  INFO 18256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 19:10:00.723  INFO 18256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 19:10:00.724  INFO 18256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1927 ms
+2021-03-19 19:10:04.122  INFO 18256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 19:10:04.123  INFO 18256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 19:10:04.179  INFO 18256 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c32c804b-30b2-446c-b610-3f98783877ed
+
+2021-03-19 19:10:04.261  INFO 18256 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a6fc1bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@27053257, org.springframework.security.web.header.HeaderWriterFilter@54bc3bcf, org.springframework.security.web.authentication.logout.LogoutFilter@4552f905, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@662713b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3265995e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5018b56b, org.springframework.security.web.session.SessionManagementFilter@c0004b7, org.springframework.security.web.access.ExceptionTranslationFilter@1f3f434, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13f36d75]
+2021-03-19 19:10:04.283  INFO 18256 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 19:10:04.742  INFO 18256 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:10:04.765  INFO 18256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 19:10:04.766  INFO 18256 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 19:10:04.783  INFO 18256 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 19:10:04.827  INFO 18256 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:10:05.010  INFO 18256 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 19:10:05.028  INFO 18256 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:10:05.057  INFO 18256 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:10:05.065  INFO 18256 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 19:10:05.067  INFO 18256 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 19:10:05.076  INFO 18256 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 19:10:05.077  INFO 18256 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 19:10:05.087  INFO 18256 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 19:10:05.107  INFO 18256 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 7.325 seconds (JVM running for 9.717)
+2021-03-19 19:10:06.131  INFO 18256 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 19:10:06.131  INFO 18256 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 19:10:06.147  INFO 18256 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2021-03-19 19:10:13.508  INFO 18256 --- [http-nio-8078-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 19:10:13.636  INFO 18256 --- [http-nio-8078-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 19:17:52.922  INFO 18256 --- [http-nio-8078-exec-7] c.o.h.exception.ExceptionController      : Redis command interrupted; nested exception is io.lettuce.core.RedisCommandInterruptedException: Command interrupted
+2021-03-19 19:17:52.960  INFO 18256 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 19:17:52.962  INFO 18256 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-19 19:17:52.973  INFO 18256 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-19 19:17:57.935  INFO 2492 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 2492 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 19:17:57.940  INFO 2492 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 19:17:59.084  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:17:59.086  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 19:17:59.133  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 Redis repository interfaces.
+2021-03-19 19:17:59.139  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:17:59.139  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 19:17:59.151  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 Solr repository interfaces.
+2021-03-19 19:17:59.479  INFO 2492 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$9aae03e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:17:59.497  INFO 2492 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@57ddd45b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:17:59.501  INFO 2492 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:17:59.830  INFO 2492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 19:17:59.845  INFO 2492 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:17:59.846  INFO 2492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 19:17:59.847  INFO 2492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 19:17:59.996  INFO 2492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 19:17:59.996  INFO 2492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2010 ms
+2021-03-19 19:18:08.009  INFO 2520 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 2520 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 19:18:08.012  INFO 2520 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 19:18:09.177  INFO 2520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:18:09.179  INFO 2520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 19:18:09.215  INFO 2520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2021-03-19 19:18:09.221  INFO 2520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:18:09.221  INFO 2520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 19:18:09.235  INFO 2520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-19 19:18:09.560  INFO 2520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$db73aa1c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:18:09.579  INFO 2520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6cfbbff7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:18:09.584  INFO 2520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:18:09.933  INFO 2520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 19:18:09.945  INFO 2520 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:18:09.946  INFO 2520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 19:18:09.946  INFO 2520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 19:18:10.062  INFO 2520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 19:18:10.062  INFO 2520 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2007 ms
+2021-03-19 19:18:14.416  INFO 2520 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 19:18:14.417  INFO 2520 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 19:18:14.488  INFO 2520 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c0556bf1-6f4f-47a8-9d72-6821a7c98a03
+
+2021-03-19 19:18:14.589  INFO 2520 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74a74070, org.springframework.security.web.context.SecurityContextPersistenceFilter@a6fc1bc, org.springframework.security.web.header.HeaderWriterFilter@5ca4c88a, org.springframework.security.web.authentication.logout.LogoutFilter@4d525897, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@360a3106, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e05a706, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c6919ff, org.springframework.security.web.session.SessionManagementFilter@44a44a04, org.springframework.security.web.access.ExceptionTranslationFilter@5d93ff21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cf70afa]
+2021-03-19 19:18:14.614  INFO 2520 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 19:18:15.154  INFO 2520 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:18:15.178  INFO 2520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 19:18:15.179  INFO 2520 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 19:18:15.195  INFO 2520 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 19:18:15.228  INFO 2520 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:18:15.347  INFO 2520 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 19:18:15.347  INFO 2520 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 19:18:15.358  INFO 2520 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-03-19 19:18:15.385  INFO 2520 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 19:18:15.407  INFO 2520 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:18:15.445  INFO 2520 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:18:15.456  INFO 2520 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 19:18:15.457  INFO 2520 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 19:18:15.471  INFO 2520 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 19:18:15.473  INFO 2520 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 19:18:15.484  INFO 2520 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 19:18:15.506  INFO 2520 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 8.367 seconds (JVM running for 10.118)
+2021-03-19 19:18:26.589  INFO 2520 --- [http-nio-8078-exec-4] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:18:26.656  INFO 2520 --- [http-nio-8078-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 19:18:26.800  INFO 2520 --- [http-nio-8078-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 19:18:26.838  INFO 2520 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 19:18:26.897  INFO 2520 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 19:18:26.956  INFO 2520 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 19:20:09.284  INFO 2520 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:20:09.289  INFO 2520 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 19:20:09.349  INFO 2520 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 0
+2021-03-19 19:20:09.406  INFO 2520 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 19:20:59.911  INFO 2520 --- [http-nio-8078-exec-10] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:20:59.916  INFO 2520 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 19:20:59.975  INFO 2520 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 1
+2021-03-19 19:21:00.034  INFO 2520 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 19:22:04.464  INFO 2520 --- [http-nio-8078-exec-3] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:22:04.469  INFO 2520 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 19:22:04.529  INFO 2520 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 2
+2021-03-19 19:22:04.588  INFO 2520 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 19:24:24.461  INFO 2520 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 19:24:30.871  INFO 2520 --- [http-nio-8078-exec-8] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 19:25:46.158  INFO 2520 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 19:25:46.353  INFO 2520 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 19:25:46.393  INFO 2520 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 19:29:57.676  INFO 2520 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 19:31:16.018  INFO 2520 --- [http-nio-8078-exec-4] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 19:40:43.502  INFO 2520 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 19:40:43.505  INFO 2520 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-19 19:40:43.514  INFO 2520 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-19 19:40:54.497  INFO 17732 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 17732 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 19:40:54.500  INFO 17732 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 19:40:55.833  INFO 17732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:40:55.835  INFO 17732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 19:40:55.871  INFO 17732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2021-03-19 19:40:55.877  INFO 17732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 19:40:55.877  INFO 17732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 19:40:55.890  INFO 17732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-19 19:40:56.208  INFO 17732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$a2058651] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:40:56.228  INFO 17732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@32ec9c90' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:40:56.233  INFO 17732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 19:40:56.570  INFO 17732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 19:40:56.590  INFO 17732 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:40:56.591  INFO 17732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 19:40:56.591  INFO 17732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 19:40:56.706  INFO 17732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 19:40:56.706  INFO 17732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2162 ms
+2021-03-19 19:41:00.055  INFO 17732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 19:41:00.056  INFO 17732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 19:41:00.112  INFO 17732 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 92b3e4a2-ea94-4a54-9c52-2051c2a07093
+
+2021-03-19 19:41:00.194  INFO 17732 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ca4c88a, org.springframework.security.web.context.SecurityContextPersistenceFilter@54bc3bcf, org.springframework.security.web.header.HeaderWriterFilter@627d35ff, org.springframework.security.web.authentication.logout.LogoutFilter@408d945b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13714753, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38b54694, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1791e231, org.springframework.security.web.session.SessionManagementFilter@1f3f434, org.springframework.security.web.access.ExceptionTranslationFilter@27dc81be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b7e4d14]
+2021-03-19 19:41:00.215  INFO 17732 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 19:41:00.666  INFO 17732 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 19:41:00.688  INFO 17732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 19:41:00.689  INFO 17732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 19:41:00.704  INFO 17732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 19:41:00.737  INFO 17732 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:41:00.880  INFO 17732 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 19:41:00.897  INFO 17732 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:41:00.928  INFO 17732 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 19:41:00.937  INFO 17732 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 19:41:00.939  INFO 17732 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 19:41:00.948  INFO 17732 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 19:41:00.950  INFO 17732 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 19:41:00.958  INFO 17732 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 19:41:00.979  INFO 17732 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 7.529 seconds (JVM running for 10.33)
+2021-03-19 19:41:29.119  INFO 17732 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 19:41:29.119  INFO 17732 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 19:41:29.136  INFO 17732 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2021-03-19 19:41:37.754  INFO 17732 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 19:41:37.887  INFO 17732 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 19:41:39.140  INFO 17732 --- [http-nio-8078-exec-3] c.o.h.controller.user.UserController     : 2768011423@qq.com
+2021-03-19 19:41:39.147  INFO 17732 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 19:41:39.197  INFO 17732 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 19:41:39.247  INFO 17732 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 19:41:52.263  INFO 17732 --- [http-nio-8078-exec-4] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-19 19:49:13.263  INFO 17732 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 19:49:13.421  INFO 17732 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 19:49:13.509  INFO 17732 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:00:55.119  INFO 17732 --- [lettuce-nioEventLoop-4-2] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:00:55.221  INFO 17732 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:00:55.252  INFO 17732 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:03:00.714  INFO 17732 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 20:03:00.716  INFO 17732 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-19 20:03:00.724  INFO 17732 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-19 20:03:07.265  INFO 11512 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 11512 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-19 20:03:07.269  INFO 11512 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-19 20:03:08.370  INFO 11512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 20:03:08.372  INFO 11512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 20:03:08.408  INFO 11512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2021-03-19 20:03:08.414  INFO 11512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 20:03:08.415  INFO 11512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-19 20:03:08.426  INFO 11512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-03-19 20:03:08.749  INFO 11512 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$9aae03e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 20:03:08.767  INFO 11512 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b332962' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 20:03:08.772  INFO 11512 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 20:03:09.092  INFO 11512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-19 20:03:09.101  INFO 11512 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-19 20:03:09.102  INFO 11512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 20:03:09.102  INFO 11512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 20:03:09.211  INFO 11512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 20:03:09.212  INFO 11512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1896 ms
+2021-03-19 20:03:12.622  INFO 11512 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-19 20:03:12.624  INFO 11512 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-19 20:03:12.679  INFO 11512 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 623db9da-e041-4de3-993b-75c4aa9678ef
+
+2021-03-19 20:03:12.766  INFO 11512 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35d4035f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2792c28, org.springframework.security.web.header.HeaderWriterFilter@52d59507, org.springframework.security.web.authentication.logout.LogoutFilter@5c2a3f0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@351e86b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12270a01, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f4fc83f, org.springframework.security.web.session.SessionManagementFilter@673a9db4, org.springframework.security.web.access.ExceptionTranslationFilter@55e5415d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@54737322]
+2021-03-19 20:03:12.787  INFO 11512 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 20:03:13.234  INFO 11512 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-19 20:03:13.256  INFO 11512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-19 20:03:13.257  INFO 11512 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-19 20:03:13.272  INFO 11512 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-19 20:03:13.304  INFO 11512 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 20:03:13.467  INFO 11512 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-19 20:03:13.485  INFO 11512 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 20:03:13.516  INFO 11512 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-19 20:03:13.524  INFO 11512 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-19 20:03:13.526  INFO 11512 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-19 20:03:13.542  INFO 11512 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-19 20:03:13.544  INFO 11512 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-19 20:03:13.555  INFO 11512 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-19 20:03:13.575  INFO 11512 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 7.073 seconds (JVM running for 8.667)
+2021-03-19 20:03:28.348  INFO 11512 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 20:03:28.348  INFO 11512 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 20:03:28.356  INFO 11512 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-03-19 20:03:28.387  INFO 11512 --- [http-nio-8078-exec-1] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:03:29.841  INFO 11512 --- [http-nio-8078-exec-1] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:03:29.872  INFO 11512 --- [http-nio-8078-exec-1] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:03:30.090  INFO 11512 --- [http-nio-8078-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 20:03:30.236  INFO 11512 --- [http-nio-8078-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 20:03:30.277  INFO 11512 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:03:30.331  INFO 11512 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 20:03:30.386  INFO 11512 --- [http-nio-8078-exec-1] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:03:32.931  INFO 11512 --- [http-nio-8078-exec-3] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:03:36.545  INFO 11512 --- [http-nio-8078-exec-5] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:09:23.697  INFO 11512 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:09:23.813  INFO 11512 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:09:23.849  INFO 11512 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:12:58.978  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:12:59.038  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:12:59.038  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:12:59.046  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:12:59.100  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 20:12:59.156  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:13:29.863  INFO 11512 --- [http-nio-8078-exec-4] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:13:29.918  INFO 11512 --- [http-nio-8078-exec-4] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:13:29.919  INFO 11512 --- [http-nio-8078-exec-4] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:13:29.922  INFO 11512 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:13:29.981  INFO 11512 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 0
+2021-03-19 20:13:30.037  INFO 11512 --- [http-nio-8078-exec-4] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:14:02.633  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:14:02.693  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:14:02.694  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:14:02.703  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:14:02.758  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 1
+2021-03-19 20:14:02.813  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:16:27.682  INFO 11512 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:16:27.738  INFO 11512 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:16:27.739  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:16:27.743  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:16:27.802  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 2
+2021-03-19 20:16:27.859  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:17:38.415  INFO 11512 --- [http-nio-8078-exec-8] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:17:38.478  INFO 11512 --- [http-nio-8078-exec-8] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:17:38.479  INFO 11512 --- [http-nio-8078-exec-8] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:17:38.483  INFO 11512 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:17:38.538  INFO 11512 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 3
+2021-03-19 20:17:38.593  INFO 11512 --- [http-nio-8078-exec-8] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:19:11.874  INFO 11512 --- [http-nio-8078-exec-10] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:19:11.930  INFO 11512 --- [http-nio-8078-exec-10] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:19:11.930  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:19:11.935  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:19:11.993  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 4
+2021-03-19 20:19:12.048  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:20:39.517  INFO 11512 --- [http-nio-8078-exec-9] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:20:39.572  INFO 11512 --- [http-nio-8078-exec-9] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:20:39.573  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:20:39.578  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:20:39.634  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 5
+2021-03-19 20:20:39.690  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:21:48.315  INFO 11512 --- [http-nio-8078-exec-3] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:21:48.370  INFO 11512 --- [http-nio-8078-exec-3] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:21:48.370  INFO 11512 --- [http-nio-8078-exec-3] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:21:48.374  INFO 11512 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:21:48.428  INFO 11512 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 6
+2021-03-19 20:21:48.483  INFO 11512 --- [http-nio-8078-exec-3] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:21:54.026  INFO 11512 --- [lettuce-nioEventLoop-4-2] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:21:54.117  INFO 11512 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:21:54.154  INFO 11512 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:22:33.225  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:22:33.284  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:22:33.284  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:22:33.289  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:22:33.347  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 7
+2021-03-19 20:22:33.406  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:22:44.487  INFO 11512 --- [http-nio-8078-exec-4] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:23:29.808  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:23:29.866  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:23:29.866  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:23:29.870  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:23:29.928  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 8
+2021-03-19 20:23:29.985  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:24:05.223  INFO 11512 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:24:05.281  INFO 11512 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:24:05.282  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:24:05.286  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:24:05.344  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 9
+2021-03-19 20:24:05.402  INFO 11512 --- [http-nio-8078-exec-6] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:24:31.776  INFO 11512 --- [lettuce-nioEventLoop-4-3] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:821)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:24:31.816  INFO 11512 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:24:31.869  INFO 11512 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:25:04.085  INFO 11512 --- [lettuce-nioEventLoop-4-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:25:04.113  INFO 11512 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:25:04.146  INFO 11512 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:26:05.197  INFO 11512 --- [lettuce-nioEventLoop-4-5] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:26:05.214  INFO 11512 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:26:05.255  INFO 11512 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:26:37.390  INFO 11512 --- [lettuce-nioEventLoop-4-6] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:26:37.413  INFO 11512 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:26:37.461  INFO 11512 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:26:56.204  INFO 11512 --- [http-nio-8078-exec-10] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:26:56.260  INFO 11512 --- [http-nio-8078-exec-10] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:26:56.260  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:26:56.265  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:26:56.319  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 10
+2021-03-19 20:26:56.373  INFO 11512 --- [http-nio-8078-exec-10] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:27:32.744  INFO 11512 --- [http-nio-8078-exec-9] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:27:32.798  INFO 11512 --- [http-nio-8078-exec-9] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:27:32.799  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:27:32.802  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:27:32.856  INFO 11512 --- [http-nio-8078-exec-9] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 11
+2021-03-19 20:27:37.034  INFO 11512 --- [http-nio-8078-exec-1] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:27:41.346  INFO 11512 --- [http-nio-8078-exec-3] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:28:21.489  INFO 11512 --- [http-nio-8078-exec-5] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:28:21.542  INFO 11512 --- [http-nio-8078-exec-5] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:28:21.543  INFO 11512 --- [http-nio-8078-exec-5] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:28:21.546  INFO 11512 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:28:21.600  INFO 11512 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : ipSendTime : null
+2021-03-19 20:28:21.655  INFO 11512 --- [http-nio-8078-exec-5] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:29:12.279  INFO 11512 --- [lettuce-nioEventLoop-4-7] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:29:12.314  INFO 11512 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:29:12.384  INFO 11512 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:29:14.784  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:29:14.863  INFO 11512 --- [http-nio-8078-exec-2] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:29:14.863  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:29:19.667  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:29:19.726  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 0
+2021-03-19 20:29:19.781  INFO 11512 --- [http-nio-8078-exec-2] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:29:20.182  INFO 11512 --- [http-nio-8078-exec-4] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:29:44.567  INFO 11512 --- [lettuce-nioEventLoop-4-8] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-03-19 20:29:44.619  INFO 11512 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-19 20:29:44.646  INFO 11512 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-19 20:29:53.079  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : tokenKey -||- > 9d4f22e7d72df19fa05903b1229af29b
+2021-03-19 20:29:53.130  INFO 11512 --- [http-nio-8078-exec-7] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
+2021-03-19 20:29:53.131  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.controller.user.UserController     : 1005777562@qq.com
+2021-03-19 20:29:53.136  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : sendEmail ==> ip ==> 127.0.0.1
+2021-03-19 20:29:53.186  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : ipSendTime : 1
+2021-03-19 20:29:53.236  INFO 11512 --- [http-nio-8078-exec-7] c.o.h.service.impl.UserServiceImpl       : null
+2021-03-19 20:31:09.805  INFO 11512 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-19 20:31:09.808  INFO 11512 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-19 20:31:09.819  INFO 11512 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
