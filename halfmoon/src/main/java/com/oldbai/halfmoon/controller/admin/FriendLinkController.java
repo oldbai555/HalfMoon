@@ -95,6 +95,20 @@ public class FriendLinkController {
     }
 
 
+    /**
+     * 获取集合
+     *
+     * @return
+     */
+    @ApiOperation("获取友情链接集合")
+    @PreAuthorize("@permission.adminPermission()")
+    @GetMapping("/list/{page}/{size}")
+    public ResponseResult listPageFriendLinks(@PathVariable("page") Integer page,
+                                              @PathVariable("size") Integer size) {
+        return friendLinkService.listPageFriendLinks(page,size);
+    }
+
+
 
 
 }

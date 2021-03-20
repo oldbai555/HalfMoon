@@ -23,4 +23,6 @@ public interface FriendLinkService extends IService<FriendLink> {
     ResponseResult getFriendLink(String friendLinkId);
 
     ResponseResult listFriendLinks();
+
+    ResponseResult listPageFriendLinks(Integer page, Integer size);
 }

@@ -1,6 +1,7 @@
 package com.oldbai.halfmoon.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.oldbai.halfmoon.entity.FriendLink;
 import com.oldbai.halfmoon.entity.User;
 import com.oldbai.halfmoon.mapper.FriendLinkMapper;
@@ -9,9 +10,11 @@ import com.oldbai.halfmoon.service.FriendLinkService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.oldbai.halfmoon.service.UserService;
 import com.oldbai.halfmoon.util.Constants;
+import com.oldbai.halfmoon.util.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.Date;
@@ -54,6 +57,9 @@ public class FriendLinkServiceImpl extends ServiceImpl<FriendLinkMapper, FriendL
         if (StringUtils.isEmpty(name)) {
             return ResponseResult.FAILED("对方网站名不可以为空.");
         }
+        if (StringUtils.isEmpty(friendLink.getOrder())) {
+            friendLink.setOrder(0);
+        }
         //补全数据
 //        friendLink.setId(idWorker.nextId() + "");
 //        friendLink.setUpdateTime(new Date());
@@ -62,7 +68,7 @@ public class FriendLinkServiceImpl extends ServiceImpl<FriendLinkMapper, FriendL
         //保存数据
         friendLinkMapper.insert(friendLink);
         //返回结果
-        return ResponseResult.FAILED("添加成功.");
+        return ResponseResult.SUCCESS("添加成功.");
     }
 
     @Override
@@ -137,5 +143,23 @@ public class FriendLinkServiceImpl extends ServiceImpl<FriendLinkMapper, FriendL
             all = friendLinkMapper.selectList(friendLinkQueryWrapper);
         }
         return ResponseResult.SUCCESS("获取列表成功.", all);
+    }
+
+    @Override
+    @Transactional
+    public ResponseResult listPageFriendLinks(Integer page, Integer size) {
+        //判断page
+        page = Utils.getPage(page);
+        //size也限制一下,每一页不小于5个
+        size = Utils.getSize(size);
+        QueryWrapper<FriendLink> friendLinkQueryWrapper = new QueryWrapper<>();
+        friendLinkQueryWrapper.eq("state", "1").orderByDesc("update_time");
+        Page<FriendLink> friendPage = new Page<>(page, size);
+        Page<FriendLink> linkPage = friendLinkMapper.selectPage(friendPage, friendLinkQueryWrapper);
+        if (StringUtils.isEmpty(linkPage)) {
+            return ResponseResult.FAILED("获取失败......");
+        }
+
+        return ResponseResult.SUCCESS("获取成功......", linkPage);
     }
 }
