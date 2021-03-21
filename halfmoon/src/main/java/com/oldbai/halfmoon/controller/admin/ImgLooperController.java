@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(description = "管理中心轮播图模块API")
 @RestController
-@CrossOrigin
 @RequestMapping("/halfmoon/img-looper")
 public class ImgLooperController {
     @Autowired

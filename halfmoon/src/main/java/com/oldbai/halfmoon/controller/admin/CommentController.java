@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(description = "管理中心评论模块API")
 @RestController
-@CrossOrigin
 @RequestMapping("/halfmoon/comment")
 public class CommentController {
     @Autowired

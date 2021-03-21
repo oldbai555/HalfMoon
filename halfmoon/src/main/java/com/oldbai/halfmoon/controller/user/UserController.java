@@ -27,7 +27,6 @@ import org.springframework.web.bind.annotation.*;
 @Api(description = "用户中心")
 @Slf4j
 @RestController
-@CrossOrigin
 @RequestMapping("/halfmoon/user")
 public class UserController {
 

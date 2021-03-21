@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @Api(description = "门户-文章")
 @RestController
-@CrossOrigin
 @RequestMapping("/halfmoon/portal/article")
 public class ArticlePortalController {
     @Autowired

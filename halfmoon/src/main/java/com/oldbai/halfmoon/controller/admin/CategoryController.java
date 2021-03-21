@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
  * @since 2021-02-14
  */
 @Api(description = "管理中心分类模块API")
-@CrossOrigin
 @RestController
 @RequestMapping("/halfmoon/category")
 public class CategoryController {

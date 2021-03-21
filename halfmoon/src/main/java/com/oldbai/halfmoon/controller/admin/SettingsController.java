@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(description = "管理中心网站信息模块API")
 @RestController
-@CrossOrigin
 @RequestMapping("/halfmoon/settings")
 public class SettingsController {
     @Autowired

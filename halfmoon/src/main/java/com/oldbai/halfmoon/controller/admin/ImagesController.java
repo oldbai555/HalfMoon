@@ -25,7 +25,6 @@ import org.springframework.web.multipart.MultipartFile;
  */
 @Api(description = "管理中心图片模块API")
 @RestController
-@CrossOrigin
 @RequestMapping("/halfmoon/images")
 public class ImagesController {
     @Autowired

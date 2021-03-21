@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(description = "管理中心文章模块API")
 @RestController
-@CrossOrigin
 @RequestMapping("/halfmoon/article")
 public class ArticleController {
 

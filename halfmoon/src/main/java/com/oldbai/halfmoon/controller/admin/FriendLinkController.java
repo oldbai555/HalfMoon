@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(description = "管理中心友情链接模块API")
 @RestController
-@CrossOrigin
 @RequestMapping("/halfmoon/friend-link")
 public class FriendLinkController {
 

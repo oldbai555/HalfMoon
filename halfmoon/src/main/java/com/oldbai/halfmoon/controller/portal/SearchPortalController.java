@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/halfmoon/portal/search")
-@CrossOrigin
 @RestController
 @Api(description = "门户-搜索")
 public class SearchPortalController {
