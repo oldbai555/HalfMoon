@@ -154,7 +154,7 @@ public class ArticleController {
      */
     @ApiOperation("更新文章状态")
     @PreAuthorize("@permission.adminPermission()")
-    @PostMapping("/state/{articleId}/{state}")
+    @PostMapping("/state/{articleId}")
     public ResponseResult updateArticleState(@PathVariable("articleId") String articleId) {
         return articleService.deleteArticleByState(articleId);
     }

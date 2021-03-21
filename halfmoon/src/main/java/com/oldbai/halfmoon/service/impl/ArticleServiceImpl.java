@@ -425,6 +425,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         if (Constants.Article.STATE_PUBLISH.equals(state)) {
             article.setState(Constants.Article.STATE_TOP);
             articleMapper.updateById(article);
+            redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "cg_" + "tt_" + "st_");
             return ResponseResult.SUCCESS("文章置顶成功.");
         }
         if (Constants.Article.STATE_TOP.equals(state)) {
