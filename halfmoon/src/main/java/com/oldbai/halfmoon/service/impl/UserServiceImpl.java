@@ -769,9 +769,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //把token 写入 cookies 里
         Cookie cookie = new Cookie(Constants.User.COOKIE_TOKE_KEY, tokenKey);
         //TODO 动态获取域名，可以从request里获取
-        cookie.setDomain("localhost");
-        //设置存活时间
+        //TODO cookie设置保存的域名
+        cookie.setDomain("oldbai.top");
         cookie.setPath("/");
+        //设置存活时间
         cookie.setMaxAge(Constants.User.COOKIE_TOKE_AGE * 24);
         response.addCookie(cookie);
         // 前端访问时，携带 md5 key ，后端从 redis中取出 token

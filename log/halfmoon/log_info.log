@@ -964,3 +964,4 @@ Using generated security password: 36f864ee-67e8-4b5b-a568-83923afcfebb
 2021-03-21 21:26:17.113  INFO 5040 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
 2021-03-21 21:26:17.113  INFO 5040 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
 2021-03-21 21:26:17.122  INFO 5040 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 7.006 seconds (JVM running for 9.162)
+2021-03-21 21:34:41.348  INFO 5040 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
