@@ -1,0 +1,3 @@
+2021-03-20 12:21:30.753 ERROR 8756 --- [http-nio-8078-exec-5] c.o.h.controller.user.UserController     : java.lang.NullPointerException
+2021-03-20 19:38:25.485 ERROR 16144 --- [http-nio-8078-exec-9] c.o.h.controller.user.UserController     : java.lang.NullPointerException
+2021-03-20 19:45:53.811 ERROR 16144 --- [http-nio-8078-exec-8] c.o.h.controller.user.UserController     : java.lang.NullPointerException

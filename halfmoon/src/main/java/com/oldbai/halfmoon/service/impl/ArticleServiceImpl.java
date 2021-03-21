@@ -162,6 +162,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         //如果要做程序自动保存成草稿（比如说每30秒保存一次，就需要加上这个ID了，否则会创建多个Item）
         redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "null");
         redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + article.getCategoryId());
+        redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "cg_" + "tt_" + "st_");
         return ResponseResult.SUCCESS(Constants.Article.STATE_DRAFT.equals(state) ? "草稿保存成功" :
                 "文章发表成功.", article.getId());
     }
@@ -196,12 +197,16 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         queryWrapper.eq("article_id", articleId);
         commentMapper.delete(queryWrapper);
         int result = articleMapper.deleteById(articleId);
+        //TODO 更新搜索的
         if (result > 0) {
             redisUtil.del(Constants.Article.KEY_ARTICLE_CACHE + articleId);
             redisUtil.del(Constants.Article.KEY_ARTICLE_VIEW_COUNT + articleId);
             redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "null");
             redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + article.getCategoryId());
             solrService.deleteArticle(articleId);
+            //删除文章记得更新缓存
+
+            redisUtil.del(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "cg_" + "tt_" + "st_");
             return ResponseResult.SUCCESS("文章删除成功.");
         }
         return ResponseResult.FAILED("文章不存在.");
@@ -307,6 +312,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
             article.setViewCount(count);
             articleMapper.updateById(article);
             //可以返回
+            article.setLabelsList(Utils.noLabelsArr(article.getLabels()));
             return ResponseResult.SUCCESS("获取文章成功.", article);
         } else {
             //查询出文章
@@ -334,6 +340,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
             }
             articleMapper.updateById(article);
             solrService.updateArticle(article);
+            article.setLabelsList(Utils.noLabelsArr(article.getLabels()));
             //可以返回
             return ResponseResult.SUCCESS("获取文章成功.", article);
         }
@@ -342,6 +349,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         if (sobUser == null || !Constants.User.ROLE_ADMIN.equals(sobUser.getRoles())) {
             return ResponseResult.NO_PERMISSION();
         }
+        article.setLabelsList(Utils.noLabelsArr(article.getLabels()));
         //返回结果
         return ResponseResult.SUCCESS("获取文章成功.", article);
     }
@@ -364,7 +372,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         page = Utils.getPage(page);
         size = Utils.getSize(size);
         if (page == 1) {
-            Page<ArticleView> all = (Page<ArticleView>) redisUtil.get(Constants.Article.KEY_ARTICLE_FIRST_PAGE + categoryId);
+            Page<ArticleView> all = (Page<ArticleView>) redisUtil.get(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "cg_" + categoryId + "tt_" + keyword + "st_" + state);
             if (!StringUtils.isEmpty(all)) {
                 return ResponseResult.SUCCESS("获取文章列表成功.", all);
             }
@@ -387,7 +395,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         //处理查询条件
         //返回结果
         if (page == 1) {
-            redisUtil.set(Constants.Article.KEY_ARTICLE_FIRST_PAGE + categoryId, all, Constants.TimeValue.DAY);
+            redisUtil.set(Constants.Article.KEY_ARTICLE_FIRST_PAGE + "cg_" + categoryId + "tt_" + keyword + "st_" + state, all, Constants.TimeValue.DAY);
         }
         return ResponseResult.SUCCESS("获取文章列表成功.", all);
     }

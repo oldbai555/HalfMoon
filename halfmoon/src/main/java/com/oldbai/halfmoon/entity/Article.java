@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.*;
 import java.util.Date;
 
 import java.io.Serializable;
+import java.util.List;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -62,6 +63,10 @@ public class Article implements Serializable {
 
     @ApiModelProperty(value = "标签")
     private String labels;
+
+    @ApiModelProperty(value = "标签数组")
+    @TableField(exist = false)
+    private List<String> labelsList;
 
     @ApiModelProperty(value = "阅读数量")
     private Integer viewCount;
