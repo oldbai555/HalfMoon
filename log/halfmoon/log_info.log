@@ -819,3 +819,74 @@ Using generated security password: 5a99dda9-acb0-4bbb-a4ca-e52edd78a301
 2021-03-21 14:39:30.481  INFO 6656 --- [http-nio-8078-exec-6] c.o.halfmoon.interceptor.ApiInterceptor  : check commit too frequent...
 2021-03-21 14:39:30.547  INFO 6656 --- [http-nio-8078-exec-6] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
 2021-03-21 14:39:38.912  INFO 6656 --- [http-nio-8078-exec-1] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 14:57:22.093  INFO 6656 --- [http-nio-8078-exec-2] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-21 14:57:23.367  INFO 6656 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-21 14:57:23.447  INFO 6656 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-21 14:59:06.971  INFO 6656 --- [http-nio-8078-exec-8] c.o.h.exception.ExceptionController      : Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+2021-03-21 14:59:08.828  INFO 6656 --- [http-nio-8078-exec-9] c.o.h.exception.ExceptionController      : Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+2021-03-21 15:01:10.169  INFO 6656 --- [http-nio-8078-exec-3] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:01:14.770  INFO 6656 --- [http-nio-8078-exec-6] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:01:16.858  INFO 6656 --- [http-nio-8078-exec-7] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:04:47.424  INFO 6656 --- [http-nio-8078-exec-5] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:16:48.561  INFO 6656 --- [http-nio-8078-exec-4] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-21 15:16:49.764  INFO 6656 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-21 15:16:49.795  INFO 6656 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-21 15:32:24.658  INFO 6656 --- [http-nio-8078-exec-3] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:32:25.301  INFO 6656 --- [http-nio-8078-exec-7] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:32:27.938  INFO 6656 --- [http-nio-8078-exec-9] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:32:28.854  INFO 6656 --- [http-nio-8078-exec-1] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:32:29.935  INFO 6656 --- [http-nio-8078-exec-2] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:32:30.917  INFO 6656 --- [http-nio-8078-exec-5] c.o.halfmoon.config.MyMetaObjectHandler  : start update fill ....
+2021-03-21 15:42:41.916  INFO 6656 --- [http-nio-8078-exec-1] c.o.h.exception.ExceptionController      : Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 18 second(s)
+2021-03-21 15:42:43.163  INFO 6656 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.106.234.164:6379
+2021-03-21 15:42:43.189  INFO 6656 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.106.234.164:6379
+2021-03-21 15:47:07.351  INFO 6656 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-21 15:47:07.354  INFO 6656 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-21 15:47:07.356  INFO 6656 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-21 15:47:12.118  INFO 11136 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Starting HalfmoonApplication on 老白的炸鸡堡垒 with PID 11136 (G:\MyJava\HalfMoon\halfmoon\target\classes started by 老白 in G:\MyJava\HalfMoon)
+2021-03-21 15:47:12.125  INFO 11136 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : No active profile set, falling back to default profiles: default
+2021-03-21 15:47:13.486  INFO 11136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-21 15:47:13.489  INFO 11136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-21 15:47:13.529  INFO 11136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2021-03-21 15:47:13.536  INFO 11136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-21 15:47:13.537  INFO 11136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-03-21 15:47:13.550  INFO 11136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Solr repository interfaces.
+2021-03-21 15:47:13.890  INFO 11136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.oldbai.halfmoon.config.RedisConfig$$EnhancerBySpringCGLIB$$1ba2119b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-21 15:47:13.912  INFO 11136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@45545e7a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-21 15:47:13.918  INFO 11136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-21 15:47:14.283  INFO 11136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+2021-03-21 15:47:14.294  INFO 11136 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8078"]
+2021-03-21 15:47:14.294  INFO 11136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-21 15:47:14.295  INFO 11136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-21 15:47:14.409  INFO 11136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-21 15:47:14.410  INFO 11136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2213 ms
+2021-03-21 15:47:18.003  INFO 11136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-21 15:47:18.004  INFO 11136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2021-03-21 15:47:18.060  INFO 11136 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c2742f8f-6f2b-4026-8cf0-71ce918fef5e
+
+2021-03-21 15:47:18.151  INFO 11136 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@737ff5c4, org.springframework.security.web.context.SecurityContextPersistenceFilter@45539bd8, org.springframework.security.web.header.HeaderWriterFilter@3c3cd7a5, org.springframework.security.web.authentication.logout.LogoutFilter@12532e37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55e5415d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ed7978c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e9a836, org.springframework.security.web.session.SessionManagementFilter@6a0e97fc, org.springframework.security.web.access.ExceptionTranslationFilter@d3d5094, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@cfb94fd]
+2021-03-21 15:47:18.179  INFO 11136 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-21 15:47:18.655  INFO 11136 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8078"]
+2021-03-21 15:47:18.677  INFO 11136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+2021-03-21 15:47:18.678  INFO 11136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-21 15:47:18.695  INFO 11136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2021-03-21 15:47:18.732  INFO 11136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-21 15:47:18.871  INFO 11136 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getCategoriesUsingGET_1
+2021-03-21 15:47:18.889  INFO 11136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-21 15:47:18.918  INFO 11136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-21 15:47:18.929  INFO 11136 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getArticleUsingGET_1
+2021-03-21 15:47:18.931  INFO 11136 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listArticlesUsingGET_1
+2021-03-21 15:47:18.941  INFO 11136 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteCommentUsingGET_1
+2021-03-21 15:47:18.942  INFO 11136 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listCommentsUsingGET_1
+2021-03-21 15:47:18.953  INFO 11136 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getImageUsingGET_1
+2021-03-21 15:47:18.973  INFO 11136 --- [main] com.oldbai.halfmoon.HalfmoonApplication  : Started HalfmoonApplication in 7.674 seconds (JVM running for 9.375)
+2021-03-21 15:47:21.782  INFO 11136 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-21 15:47:21.782  INFO 11136 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-21 15:47:21.795  INFO 11136 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2021-03-21 15:47:24.218  INFO 11136 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-21 15:47:24.699  INFO 11136 --- [http-nio-8078-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-21 15:47:57.431  INFO 11136 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
+2021-03-21 15:47:57.433  INFO 11136 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-21 15:47:57.441  INFO 11136 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
